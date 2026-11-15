@@ -1,0 +1,1208 @@
+[
+{
+"id": 0,
+"name": "Water rocket nozzle-2",
+"kind": "device",
+"group": "inner",
+"ext": [
+31,
+31,
+39
+],
+"c": [
+-210,
+342,
+561
+],
+"len": 40,
+"faces": 14138
+},
+{
+"id": 1,
+"name": "gas canister-5",
+"kind": "device",
+"group": "inner",
+"ext": [
+111,
+87,
+111
+],
+"c": [
+108,
+78,
+493
+],
+"len": 110,
+"faces": 2362
+},
+{
+"id": 2,
+"name": "gas canister-6",
+"kind": "device",
+"group": "inner",
+"ext": [
+111,
+87,
+111
+],
+"c": [
+108,
+148,
+493
+],
+"len": 110,
+"faces": 2362
+},
+{
+"id": 3,
+"name": "Storage-PD_OF_YanPanel-6",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+80,
+570
+],
+"c": [
+240,
+54,
+-280
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 4,
+"name": "gas canister-2",
+"kind": "device",
+"group": "inner",
+"ext": [
+111,
+87,
+111
+],
+"c": [
+-142,
+148,
+493
+],
+"len": 110,
+"faces": 2362
+},
+{
+"id": 5,
+"name": "Bidon - 12L-DIN-96-2",
+"kind": "device",
+"group": "inner",
+"ext": [
+126,
+260,
+418
+],
+"c": [
+-1,
+164,
+211
+],
+"len": 420,
+"faces": 60072
+},
+{
+"id": 6,
+"name": "20x20EndCap-4_2",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+-240,
+23,
+555
+],
+"len": 20,
+"faces": 1242
+},
+{
+"id": 7,
+"name": "gas canister-4",
+"kind": "device",
+"group": "inner",
+"ext": [
+111,
+87,
+111
+],
+"c": [
+-17,
+148,
+493
+],
+"len": 110,
+"faces": 2362
+},
+{
+"id": 8,
+"name": "gas canister-3",
+"kind": "device",
+"group": "inner",
+"ext": [
+111,
+87,
+111
+],
+"c": [
+-17,
+78,
+493
+],
+"len": 110,
+"faces": 2362
+},
+{
+"id": 9,
+"name": "Bidon - 12L-DIN-96-3",
+"kind": "device",
+"group": "inner",
+"ext": [
+126,
+260,
+418
+],
+"c": [
+124,
+164,
+211
+],
+"len": 420,
+"faces": 60072
+},
+{
+"id": 10,
+"name": "Storage-PD_OF_UstYanPanel-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+280,
+570
+],
+"c": [
+-241,
+246,
+-279
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 11,
+"name": "gas canister-1",
+"kind": "device",
+"group": "inner",
+"ext": [
+111,
+87,
+111
+],
+"c": [
+-142,
+78,
+493
+],
+"len": 110,
+"faces": 2362
+},
+{
+"id": 12,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+394,
+20,
+20
+],
+"c": [
+0,
+102,
+-40
+],
+"len": 395,
+"faces": 912
+},
+{
+"id": 13,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-207,
+102,
+250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 14,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+207,
+102,
+250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 15,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+207,
+67,
+-40
+],
+"len": 50,
+"faces": 960
+},
+{
+"id": 16,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+-207,
+67,
+-40
+],
+"len": 50,
+"faces": 912
+},
+{
+"id": 17,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+-207,
+67,
+535
+],
+"len": 50,
+"faces": 912
+},
+{
+"id": 18,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+207,
+32,
+250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 19,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+394,
+20,
+20
+],
+"c": [
+0,
+32,
+-40
+],
+"len": 395,
+"faces": 912
+},
+{
+"id": 20,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-207,
+32,
+250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 21,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+207,
+67,
+535
+],
+"len": 50,
+"faces": 940
+},
+{
+"id": 22,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+372,
+555
+],
+"len": 460,
+"faces": 960
+},
+{
+"id": 23,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+360,
+20
+],
+"c": [
+-240,
+202,
+555
+],
+"len": 360,
+"faces": 912
+},
+{
+"id": 24,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+360,
+20
+],
+"c": [
+240,
+202,
+555
+],
+"len": 360,
+"faces": 912
+},
+{
+"id": 25,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+199,
+40,
+-40
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 26,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+199,
+94,
+-40
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 27,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-199,
+94,
+-40
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 28,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-199,
+40,
+-40
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 29,
+"name": "Storage-Drawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+32,
+555
+],
+"len": 460,
+"faces": 2624
+},
+{
+"id": 30,
+"name": "Storage-PD_OF_YanPanel-5",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+80,
+570
+],
+"c": [
+-240,
+54,
+-280
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 31,
+"name": "Storage-PD_OF_ArkaPanel-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+470,
+370,
+4
+],
+"c": [
+1,
+201,
+-570
+],
+"len": 470,
+"faces": 12
+},
+{
+"id": 32,
+"name": "Storage-PD_IF_YanPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+4,
+60,
+570
+],
+"c": [
+-208,
+66,
+248
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 33,
+"name": "20x20EndCap-3_2",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+240,
+23,
+555
+],
+"len": 20,
+"faces": 1242
+},
+{
+"id": 34,
+"name": "Bidon - 12L-DIN-96-1",
+"kind": "device",
+"group": "inner",
+"ext": [
+126,
+260,
+418
+],
+"c": [
+-126,
+164,
+211
+],
+"len": 420,
+"faces": 60072
+},
+{
+"id": 35,
+"name": "Water rocket nozzle-1",
+"kind": "device",
+"group": "inner",
+"ext": [
+31,
+31,
+39
+],
+"c": [
+210,
+342,
+561
+],
+"len": 40,
+"faces": 14138
+},
+{
+"id": 36,
+"name": "Storage-PD_OF_UstPanel-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+470,
+4,
+570
+],
+"c": [
+0,
+390,
+-280
+],
+"len": 570,
+"faces": 1244
+},
+{
+"id": 37,
+"name": "Storage-PD_IF_ArkaPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+394,
+60,
+4
+],
+"c": [
+0,
+66,
+-41
+],
+"len": 395,
+"faces": 12
+},
+{
+"id": 38,
+"name": "20x20EndCap-1_2",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+240,
+381,
+555
+],
+"len": 20,
+"faces": 1242
+},
+{
+"id": 39,
+"name": "Mini Kabin Kilidi Mesan 116_2",
+"kind": "lock",
+"group": "inner",
+"ext": [
+73,
+94,
+44
+],
+"c": [
+0,
+323,
+538
+],
+"len": 95,
+"faces": 23308
+},
+{
+"id": 40,
+"name": "Storage-PD_IF_AltPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+405,
+4,
+585
+],
+"c": [
+0,
+32,
+256
+],
+"len": 585,
+"faces": 12
+},
+{
+"id": 41,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+240,
+390,
+-280
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 42,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+240,
+10,
+-280
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 43,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-240,
+390,
+-280
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 44,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-240,
+10,
+-280
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 45,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+390,
+10
+],
+"len": 460,
+"faces": 912
+},
+{
+"id": 46,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+10,
+10
+],
+"len": 460,
+"faces": 912
+},
+{
+"id": 47,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+390,
+-570
+],
+"len": 460,
+"faces": 912
+},
+{
+"id": 48,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+10,
+-570
+],
+"len": 460,
+"faces": 912
+},
+{
+"id": 49,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+560
+],
+"c": [
+240,
+100,
+-280
+],
+"len": 560,
+"faces": 912
+},
+{
+"id": 50,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+560
+],
+"c": [
+-240,
+100,
+-280
+],
+"len": 560,
+"faces": 912
+},
+{
+"id": 51,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+382,
+10
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 52,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+18,
+10
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 53,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+382,
+10
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 54,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+18,
+10
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 55,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+18,
+-570
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 56,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+18,
+-570
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 57,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+382,
+-570
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 58,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+382,
+-570
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 59,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+360,
+20
+],
+"c": [
+240,
+200,
+10
+],
+"len": 360,
+"faces": 1956
+},
+{
+"id": 60,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+360,
+20
+],
+"c": [
+-240,
+200,
+10
+],
+"len": 360,
+"faces": 1936
+},
+{
+"id": 61,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+360,
+20
+],
+"c": [
+-240,
+200,
+-570
+],
+"len": 360,
+"faces": 1948
+},
+{
+"id": 62,
+"name": "Storage-Drawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+360,
+20
+],
+"c": [
+240,
+200,
+-570
+],
+"len": 360,
+"faces": 2024
+},
+{
+"id": 63,
+"name": "Storage-PD_IF_OnPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+470,
+330,
+4
+],
+"c": [
+0,
+203,
+555
+],
+"len": 470,
+"faces": 32
+},
+{
+"id": 64,
+"name": "20x20EndCap-2_2",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+-240,
+381,
+555
+],
+"len": 20,
+"faces": 1242
+},
+{
+"id": 65,
+"name": "Storage-PD_IF_YanPanel-2",
+"kind": "panel",
+"group": "inner",
+"ext": [
+4,
+60,
+570
+],
+"c": [
+208,
+66,
+248
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 66,
+"name": "Storage-PD_OF_UstYanPanel-2",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+280,
+570
+],
+"c": [
+241,
+246,
+-279
+],
+"len": 570,
+"faces": 12
+}
+]

@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Nest Su ve Gaz Çekmecesi: Yolun ağır yüklerini zahmetsizce kaydır.">
+<meta property="og:title" content="Nest Su ve Gaz Çekmecesi — Can Sasmaz Studio">
+<meta property="og:description" content="Nest Su ve Gaz Çekmecesi: Yolun ağır yüklerini zahmetsizce kaydır.">
+<meta property="og:image" content="img/iso-1.webp">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Nest Su ve Gaz Çekmecesi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: apple.com ürün sayfası kurgusu — yerel menü, ortalanmış kahraman, gölgesiz karo ızgarası, sekmeli detaylar, seçenekli satın alma. Tokenlar: Can Sasmaz Studio tasarım sistemi. */
+:root{
+  --bg:#ffffff;
+  --surface:#f5f5f7;
+  --surface-raised:#ffffff;
+  --line:#d2d2d7;
+  --ink:#1d1d1f;
+  --ink-muted:#6e6e73;
+  --ink-subtle:#86868b;
+  --brand:#e34520;
+  --action:#d23c1a;
+  --on-action:#ffffff;
+  --accent-text:#c23a17;
+  --accent-soft:#fde8e1;
+  --gold:#f1c891;
+  --glass-fill:rgba(255,255,255,0.62);
+  --glass-stroke:rgba(255,255,255,0.80);
+  --glass-shade:rgba(0,0,0,0.10);
+  --success:#1f7a45;
+  --warning:#8a5d00;
+  --error:#b3261e;
+  --series-moduler:#5b6770;
+  --series-dogman:#2e7d4f;
+  --series-house:#8a6a2f;
+  --series-elcilik:#2b63a0;
+  --link:var(--accent-text);
+  --font-sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, "Segoe UI", sans-serif;
+  --font-display:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, "Segoe UI", sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-20:80px;
+  --space-30:120px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+  --radius-xl:28px;
+  --radius-pill:980px;
+  --shadow-card:0 0 0 rgba(0,0,0,0);
+  --shadow-float:0 2px 8px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.10);
+  --shadow-glass:0 8px 32px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#000000;
+  --surface:#1c1a18;
+  --surface-raised:#2a2724;
+  --line:#38342f;
+  --ink:#f5f5f7;
+  --ink-muted:#a1a1a6;
+  --ink-subtle:#86868b;
+  --brand:#e34520;
+  --action:#d23c1a;
+  --on-action:#ffffff;
+  --accent-text:#ff6b47;
+  --accent-soft:#3a1a10;
+  --gold:#f1c891;
+  --glass-fill:rgba(38,35,31,0.55);
+  --glass-stroke:rgba(255,255,255,0.14);
+  --glass-shade:rgba(0,0,0,0.45);
+  --success:#4fbf7a;
+  --warning:#e0b04a;
+  --error:#ff7a70;
+  --series-moduler:#9aa7b0;
+  --series-dogman:#5cc08a;
+  --series-house:#f1c891;
+  --series-elcilik:#7fb0e6;
+  --link:var(--accent-text);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#000000;
+  --surface:#1c1a18;
+  --surface-raised:#2a2724;
+  --line:#38342f;
+  --ink:#f5f5f7;
+  --ink-muted:#a1a1a6;
+  --ink-subtle:#86868b;
+  --brand:#e34520;
+  --action:#d23c1a;
+  --on-action:#ffffff;
+  --accent-text:#ff6b47;
+  --accent-soft:#3a1a10;
+  --gold:#f1c891;
+  --glass-fill:rgba(38,35,31,0.55);
+  --glass-stroke:rgba(255,255,255,0.14);
+  --glass-shade:rgba(0,0,0,0.45);
+  --success:#4fbf7a;
+  --warning:#e0b04a;
+  --error:#ff7a70;
+  --series-moduler:#9aa7b0;
+  --series-dogman:#5cc08a;
+  --series-house:#f1c891;
+  --series-elcilik:#7fb0e6;
+  --link:var(--accent-text);
+  color-scheme:dark;
+}
+
+/* Can Sasmaz Studio — bileşen stilleri (Apple düzeni). tokens.css'ten sonra yüklenir. */
+body { margin: 0; font-family: var(--font-sans); font-size: 17px; line-height: 25px; letter-spacing: -.022em; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+.cs-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-4); }
+
+/* Button — hap biçimli; primary sayfada bir kez */
+.cs-btn { font: inherit; font-size: 17px; font-weight: 400; line-height: 20px; letter-spacing: -.022em; min-height: 44px; padding: 12px 22px; border-radius: var(--radius-pill); border: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); text-decoration: none; transition: filter .2s ease-out, transform .2s ease-out; }
+.cs-btn:active { transform: scale(.98); }
+.cs-btn:focus-visible, .cs-link:focus-visible, .cs-seg button:focus-visible, .cs-option:focus-within { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+.cs-btn-primary { background: var(--action); color: var(--on-action); }
+.cs-btn-primary:hover { filter: brightness(1.08); }
+.cs-btn-secondary { background: transparent; color: var(--accent-text); box-shadow: inset 0 0 0 1px var(--accent-text); }
+.cs-btn-secondary:hover { background: var(--accent-soft); }
+.cs-btn-glass { background: var(--glass-fill); color: var(--ink); border: 1px solid var(--glass-stroke); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%); }
+.cs-btn-sm { min-height: 28px; padding: 4px 12px; font-size: 12px; line-height: 16px; }
+
+/* Link — "Daha fazla bilgi ›" */
+.cs-link { color: var(--accent-text); text-decoration: none; font-size: inherit; display: inline-flex; align-items: center; gap: 2px; }
+.cs-link::after { content: "›"; font-size: 1.15em; line-height: 1; transform: translateY(-1px); margin-left: 3px; }
+.cs-link:hover { text-decoration: underline; }
+
+/* LocalNav — ürün adı + bağlantılar + Satın al; cam şerit */
+.cs-localnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: var(--glass-fill); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--line); }
+.cs-localnav-in { max-width: 1024px; margin: 0 auto; min-height: 52px; display: flex; align-items: center; gap: var(--space-6); padding-left: max(22px, env(safe-area-inset-left, 0px)); padding-right: max(22px, env(safe-area-inset-right, 0px)); }
+.cs-localnav-title { font-family: var(--font-display); font-size: 21px; line-height: 25px; font-weight: 600; letter-spacing: .011em; color: var(--ink); text-decoration: none; white-space: nowrap; margin-right: auto; }
+.cs-localnav-links { display: flex; gap: var(--space-6); }
+.cs-localnav-links a { font-size: 12px; line-height: 16px; letter-spacing: -.01em; color: var(--ink); opacity: .8; text-decoration: none; white-space: nowrap; }
+.cs-localnav-links a:hover { opacity: 1; color: var(--accent-text); }
+
+/* SeriesBadge */
+.cs-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; padding: 5px 12px; border-radius: var(--radius-pill); background: var(--surface); color: var(--ink); }
+.cs-badge::before { content: ""; width: 8px; height: 8px; border-radius: var(--radius-pill); background: var(--brand); }
+.cs-badge-moduler::before { background: var(--series-moduler); }
+.cs-badge-dogman::before { background: var(--series-dogman); }
+.cs-badge-house::before { background: var(--series-house); }
+.cs-badge-elcilik::before { background: var(--series-elcilik); }
+
+/* Tile — gölgesiz büyük karo; ayrışma yalnızca zemin tonuyla */
+.cs-tile { background: var(--surface); border-radius: var(--radius-xl); padding: 40px; overflow: hidden; display: grid; gap: var(--space-3); align-content: start; min-width: 0; }
+.cs-tile-dark { background: var(--ink); color: var(--bg); }
+.cs-tile-dark .cs-stat-label, .cs-tile-dark .cs-tile-text { color: var(--bg); opacity: .72; }
+.cs-tile-title { font-family: var(--font-display); font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: .007em; margin: 0; text-wrap: balance; }
+.cs-tile-text { font-size: 17px; line-height: 25px; color: var(--ink-muted); margin: 0; }
+
+/* Stat — dev sayı */
+.cs-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.cs-stat { background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-6); display: grid; gap: 2px; }
+.cs-stat-label { font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+.cs-stat-value { font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 700; letter-spacing: -.02em; color: var(--ink); }
+.cs-stat-unit { font-size: 17px; font-weight: 600; margin-left: 4px; letter-spacing: 0; }
+.cs-stat-xl .cs-stat-value { font-size: 72px; line-height: 76px; color: var(--accent-text); }
+
+/* Segmented — sekme çubuğu (cam hap) */
+.cs-seg { display: inline-flex; gap: 2px; padding: 4px; border-radius: var(--radius-pill); background: var(--glass-fill); border: 1px solid var(--glass-stroke); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%); max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.cs-seg::-webkit-scrollbar { display: none; }
+.cs-seg button { appearance: none; border: 0; background: transparent; color: var(--ink); font: 400 14px/20px var(--font-sans); letter-spacing: -.016em; padding: 8px 18px; border-radius: var(--radius-pill); cursor: pointer; white-space: nowrap; transition: background .25s ease-out, color .25s ease-out; }
+.cs-seg button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+
+/* OptionCard — Apple satın alma seçenekleri */
+.cs-options { display: grid; gap: var(--space-3); }
+.cs-option { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px var(--space-4); align-items: center; padding: 18px 20px; border-radius: var(--radius-md); box-shadow: inset 0 0 0 1px var(--line); cursor: pointer; background: var(--bg); transition: box-shadow .2s ease-out; }
+.cs-option input { position: absolute; opacity: 0; pointer-events: none; }
+.cs-option:hover { box-shadow: inset 0 0 0 1px var(--ink-subtle); }
+.cs-option:has(input:checked) { box-shadow: inset 0 0 0 2px var(--accent-text); }
+.cs-option-title { font-size: 17px; line-height: 21px; font-weight: 600; }
+.cs-option-desc { grid-column: 1; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+.cs-option-price { grid-row: 1 / span 2; grid-column: 2; font-size: 14px; line-height: 20px; color: var(--ink); text-align: right; }
+
+/* GlassPanel */
+.cs-glass { background: var(--glass-fill); border: 1px solid var(--glass-stroke); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%); padding: var(--space-4) var(--space-6); color: var(--ink); }
+
+/* PriceBlock (eski sayfalar için) */
+.cs-price { background: var(--surface); border-radius: var(--radius-xl); padding: var(--space-6); display: grid; gap: var(--space-4); max-width: 420px; }
+.cs-price-amount { font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 600; color: var(--ink); }
+.cs-price-note { font-size: 14px; line-height: 20px; color: var(--ink-muted); margin: 0; }
+.cs-price .cs-btn { width: 100%; }
+
+/* PackageList — düz liste, ince ayraçlar */
+.cs-pack { list-style: none; margin: 0; padding: 0; }
+.cs-pack li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--space-4); align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); }
+.cs-pack li:last-child { border-bottom: 1px solid var(--line); }
+.cs-pack-num { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--accent-text); }
+.cs-pack-title { font-size: 21px; line-height: 25px; font-weight: 600; letter-spacing: .011em; }
+.cs-pack-desc { font-size: 17px; line-height: 25px; color: var(--ink-muted); }
+.cs-pack-fmt { font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); }
+
+/* VideoNotice */
+.cs-notice { display: inline-grid; grid-template-columns: auto 1fr; gap: 2px var(--space-3); align-items: center; background: var(--glass-fill); border: 1px solid var(--glass-stroke); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass); -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%); padding: var(--space-3) var(--space-4) var(--space-3) var(--space-3); color: var(--ink); min-width: 240px; }
+.cs-notice-dot { grid-row: span 2; width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--brand); color: var(--on-action); display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+.cs-notice-title { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--ink-muted); }
+.cs-notice-value { font-family: var(--font-display); font-size: 22px; line-height: 28px; font-weight: 600; letter-spacing: -.01em; }
+
+/* StatTile uyumluluk (eski cs-stat kullanımı) */
+.cs-stats .cs-stat-value { font-size: 32px; line-height: 36px; }
+
+/* Can Sasmaz Studio — Özelleştir bileşeni (tasarım sistemi token'larını kullanır) */
+.cfg { --cfg-stage-bg: var(--surface); display: grid; gap: var(--space-8); }
+.cfg-main { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--space-8); align-items: start; }
+.cfg-stage { position: relative; background: var(--cfg-stage-bg); border-radius: var(--radius-xl); aspect-ratio: 4 / 3.2; overflow: hidden; position: sticky; top: calc(64px + env(safe-area-inset-top, 0px)); }
+.cfg-stage canvas { display: block; width: 100% !important; height: 100% !important; cursor: grab; touch-action: none; }
+.cfg-stage canvas:active { cursor: grabbing; }
+.cfg-load { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-muted); font-size: 14px; }
+.cfg-dimtag { position: absolute; left: 16px; top: 14px; font-family: var(--font-mono); font-size: 13px; color: var(--ink); background: var(--glass-fill); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--glass-stroke); padding: 6px 10px; border-radius: var(--radius-pill); }
+.cfg-tools { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.cfg-chip { font: inherit; font-size: 13px; font-weight: 500; color: var(--ink); background: var(--glass-fill); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--glass-stroke); box-shadow: 0 1px 2px var(--glass-shade); padding: 7px 14px; border-radius: var(--radius-pill); cursor: pointer; }
+.cfg-chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.cfg-chip:focus-visible, .cfg-link:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+.cfg-side { display: grid; gap: var(--space-6); min-width: 0; }
+.cfg-group { display: grid; gap: var(--space-3); }
+.cfg-h { font-size: 14px; font-weight: 600; margin: 0; color: var(--ink); letter-spacing: 0; }
+.cfg-swatch-name { font-weight: 400; color: var(--ink-muted); }
+.cfg-presets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.cfg-preset { position: relative; display: grid; gap: 2px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-md); cursor: pointer; background: var(--surface-raised); min-width: 0; }
+.cfg-preset input { position: absolute; opacity: 0; pointer-events: none; }
+.cfg-preset:has(input:checked) { border-color: var(--action); box-shadow: inset 0 0 0 1px var(--action); }
+.cfg-preset:has(input:focus-visible) { outline: 2px solid var(--action); outline-offset: 2px; }
+.cfg-preset-dots { display: flex; gap: 4px; margin-bottom: 6px; }
+.cfg-preset-dots i { width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+.cfg-preset-name { font-size: 14px; font-weight: 600; }
+.cfg-preset-desc { font-size: 12px; color: var(--ink-muted); }
+.cfg-preset-dims { font-family: var(--font-mono); font-size: 11px; color: var(--ink-subtle); margin-top: 4px; }
+.cfg-swatches { display: flex; gap: 10px; flex-wrap: wrap; }
+.cfg-swatch { position: relative; cursor: pointer; }
+.cfg-swatch input { position: absolute; opacity: 0; pointer-events: none; }
+.cfg-swatch span { display: block; width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); transition: transform .15s ease; }
+.cfg-swatch input:checked + span { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink); }
+.cfg-swatch input:focus-visible + span { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--action); }
+.cfg-swatch:hover span { transform: scale(1.06); }
+.cfg-note { font-size: 12px; color: var(--ink-muted); margin: 0; line-height: 1.45; }
+.cfg-dim { display: grid; gap: 6px; padding: 12px 0; border-top: 1px solid var(--line); }
+.cfg-dim-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cfg-dim-top label { font-size: 15px; font-weight: 500; }
+.cfg-num-wrap { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-muted); }
+.cfg-num { width: 84px; font: inherit; font-family: var(--font-mono); font-size: 14px; color: var(--ink); text-align: right; padding: 6px 8px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-raised); }
+.cfg-num:focus { outline: 2px solid var(--action); outline-offset: 1px; }
+.cfg-range { -webkit-appearance: none; appearance: none; width: 100%; height: 22px; background: transparent; margin: 0; --p: 50%; }
+.cfg-range::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--ink) var(--p), var(--line) var(--p)); }
+.cfg-range::-moz-range-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--ink) var(--p), var(--line) var(--p)); }
+.cfg-range::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.3); margin-top: -9px; }
+.cfg-range::-moz-range-thumb { width: 22px; height: 22px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+.cfg-range:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; border-radius: 4px; }
+.cfg-dim-lim { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-subtle); font-family: var(--font-mono); gap: 8px; }
+.cfg-warn { color: var(--warning); font-family: var(--font-sans); }
+.cfg-why { font-size: 12px; color: var(--ink-muted); margin: 0; line-height: 1.45; }
+.cfg-link { justify-self: start; font: inherit; font-size: 14px; color: var(--link); background: none; border: 0; padding: 4px 0; cursor: pointer; }
+.cfg-link:hover { text-decoration: underline; }
+.cfg-result { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-6); }
+.cfg-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+.cfg-table th { text-align: left; font-weight: 500; color: var(--ink-muted); font-size: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.cfg-table td { padding: 6px 0; border-bottom: 1px solid var(--line); font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.cfg-table td:last-child, .cfg-table th:last-child { text-align: right; }
+.cfg-table tfoot td { font-family: var(--font-sans); font-weight: 600; border-bottom: 0; }
+.cfg-codebox { display: grid; gap: 8px; align-content: start; }
+.cfg-coderow { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.cfg-code { font-family: var(--font-mono); font-size: 13px; background: var(--surface-raised); padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--line); word-break: break-all; min-width: 0; flex: 1 1 160px; }
+@media (max-width: 900px) {
+  .cfg-main { grid-template-columns: 1fr; }
+  .cfg-stage { position: relative; top: 0; aspect-ratio: 4 / 3.4; }
+  .cfg-result { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) { .cfg-presets { grid-template-columns: 1fr; } .cfg-preset { grid-template-columns: auto 1fr; column-gap: 10px; } .cfg-preset-dots { grid-row: span 3; margin: 2px 0 0; } }
+
+.cfg [hidden] { display: none !important; }
+
+
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 50; background: var(--bg); }
+.wrap { max-width: 1024px; margin: 0 auto; padding-left: max(22px, env(safe-area-inset-left, 0px)); padding-right: max(22px, env(safe-area-inset-right, 0px)); }
+.wide { max-width: 1240px; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; letter-spacing: 0; }
+.center { text-align: center; }
+.eyebrow { font-size: 21px; line-height: 25px; font-weight: 600; letter-spacing: .011em; color: var(--accent-text); }
+.intro { font-size: 21px; line-height: 29px; letter-spacing: .011em; color: var(--ink-muted); max-width: 690px; }
+.center .intro { margin-inline: auto; }
+.headline { font-size: 56px; line-height: 60px; font-weight: 600; letter-spacing: -.005em; }
+.title { font-size: 40px; line-height: 44px; font-weight: 600; }
+.muted { color: var(--ink-muted); }
+.small { font-size: 14px; line-height: 20px; letter-spacing: -.016em; }
+.todo { display: inline-block; font: 600 11px/16px var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--warning); box-shadow: inset 0 0 0 1px var(--warning); border-radius: var(--radius-pill); padding: 1px 8px; vertical-align: middle; }
+section { scroll-margin-top: 60px; }
+
+/* Local nav mobile */
+@media (max-width: 734px) { .cs-localnav-links { display: none; } .cs-localnav-title { font-size: 17px; } }
+
+/* Hero */
+.hero { padding-block: 72px 0; display: grid; gap: 18px; justify-items: center; }
+.hero h1 { font-size: 80px; line-height: 84px; font-weight: 600; letter-spacing: -.015em; }
+.hero .price { font-size: 17px; line-height: 25px; color: var(--ink); }
+.hero-ctas { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.hero-img { margin: 48px auto 0; max-width: 1240px; padding-left: max(22px, env(safe-area-inset-left, 0px)); padding-right: max(22px, env(safe-area-inset-right, 0px)); }
+.hero-img img { display: block; margin: 0 auto; width: auto; max-width: 100%; height: auto; max-height: min(70vh, 680px); }
+
+
+.dims-line { margin-top: 18px; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; color: var(--ink-muted); font-size: 14px; }
+
+.room { padding-top: 64px; }
+.room-fig { margin: 0; border-radius: var(--radius-xl); overflow: hidden; background: var(--surface); }
+.room-fig img { display: block; width: 100%; height: auto; }
+
+/* Highlights bento */
+.block { padding-block: 100px; }
+.block-alt { background: var(--surface); }
+.block-head { display: grid; gap: 16px; margin-bottom: 56px; }
+.bento { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
+.bento > * { grid-column: span 3; }
+.bento .span-2 { grid-column: span 2; }
+.bento .span-4 { grid-column: span 4; }
+.bento .span-6 { grid-column: span 6; }
+.block-alt .cs-tile { background: var(--bg); }
+.cs-tile { padding: 40px; min-height: 0; }
+.tile-stat { display: grid; gap: 4px; }
+.tile-stat .cs-stat-label { font-size: 17px; line-height: 21px; font-weight: 600; color: var(--ink); }
+.tile-stat .big { font-family: var(--font-display); font-size: 72px; line-height: 76px; font-weight: 700; letter-spacing: -.02em; color: var(--accent-text); }
+.tile-stat .big small { font-size: 28px; letter-spacing: 0; margin-left: 4px; }
+.tile-img img { display: block; width: 100%; height: 340px; object-fit: contain; margin-top: 16px; }
+.viewer-tile { padding: 0; position: relative; aspect-ratio: 16 / 9; min-height: 320px; }
+.viewer-tile .cap { position: absolute; left: 32px; top: 28px; z-index: 2; display: grid; gap: 4px; pointer-events: none; }
+.viewer-tile canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; touch-action: none; }
+.viewer-tile .start { position: absolute; inset: 0; display: grid; place-items: center; z-index: 1; }
+.viewer-tile .start img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 80px 48px 72px; box-sizing: border-box; }
+.viewer-tile .start .cs-btn { position: relative; }
+.viewer-tile .hint { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 2; font-size: 12px; line-height: 16px; padding: 8px 14px; border-radius: var(--radius-pill); white-space: nowrap; }
+
+.video-tile { padding: 0; background: #ffffff; position: relative; }
+.video-tile .cap { position: absolute; left: 40px; top: 36px; z-index: 1; display: grid; gap: 6px; max-width: 360px; color: #1d1d1f; }
+.video-tile .cap .cs-tile-text { color: #6e6e73; }
+.video-tile .cap .eyebrow { color: #c23a17; }
+.video-tile video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.explode-fig { margin: 0; background: var(--bg); border-radius: var(--radius-xl); overflow: hidden; }
+.explode-fig img { display: block; width: 100%; max-height: 560px; object-fit: contain; padding: 24px; box-sizing: border-box; }
+.explode-fig figcaption { padding: 0 24px 20px; font-size: 14px; color: var(--ink-muted); }
+@media (max-width: 734px) { .video-tile .cap { position: static; padding: 28px 28px 0; } }
+
+/* Story */
+.story { display: grid; gap: 40px; justify-items: center; }
+.story .note { display: grid; gap: 8px; justify-items: center; max-width: 560px; }
+
+/* Package */
+.pack-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 56px; align-items: start; }
+.pack-head { position: sticky; top: 90px; display: grid; gap: 12px; align-content: start; }
+
+/* Details tabs */
+.detail-head { display: grid; gap: 28px; justify-items: center; margin-bottom: 48px; }
+.seg-wrap { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 64px); z-index: 30; display: flex; justify-content: center; }
+.ozel-head { max-width: 640px; margin: 0 0 32px; }
+.ozel-head p { margin: 8px 0 0; }
+.panel { display: grid; gap: 40px; animation: rise .35s ease-out; }
+@keyframes rise { from { transform: translateY(8px); } to { transform: none; } }
+
+.specs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 0 40px; }
+.specs dt, .specs dd { padding-block: 22px; border-top: 1px solid var(--line); margin: 0; }
+.specs dt { font-size: 17px; font-weight: 600; }
+.specs dd { color: var(--ink); }
+.views { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.views figure { margin: 0; background: var(--surface); border-radius: var(--radius-xl); overflow: hidden; }
+.views img { display: block; width: 100%; height: 360px; object-fit: contain; padding: 24px; box-sizing: border-box; }
+.views figcaption { padding: 0 24px 20px; font-size: 14px; color: var(--ink-muted); }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 25px; }
+th { text-align: left; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .02em; color: var(--ink-muted); padding: 0 0 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 16px 0; border-bottom: 1px solid var(--line); }
+td + td, th + th { padding-left: 24px; }
+.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; letter-spacing: 0; font-size: 15px; }
+tfoot td { font-weight: 600; border-bottom: 0; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; }
+.cutplan { background: var(--surface); border-radius: var(--radius-xl); padding: 40px; display: grid; gap: 20px; }
+.cutplan svg { width: 100%; height: auto; display: block; overflow: visible; }
+.cut-legend { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; color: var(--ink-muted); }
+.cut-legend span { display: inline-flex; align-items: center; gap: 8px; }
+.cut-legend i { width: 12px; height: 12px; border-radius: 4px; display: inline-block; }
+
+.feature { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.feature-text { display: grid; gap: 16px; }
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-xl); overflow: hidden; background: var(--ink); max-width: 100%; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-empty, .video-link { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; text-align: center; padding: 24px; color: var(--bg); text-decoration: none; }
+.video .todo { color: var(--gold); box-shadow: inset 0 0 0 1px var(--gold); }
+.play { width: 64px; height: 64px; border-radius: var(--radius-pill); background: var(--brand); position: relative; }
+.play::after { content: ""; position: absolute; left: 26px; top: 20px; border-left: 18px solid var(--on-action); border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+
+.video-cover { position: absolute; inset: 0; display: grid; place-items: center; text-decoration: none; color: #ffffff; }
+.video-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55)); }
+.video-cover .play { position: relative; z-index: 1; transition: transform .2s ease-out; box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+.video-cover:hover .play { transform: scale(1.06); }
+.video-label { position: absolute; left: 20px; bottom: 16px; z-index: 1; font-size: 14px; line-height: 20px; font-weight: 600; }
+
+/* Buy */
+.buy { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.buy-media { position: sticky; top: 90px; background: var(--surface); border-radius: var(--radius-xl); overflow: hidden; }
+.buy-media img { display: block; width: 100%; height: min(70vh, 620px); object-fit: contain; padding: 40px; box-sizing: border-box; }
+.buy-side { display: grid; gap: 28px; }
+.buy-side h2 { font-size: 40px; line-height: 44px; font-weight: 600; }
+.buy-cta { display: grid; gap: 12px; }
+.buy-cta .cs-btn { width: 100%; box-sizing: border-box; }
+.buy-note { font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+.contact { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 14px; color: var(--ink-muted); }
+.copy { appearance: none; border: 0; background: none; padding: 0; color: var(--accent-text); font: 400 14px/20px var(--font-sans); cursor: pointer; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.facts div { padding: 18px 0 0; display: grid; gap: 2px; }
+.facts b { font-family: var(--font-display); font-size: 28px; line-height: 32px; font-weight: 600; }
+.facts span { font-size: 12px; line-height: 16px; color: var(--ink-muted); }
+
+/* Related + footer */
+.related { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; }
+footer { background: var(--surface); color: var(--ink-muted); font-size: 12px; line-height: 16px; padding-block: 20px 40px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 16px; }
+
+@media (max-width: 1068px) {
+  .hero h1 { font-size: 64px; line-height: 68px; }
+  .headline { font-size: 48px; line-height: 52px; }
+}
+@media (max-width: 734px) {
+  .tile-img img, .views img { height: 260px; }
+  .hero { padding-block: 48px 0; }
+  .hero h1 { font-size: 44px; line-height: 48px; }
+  .headline { font-size: 36px; line-height: 40px; }
+  .title, .buy-side h2 { font-size: 28px; line-height: 32px; }
+  .eyebrow, .intro { font-size: 19px; line-height: 25px; }
+  .block { padding-block: 64px; }
+  .block-head { margin-bottom: 36px; }
+  .bento { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .bento > *, .bento .span-2, .bento .span-4, .bento .span-6 { grid-column: auto; }
+  .cs-tile { padding: 28px; }
+  .tile-stat .big { font-size: 56px; line-height: 60px; }
+  .viewer-tile { aspect-ratio: 4 / 5; }
+  .pack-grid, .two, .feature, .buy, .specs { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .specs { gap: 0; }
+  .specs dt { padding-bottom: 0; }
+  .specs dd { border-top: 0; padding-top: 4px; }
+  .pack-head, .buy-media { position: static; }
+  .views { grid-template-columns: minmax(0, 1fr); }
+  .cutplan { padding: 24px; }
+  .seg-wrap { justify-content: flex-start; }
+  .related { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .panel { animation: none; } * { transition: none !important; } html { scroll-behavior: auto; } }
+html { scroll-behavior: smooth; }
+</style>
+
+
+
+<style>
+.status-pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;color:var(--ink-muted)}
+.status-pill i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.status-pill.live i{background:var(--success)}
+.pipeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:28px}
+.pipeline li{list-style:none;border-top:3px solid var(--line);padding-top:10px;font-size:13px;color:var(--ink-subtle)}
+.pipeline li.done{border-color:var(--ink-muted);color:var(--ink-muted)}
+.pipeline li.now{border-color:var(--brand);color:var(--ink);font-weight:600}
+.pipeline{padding:0}
+.concept-hero{padding-block:120px 72px}
+.concept-plate{background:var(--surface);border-radius:var(--radius-xl);padding:clamp(28px,5vw,56px);display:grid;gap:20px}
+.concept-plate .dimrow{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:15px}
+.concept-plate .dimrow b{display:block;font-size:28px;font-weight:600;letter-spacing:-.01em}
+.concept-plate .dimrow span{color:var(--ink-muted);font-size:13px}
+.excluded{color:var(--ink-subtle)}
+.related-list{display:flex;flex-wrap:wrap;gap:12px 24px}
+@media (max-width:734px){.pipeline{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<nav class="cs-localnav" aria-label="Ürün">
+  <div class="cs-localnav-in">
+    <a class="cs-localnav-title" href="#top">Nest Su ve Gaz Çekmecesi</a>
+    <div class="cs-localnav-links"><a href="../">Tüm ürünler</a><a href="#one-cikanlar">Genel bakış</a><a href="#detaylar" data-open="tab-ozel">Özelleştir</a><a href="#paket">Paket</a><a href="#detaylar">Detaylar</a></div>
+    <a class="cs-btn cs-btn-primary cs-btn-sm" href="#satin-al">Haber ver</a>
+  </div>
+</nav>
+
+<main id="top">
+  <section class="wrap hero center" aria-label="Nest Su ve Gaz Çekmecesi">
+    <span class="cs-badge cs-badge-moduler">Nest yol modülleri · Yakında</span>
+    <h1>Nest Su ve Gaz Çekmecesi</h1>
+    <p class="intro">Üç adet 12 litrelik su bidonunu ve altı gaz kartuşunu tek çekmecede taşıyan, hortum geçişleri hesaplanmış tesisat modülü.</p>
+    <p class="price"><span class="status-pill"><i></i>Dijital paket hazırlanıyor</span></p>
+    <div class="hero-ctas">
+      <a class="cs-btn cs-btn-primary" href="#satin-al">Haber ver</a>
+      <a class="cs-link" href="#detaylar" data-open="tab-ozel">Ölçünü ve rengini seç</a>
+    </div>
+  </section>
+  <div class="hero-img">
+    <img src="img/iso-1.webp" alt="Nest Su ve Gaz Çekmecesi: sigma profil iskelet ve paneller">
+  </div>
+  <div class="wrap dims-line mono"><span>500 × 600 × 400 mm</span><span>20×20 sigma</span><span>28 profil · 11,75 m</span></div>
+
+  <section class="block" id="one-cikanlar" aria-labelledby="oc-h">
+    <div class="wrap wide">
+      <div class="block-head center">
+        <h2 class="headline" id="oc-h">Su ve gaz, tek çekmecede.</h2>
+        <p class="intro">Üç adet 12 litrelik bidon ve altı gaz kartuşu. Hortum geçişleri çekmecenin tam açılımına göre hesaplandı.</p>
+      </div>
+      <div class="bento">
+        <div class="cs-tile span-6 viewer-tile" id="viewer">
+          <div class="cap"><span class="eyebrow">3D model</span><h3 class="cs-tile-title">Her açıdan bak.</h3></div>
+          <div class="start" id="viewer-start">
+            <img src="img/iso-2.webp" alt="Nest Su ve Gaz Çekmecesi, arka köşeden görünüm">
+            <button class="cs-btn cs-btn-glass" id="viewer-btn" type="button">3D modeli aç</button>
+          </div>
+          <div class="cs-glass hint" id="viewer-hint" hidden>Sürükle: döndür · İki parmak: yakınlaştır</div>
+        </div>
+        <div class="cs-tile span-6 video-tile">
+          <div class="cap"><span class="eyebrow">Parça parça</span><h3 class="cs-tile-title">Her parça yerini biliyor.</h3><p class="cs-tile-text">28 profil, 12 bağlantı, 11 panel ve donanım.</p></div>
+          <video src="img/donen.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Su ve gaz çekmecesinin açılıp parçalarına ayrıldığı animasyon"></video>
+        </div>
+        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Toplam profil</span><span class="big mono">11,75<small>m</small></span><p class="cs-tile-text">20×20 sigma, 6 farklı boyda 28 parça. 2 adet 6 m'lik boydan çıkıyor.</p></div>
+        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Bağlantı</span><span class="big mono">12<small>köşe</small></span><p class="cs-tile-text">Gizli köşe bağlantıları, M5 T-somun ve cıvata. Kaynak yok.</p></div>
+        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Panel</span><span class="big mono">11<small>parça</small></span><p class="cs-tile-text">4 mm alüminyum kompozit panel.</p></div>
+        <div class="cs-tile span-3 tile-img"><h3 class="cs-tile-title">Üstten.</h3><p class="cs-tile-text">Bidonlar ve kartuşlar tek çekmecede.</p><img src="img/ust.webp" alt="Nest Su ve Gaz Çekmecesi, üstten görünüm" loading="lazy"></div>
+        <div class="cs-tile span-3 tile-img"><h3 class="cs-tile-title">Önden.</h3><p class="cs-tile-text">Ön panelde gömme kilit. Dışarı taşan kulp yok.</p><img src="img/on.webp" alt="Nest Su ve Gaz Çekmecesi, önden görünüm" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block block-alt" aria-labelledby="neden-h">
+    <div class="wrap story center">
+      <span class="eyebrow">Neden yaptım?</span>
+      <h2 class="headline" id="neden-h">Ağır yükler sarsıntıda güvende kalmalı.</h2>
+      <div class="note"><p class="intro">Karavanda ya da mobil atölyede en büyük iki düşman sarsıntı ve ağırlık. Su depolarını ve gaz tüplerini hem güvenle sabitlemek hem de gerektiğinde kolayca ulaşmak istedim. Ahşap dolaplar ve zayıf menteşeler arazide birkaç ayda pes ediyor.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="paket" aria-labelledby="paket-h">
+    <div class="wrap pack-grid">
+      <div class="pack-head"><span class="eyebrow">Dijital paket</span><h2 class="title" id="paket-h">Paketin içinde ne var?</h2><p class="muted">Profilleri kestirip parçaları sipariş ettiğin andan modülün ayağa kalktığı ana kadar ihtiyacın olan dosyalar.</p></div>
+      <ul class="cs-pack"><li><span class="cs-pack-num">01</span><div><div class="cs-pack-title">Montaj kılavuzu</div><div class="cs-pack-desc">Adım adım, patlatılmış görünümlerle.</div></div><span class="cs-pack-fmt">PDF</span></li><li><span class="cs-pack-num">02</span><div><div class="cs-pack-title">Malzeme listesi</div><div class="cs-pack-desc">Profil, panel, bağlantı ve donanım adetleri.</div></div><span class="cs-pack-fmt">XLSX</span></li><li><span class="cs-pack-num">03</span><div><div class="cs-pack-title">Profil kesim listesi</div><div class="cs-pack-desc">28 parça, 6 boy. Atölyeye doğrudan gönderilebilir.</div></div><span class="cs-pack-fmt">PDF</span></li><li><span class="cs-pack-num">04</span><div><div class="cs-pack-title">Panel kesim dosyaları</div><div class="cs-pack-desc">11 panel, lazer veya CNC için.</div></div><span class="cs-pack-fmt">DXF</span></li></ul>
+    </div>
+  </section>
+
+  <section class="block block-alt" id="detaylar" aria-labelledby="det-h">
+    <div class="wrap">
+      <div class="detail-head center"><h2 class="headline" id="det-h">Her detay, açık açık.</h2></div>
+      <div class="seg-wrap"><div class="cs-seg" role="tablist" aria-label="Detaylar">
+        <button role="tab" id="tab-ozel" aria-controls="p-ozel" aria-selected="true">Özelleştir</button>
+        <button role="tab" id="tab-teknik" aria-controls="p-teknik" aria-selected="false" tabindex="-1">Teknik özellikler</button>
+        <button role="tab" id="tab-bilesen" aria-controls="p-bilesen" aria-selected="false" tabindex="-1">Bileşenler</button>
+        <button role="tab" id="tab-tasarim" aria-controls="p-tasarim" aria-selected="false" tabindex="-1">Tasarım süreci</button>
+        <button role="tab" id="tab-uretim" aria-controls="p-uretim" aria-selected="false" tabindex="-1">Üretim süreci</button>
+      </div></div>
+      <div style="margin-top:48px">
+        <div class="panel" role="tabpanel" id="p-ozel" aria-labelledby="tab-ozel">
+          <div class="ozel-head"><h3 class="cs-tile-title">Senin ölçün, senin rengin.</h3><p class="muted">Hazır seçeneklerden birini seç ya da ölçüleri kendin ayarla. Kesim listesi ve paneller seçtiğin ölçüye göre yeniden hesaplanır.</p></div>
+          <div id="cfg-root" data-key="tesisat"></div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-teknik" aria-labelledby="tab-teknik" hidden>
+          <dl class="specs">
+            <dt>Ölçüler</dt><dd><span class="mono">500 × 600 × 400 mm</span><br><span class="muted small">Genişlik × derinlik × yükseklik</span></dd>
+            <dt>Çerçeve</dt><dd>20×20 sigma alüminyum profil<br><span class="muted small">28 parça, toplam <span class="mono">11,75 m</span></span></dd>
+            <dt>Paneller</dt><dd>4 mm alüminyum kompozit panel</dd>
+            <dt>Bağlantı</dt><dd>3 yönlü gizli köşe bağlantısı, M5 T-somun, M5 imbus cıvata, gömme kilit, hızlı bağlantı ucu (2 adet)</dd>
+            <dt>Ağırlık</dt><dd>Yaklaşık <span class="mono">4,0 kg</span></dd>
+            <dt>Alet</dt><dd>3 mm alyan anahtarı, tornavida</dd>
+            <dt>Montaj süresi</dt><dd>Yaklaşık 3,3 saat</dd>
+            <dt>Zorluk</dt><dd>5 / 10</dd>
+          </dl>
+          <div class="views">
+            <figure><img src="img/on.webp" alt="Nest Su ve Gaz Çekmecesi, önden" loading="lazy"><figcaption>Ön</figcaption></figure>
+            <figure><img src="img/yan.webp" alt="Nest Su ve Gaz Çekmecesi, yandan" loading="lazy"><figcaption>Yan</figcaption></figure>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-bilesen" aria-labelledby="tab-bilesen" hidden>
+          <figure class="explode-fig"><img src="img/patlatma.webp" alt="Nest Su ve Gaz Çekmecesi, patlatılmış görünüm" loading="lazy"><figcaption>Patlatılmış görünüm</figcaption></figure>
+          <div class="two">
+            <div class="table-wrap"><table>
+              <thead><tr><th>Profil (20×20 sigma)</th><th class="num">Boy</th><th class="num">Adet</th><th class="num">Toplam</th></tr></thead>
+              <tbody><tr><td>Profil</td><td class="num">590 mm</td><td class="num">8</td><td class="num">4.720 mm</td></tr><tr><td>Profil</td><td class="num">560 mm</td><td class="num">2</td><td class="num">1.120 mm</td></tr><tr><td>Profil</td><td class="num">460 mm</td><td class="num">6</td><td class="num">2.760 mm</td></tr><tr><td>Profil</td><td class="num">395 mm</td><td class="num">2</td><td class="num">790 mm</td></tr><tr><td>Profil</td><td class="num">360 mm</td><td class="num">6</td><td class="num">2.160 mm</td></tr><tr><td>Profil</td><td class="num">50 mm</td><td class="num">4</td><td class="num">200 mm</td></tr></tbody>
+              <tfoot><tr><td>Toplam</td><td></td><td class="num">28</td><td class="num">11.750 mm</td></tr></tfoot>
+            </table></div>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Bağlantı, panel ve donanım</th><th class="num">Adet</th></tr></thead>
+              <tbody><tr><td>3 yönlü köşe</td><td class="num">12</td></tr><tr><td>Panel 585 × 405 mm</td><td class="num">1</td></tr><tr><td>Panel 570 × 280 mm</td><td class="num">2</td></tr><tr><td>Panel 570 × 470 mm</td><td class="num">1</td></tr><tr><td>Panel 570 × 60 mm</td><td class="num">2</td></tr><tr><td>Panel 570 × 80 mm</td><td class="num">2</td></tr><tr><td>Panel 470 × 330 mm</td><td class="num">1</td></tr><tr><td>Panel 470 × 370 mm</td><td class="num">1</td></tr><tr><td>Panel 395 × 60 mm</td><td class="num">1</td></tr><tr><td>Gömme kilit</td><td class="num">1</td></tr><tr><td>Profil kapağı</td><td class="num">4</td></tr><tr><td>12 L su bidonu <span class=excluded>· pakete dahil değil</span></td><td class="num">3</td></tr><tr><td>Gaz kartuşu <span class=excluded>· pakete dahil değil</span></td><td class="num">6</td></tr><tr><td>Hızlı bağlantı ucu</td><td class="num">2</td></tr></tbody>
+            </table></div>
+          </div>
+          <div class="cutplan" style="background:var(--bg)">
+            <div><h3 class="cs-tile-title">6 metrelik 2 boydan çıkıyor.</h3><p class="muted small" style="margin-top:6px">28 parçanın standart 6 m profillere yerleşimi, ölçekli. Her kesimde 3 mm testere payı.</p></div>
+            <svg id="cutsvg" viewBox="0 0 1000 150" role="img" aria-label="Kesim planı: 28 parçanın 2 adet 6 metrelik boya yerleşimi"></svg>
+            <div class="cut-legend" id="cut-legend"></div>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-tasarim" aria-labelledby="tab-tasarim" hidden>
+          <div class="feature">
+            <div class="video"><div class="video-empty"><span class="play" aria-hidden="true"></span><span class="todo">Video eklenecek</span></div></div>
+            <div class="feature-text"><span class="eyebrow">Tasarım süreci</span><h3 class="title">Nasıl tasarladım?</h3><p class="muted">Odak noktam hareketli toleranslardı: bidonların vanaları, kartuşların regülatörleri ve bunlara bağlanan esnek hortumlar için bir hortum kanalı gerekiyordu. 3D modelde çekmecenin tam açılımını simüle edip hortumların sıkışmadığını kontrol ettim. Dış yüzeyler kapalı paneller, böylece içerideki karmaşa görünmüyor. Bütün köşelerde piyasada bulunan standart gizli köşebentler kullandım; özel talaşlı imalat gerekmiyor.</p></div>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-uretim" aria-labelledby="tab-uretim" hidden>
+          <div class="feature">
+            <div class="video"><div class="video-empty"><span class="play" aria-hidden="true"></span><span class="todo">Video eklenecek</span></div></div>
+            <div class="feature-text"><span class="eyebrow">Üretim süreci</span><h3 class="title">Nasıl ürettim?</h3><p class="muted">Parçaları masaya ızgara düzeninde dizerek başladım. Profilleri hassas boyladım, çünkü kızaklı sistemde kasanın gönyesizliği rayları sıkıştırıyor. Panelleri hortum geçişlerine göre CNC ile kestim. İç kasete yaklaşık 70–75 kg yük koyup rayların sehimini komparatörle ölçtüm.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="satin-al" aria-labelledby="buy-h">
+    <div class="wrap wide buy">
+      <div class="buy-media"><img src="img/iso-2.webp" alt="Nest Su ve Gaz Çekmecesi" loading="lazy"></div>
+      <div class="buy-side">
+        <div><span class="eyebrow">Yakında</span><h2 id="buy-h" style="margin-top:8px">Nasıl istersin?</h2></div>
+        <div class="cs-options" role="radiogroup" aria-label="Seçenek">
+          <label class="cs-option"><input type="radio" name="opt" value="diy" checked><span class="cs-option-title">Dijital paket</span><span class="cs-option-desc">Hazır olunca e-postayla haber verelim</span><span class="cs-option-price">Yakında</span></label>
+          <label class="cs-option"><input type="radio" name="opt" value="hazir"><span class="cs-option-title">Hazır ürün</span><span class="cs-option-desc">Senin için üretilir ve kurulur</span><span class="cs-option-price">Fiyat al</span></label>
+          <label class="cs-option"><input type="radio" name="opt" value="birlikte"><span class="cs-option-title">Beraber yapalım</span><span class="cs-option-desc">Ölçülerini paylaş, sana göre uyarlayalım</span><span class="cs-option-price">Teklif al</span></label>
+        </div>
+        <div class="facts">
+          <div><b class="mono">~3,3 sa</b><span>Montaj süresi</span></div>
+          <div><b class="mono">4,0 kg</b><span>Ağırlık</span></div>
+          <div><b class="mono">5</b><span>Zorluk /10</span></div>
+        </div>
+        <div class="buy-cta">
+          <a class="cs-btn cs-btn-primary" id="buy-btn" href="mailto:m.cansasmaz@gmail.com?subject=Nest Su ve Gaz Çekmecesi%20-%20haber%20ver">Hazır olunca haber ver</a><p class="buy-note" id="buy-note">Montaj kılavuzu hazır; malzeme listesi ve kesim dosyaları hazırlanıyor.</p>
+          <div class="contact" id="contact"><span>Yaz:</span><span class="mono" id="mail">m.cansasmaz@gmail.com</span><button class="copy" id="copy-mail" type="button">Kopyala</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block block-alt" aria-label="Aynı aileden" style="padding-block:64px">
+    <div class="wrap"><span class="eyebrow">Nest yol modülleri</span><h3 class="cs-tile-title" style="margin:6px 0 16px">Aynı sistemden</h3><div class="related-list"><a class="cs-link" href="../nest-drawer/">Nest Çekmece Modülü</a><a class="cs-link" href="../nest-fridge-drawer/">Nest Buzdolabı Çekmecesi</a><a class="cs-link" href="../nest-sink/">Nest Evye Modülü</a><a class="cs-link" href="../nest-cooking/">Nest Pişirme Modülü</a><a class="cs-link" href="../nest-power/">Nest Enerji Modülü</a><a class="cs-link" href="../sigma-desk/">Sigma Çalışma Masası</a></div></div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Can Sasmaz Studio · Modüler Sistemler · Kopenhag</span><span>Tasarım ve mühendislik: Mehmet Can Şaşmaz</span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="../assets/nest-core.js"></script>
+<script src="../assets/cs-configurator.js"></script>
+<script>
+(function () {
+  var KEY = 'tesisat';
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+
+  /* Özelleştir */
+  var root = document.getElementById('cfg-root');
+  fetch('../assets/ozellestirme.json').then(function (r) { return r.json(); }).then(function (cfg) {
+    CSConfigurator.mount(root, { glb: 'model/' + KEY + '-model.js', parts: 'model/' + KEY + '.json', spec: cfg.urunler[KEY], colors: cfg.renkler });
+  });
+
+  /* Satın alma seçenekleri */
+  var opts = {"diy": {"label": "Hazır olunca haber ver", "href": "mailto:m.cansasmaz@gmail.com?subject=Nest Su ve Gaz Çekmecesi - haber ver", "contact": true}, "hazir": {"label": "Hazır ürün için fiyat al", "href": "mailto:m.cansasmaz@gmail.com?subject=Nest Su ve Gaz Çekmecesi - hazır ürün", "contact": true}, "birlikte": {"label": "Ölçülerini gönder", "href": "mailto:m.cansasmaz@gmail.com?subject=Nest Su ve Gaz Çekmecesi - beraber yapalım", "contact": true}};
+  var btn = document.getElementById('buy-btn'), note = document.getElementById('buy-note'), contact = document.getElementById('contact');
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="opt"]'), function (r) {
+    r.addEventListener('change', function () { var o = opts[r.value]; btn.textContent = o.label; btn.href = o.href; if (o.contact) btn.removeAttribute('target'); else btn.setAttribute('target', '_blank'); note.hidden = o.contact && r.value !== 'diy'; contact.hidden = !o.contact; });
+  });
+  var copyBtn = document.getElementById('copy-mail');
+  copyBtn.addEventListener('click', function () {
+    var mail = document.getElementById('mail').textContent;
+    var done = function () { copyBtn.textContent = 'Kopyalandı'; setTimeout(function () { copyBtn.textContent = 'Kopyala'; }, 1600); };
+    var fb = function () { var rg = document.createRange(); rg.selectNodeContents(document.getElementById('mail')); var s = getSelection(); s.removeAllRanges(); s.addRange(rg); };
+    try { navigator.clipboard.writeText(mail).then(done, fb); } catch (e) { fb(); }
+  });
+
+  /* Kesim planı, ölçekli: 6000 mm = 1000 birim */
+  var CUT = {"bars": [[590, 590, 590, 590, 590, 590, 590, 590, 560, 560, 50, 50], [460, 460, 460, 460, 460, 460, 395, 395, 360, 360, 360, 360, 360, 360, 50, 50]], "lens": [590, 560, 460, 395, 360, 50], "pal": ["--brand", "--ink", "--gold", "--series-moduler", "--series-elcilik", "--series-dogman", "--series-house", "--ink-subtle"]};
+  function drawCut() {
+    var svg = document.getElementById('cutsvg'), NS = 'http://www.w3.org/2000/svg';
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var K = 1000 / 6000, kerf = 3, col = {}, dark = { '--gold': 1, '--series-house': 1 };
+    CUT.lens.forEach(function (L, i) { col[L] = CUT.pal[i % CUT.pal.length]; });
+    var mk = function (tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); svg.appendChild(e); return e; };
+    CUT.bars.forEach(function (bar, bi) {
+      var y = bi * 72 + 6, x = 0, used = 0;
+      mk('rect', { x: 0, y: y, width: 1000, height: 36, rx: 8, fill: css('--surface'), stroke: css('--line') });
+      bar.forEach(function (len) {
+        var w = len * K, t = col[len];
+        mk('rect', { x: x + 0.5, y: y + 0.5, width: Math.max(w - 1, 1), height: 35, rx: 6, fill: css(t) });
+        if (w > 44) { var tx = mk('text', { x: x + w / 2, y: y + 23, 'text-anchor': 'middle', 'font-size': 13, 'font-family': css('--font-mono'), fill: dark[t] ? '#1d1d1f' : (t === '--ink' ? css('--bg') : '#ffffff') }); tx.textContent = len; }
+        x += w + kerf * K; used += len + kerf;
+      });
+      var lab = mk('text', { x: 0, y: y + 56, 'font-size': 13, 'font-family': css('--font-sans'), fill: css('--ink-muted') });
+      lab.textContent = (bi + 1) + '. boy · kullanılan ' + used.toLocaleString('tr-TR') + ' mm · artan ' + (6000 - used).toLocaleString('tr-TR') + ' mm';
+    });
+    var lg = document.getElementById('cut-legend'); lg.innerHTML = '';
+    CUT.lens.forEach(function (L) { var s = document.createElement('span'); s.innerHTML = '<i style="background:' + css(col[L]) + '"></i><span class="mono">' + L + ' mm</span>'; lg.appendChild(s); });
+  }
+  drawCut();
+  try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', drawCut); } catch (e) {}
+  new MutationObserver(drawCut).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  /* Sekmeler */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function openTab(tab, focus) {
+    tabs.forEach(function (t) { var on = t === tab; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; document.getElementById(t.getAttribute('aria-controls')).hidden = !on; });
+    if (focus) tab.focus();
+    if (tab.id === 'tab-bilesen') drawCut();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { openTab(t); });
+    t.addEventListener('keydown', function (e) { var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (d) { e.preventDefault(); openTab(tabs[(i + d + tabs.length) % tabs.length], true); } });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-open]'), function (a) {
+    a.addEventListener('click', function () { openTab(document.getElementById(a.dataset.open)); });
+  });
+
+  /* 3D görüntüleyici: model yalnızca istenince yüklenir */
+  var tile = document.getElementById('viewer'), start = document.getElementById('viewer-start'), hint = document.getElementById('viewer-hint'), vbtn = document.getElementById('viewer-btn');
+  vbtn.addEventListener('click', function () {
+    if (!window.THREE || !THREE.GLTFLoader || !window.NestCore) { vbtn.textContent = '3D görüntüleyici yüklenemedi'; return; }
+    vbtn.textContent = 'Model yükleniyor…'; vbtn.disabled = true;
+    var s = document.createElement('script'); s.src = 'model/' + KEY + '-model.js';
+    s.onload = function () { fetch('model/' + KEY + '.json').then(function (r) { return r.json(); }).then(function (info) { build(window.CS_MODELS[KEY], info); }); };
+    s.onerror = function () { vbtn.textContent = '3D model yüklenemedi'; };
+    document.head.appendChild(s);
+  });
+  function build(b64, info) {
+    var bin = atob(b64), buf = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+    var w = tile.clientWidth, h = tile.clientHeight;
+    var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2)); renderer.setSize(w, h); renderer.outputEncoding = THREE.sRGBEncoding;
+    tile.appendChild(renderer.domElement);
+    var scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(30, w / h, 0.01, 50);
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x8a8f99, 1.05));
+    var k1 = new THREE.DirectionalLight(0xffffff, 1.1); k1.position.set(2, 3, 2.5); scene.add(k1);
+    var rim = new THREE.DirectionalLight(0xffffff, 0.45); rim.position.set(-2.5, 1.5, -2); scene.add(rim);
+    new THREE.GLTFLoader().parse(buf.buffer, '', function (gltf) {
+      scene.add(gltf.scene);
+      var N = new NestCore(THREE).load(info, gltf.scene), c = N.center, r = N.R;
+      cam.position.set(c.x + r * 1.7, c.y + r * 1.25, c.z + r * 2.1); cam.lookAt(c);
+      var ctl = new THREE.OrbitControls(cam, renderer.domElement); ctl.target.copy(c);
+      ctl.enableDamping = true; ctl.minDistance = r * 1.2; ctl.maxDistance = r * 6;
+      ctl.autoRotate = !matchMedia('(prefers-reduced-motion: reduce)').matches; ctl.autoRotateSpeed = 0.8;
+      ctl.addEventListener('start', function () { ctl.autoRotate = false; });
+      start.hidden = true; hint.hidden = false;
+      (function loop() { ctl.update(); renderer.render(scene, cam); requestAnimationFrame(loop); })();
+      new ResizeObserver(function () { var W = tile.clientWidth, H = tile.clientHeight; renderer.setSize(W, H); cam.aspect = W / H; cam.updateProjectionMatrix(); }).observe(tile);
+    }, function () { vbtn.textContent = '3D model okunamadı'; });
+  }
+})();
+</script>
+</body>
+</html>

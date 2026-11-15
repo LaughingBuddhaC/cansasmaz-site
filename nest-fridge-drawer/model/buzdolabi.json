@@ -1,0 +1,1064 @@
+[
+{
+"id": 0,
+"name": "Mobicool MCF40-1",
+"kind": "device",
+"group": "inner",
+"ext": [
+365,
+446,
+584
+],
+"c": [
+-14,
+257,
+247
+],
+"len": 585,
+"faces": 7850
+},
+{
+"id": 1,
+"name": "FridgeD_OF_YanPanel-5",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+80,
+570
+],
+"c": [
+-240,
+54,
+-250
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 2,
+"name": "Telescopic Slides_1",
+"kind": "slide",
+"group": "slide",
+"ext": [
+13,
+42,
+980
+],
+"c": [
+224,
+100,
+40
+],
+"len": 980,
+"faces": 38142
+},
+{
+"id": 3,
+"name": "FridgeD_IF_YanPanel-2",
+"kind": "panel",
+"group": "inner",
+"ext": [
+4,
+60,
+570
+],
+"c": [
+208,
+66,
+234
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 4,
+"name": "FridgeD_OF_UstYanPanel-2",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+480,
+570
+],
+"c": [
+241,
+346,
+-249
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 5,
+"name": "FridgeD_OF_YanPanel-6",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+80,
+570
+],
+"c": [
+240,
+54,
+-250
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 6,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+394,
+20,
+20
+],
+"c": [
+0,
+102,
+-55
+],
+"len": 395,
+"faces": 912
+},
+{
+"id": 7,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-207,
+102,
+235
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 8,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+207,
+102,
+235
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 9,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+207,
+67,
+-55
+],
+"len": 50,
+"faces": 960
+},
+{
+"id": 10,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+-207,
+67,
+-55
+],
+"len": 50,
+"faces": 912
+},
+{
+"id": 11,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+-207,
+67,
+520
+],
+"len": 50,
+"faces": 912
+},
+{
+"id": 12,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+207,
+32,
+235
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 13,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+394,
+20,
+20
+],
+"c": [
+0,
+32,
+-55
+],
+"len": 395,
+"faces": 912
+},
+{
+"id": 14,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-207,
+32,
+235
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 15,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+50,
+20
+],
+"c": [
+207,
+67,
+520
+],
+"len": 50,
+"faces": 940
+},
+{
+"id": 16,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+572,
+540
+],
+"len": 460,
+"faces": 944
+},
+{
+"id": 17,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+560,
+20
+],
+"c": [
+-240,
+302,
+540
+],
+"len": 560,
+"faces": 912
+},
+{
+"id": 18,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+20,
+560,
+20
+],
+"c": [
+240,
+302,
+540
+],
+"len": 560,
+"faces": 940
+},
+{
+"id": 19,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+199,
+40,
+-55
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 20,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+199,
+94,
+-55
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 21,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-199,
+94,
+-55
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 22,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "corner",
+"group": "inner",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-199,
+40,
+-55
+],
+"len": 35,
+"faces": 460
+},
+{
+"id": 23,
+"name": "FridgeDrawer_InnerFrame-1",
+"kind": "profile",
+"group": "inner",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+32,
+540
+],
+"len": 460,
+"faces": 2624
+},
+{
+"id": 24,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+240,
+590,
+-250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 25,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+240,
+10,
+-250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 26,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-240,
+590,
+-250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 27,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+590
+],
+"c": [
+-240,
+10,
+-250
+],
+"len": 590,
+"faces": 912
+},
+{
+"id": 28,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+590,
+40
+],
+"len": 460,
+"faces": 940
+},
+{
+"id": 29,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+10,
+40
+],
+"len": 460,
+"faces": 912
+},
+{
+"id": 30,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+590,
+-540
+],
+"len": 460,
+"faces": 944
+},
+{
+"id": 31,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+460,
+20,
+20
+],
+"c": [
+0,
+10,
+-540
+],
+"len": 460,
+"faces": 912
+},
+{
+"id": 32,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+560
+],
+"c": [
+240,
+100,
+-250
+],
+"len": 560,
+"faces": 912
+},
+{
+"id": 33,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+560
+],
+"c": [
+-240,
+100,
+-250
+],
+"len": 560,
+"faces": 912
+},
+{
+"id": 34,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+582,
+40
+],
+"len": 35,
+"faces": 464
+},
+{
+"id": 35,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+18,
+40
+],
+"len": 35,
+"faces": 464
+},
+{
+"id": 36,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+582,
+40
+],
+"len": 35,
+"faces": 464
+},
+{
+"id": 37,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+18,
+40
+],
+"len": 35,
+"faces": 464
+},
+{
+"id": 38,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+18,
+-540
+],
+"len": 35,
+"faces": 468
+},
+{
+"id": 39,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+18,
+-540
+],
+"len": 35,
+"faces": 468
+},
+{
+"id": 40,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+232,
+582,
+-540
+],
+"len": 35,
+"faces": 464
+},
+{
+"id": 41,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "corner",
+"group": "outer",
+"ext": [
+36,
+36,
+21
+],
+"c": [
+-232,
+582,
+-540
+],
+"len": 35,
+"faces": 468
+},
+{
+"id": 42,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+560,
+20
+],
+"c": [
+240,
+300,
+40
+],
+"len": 560,
+"faces": 1996
+},
+{
+"id": 43,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+560,
+20
+],
+"c": [
+-240,
+300,
+40
+],
+"len": 560,
+"faces": 1960
+},
+{
+"id": 44,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+560,
+20
+],
+"c": [
+-240,
+300,
+-540
+],
+"len": 560,
+"faces": 2064
+},
+{
+"id": 45,
+"name": "FridgeDrawer_OutterFrame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+560,
+20
+],
+"c": [
+240,
+300,
+-540
+],
+"len": 560,
+"faces": 2012
+},
+{
+"id": 46,
+"name": "FridgeD_IF_YanPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+4,
+60,
+570
+],
+"c": [
+-208,
+66,
+234
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 47,
+"name": "FridgeD_OF_UstPanel-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+470,
+4,
+570
+],
+"c": [
+0,
+590,
+-250
+],
+"len": 570,
+"faces": 1244
+},
+{
+"id": 48,
+"name": "Mini Kabin Kilidi Mesan 116",
+"kind": "lock",
+"group": "inner",
+"ext": [
+73,
+94,
+44
+],
+"c": [
+0,
+523,
+523
+],
+"len": 95,
+"faces": 24826
+},
+{
+"id": 49,
+"name": "FridgeD_IF_OnPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+470,
+530,
+4
+],
+"c": [
+0,
+303,
+540
+],
+"len": 530,
+"faces": 32
+},
+{
+"id": 50,
+"name": "Telescopic Slides",
+"kind": "slide",
+"group": "slide",
+"ext": [
+13,
+42,
+980
+],
+"c": [
+-224,
+100,
+40
+],
+"len": 980,
+"faces": 25616
+},
+{
+"id": 51,
+"name": "20x20EndCap-3",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+240,
+23,
+540
+],
+"len": 20,
+"faces": 3374
+},
+{
+"id": 52,
+"name": "20x20EndCap-1",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+240,
+581,
+540
+],
+"len": 20,
+"faces": 3374
+},
+{
+"id": 53,
+"name": "FridgeD_IF_ArkaPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+394,
+60,
+4
+],
+"c": [
+0,
+66,
+-56
+],
+"len": 395,
+"faces": 12
+},
+{
+"id": 54,
+"name": "FridgeD_OF_ArkaPanel-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+470,
+570,
+4
+],
+"c": [
+1,
+301,
+-540
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 55,
+"name": "FridgeD_IF_AltPanel-1",
+"kind": "panel",
+"group": "inner",
+"ext": [
+405,
+4,
+585
+],
+"c": [
+0,
+32,
+241
+],
+"len": 585,
+"faces": 12
+},
+{
+"id": 56,
+"name": "FridgeD_OF_UstYanPanel-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+4,
+480,
+570
+],
+"c": [
+-241,
+346,
+-249
+],
+"len": 570,
+"faces": 12
+},
+{
+"id": 57,
+"name": "20x20EndCap-4",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+-240,
+23,
+540
+],
+"len": 20,
+"faces": 3374
+},
+{
+"id": 58,
+"name": "20x20EndCap-2",
+"kind": "cap",
+"group": "inner",
+"ext": [
+20,
+8,
+20
+],
+"c": [
+-240,
+581,
+540
+],
+"len": 20,
+"faces": 3374
+}
+]

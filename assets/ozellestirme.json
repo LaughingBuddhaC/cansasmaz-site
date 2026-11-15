@@ -1,0 +1,110 @@
+{
+  "renkler": {
+    "profil": [
+      { "kod": "acik-gri", "ad": "Açık gri", "hex": "#b4b9bf", "not": "Mevcut renk. Doğal eloksal." },
+      { "kod": "koyu-gri", "ad": "Koyu gri", "hex": "#4a4d52", "not": "Mat koyu eloksal." }
+    ],
+    "panel": [
+      { "kod": "koyu-gri", "ad": "Koyu gri", "hex": "#3a3c40", "not": "Mevcut renk." },
+      { "kod": "kirmizi", "ad": "Kırmızı", "hex": "#9e3a31" },
+      { "kod": "sari", "ad": "Sarı", "hex": "#d0a03a" },
+      { "kod": "yesil", "ad": "Yeşil", "hex": "#5e7560" },
+      { "kod": "mavi", "ad": "Mavi", "hex": "#3f5e7e" }
+    ],
+    "sabit": "Bağlantı parçaları, cıvatalar, raylar ve kilitler standart renginde kalır.",
+    "yuzey": "Bütün renkler mat."
+  },
+  "urunler": {
+    "masa": {
+      "slug": "sigma-calisma-masasi",
+      "ad": "Sigma Çalışma Masası",
+      "olcu": { "w": 780, "h": 770, "d": 590 },
+      "sinir": {
+        "w": { "min": 600, "max": 1600, "neden": "60 cm altı tek kişilik çalışma alanı bırakmaz; 160 cm üstünde tabla ortadan destek ister." },
+        "h": { "min": 650, "max": 1100, "neden": "65 cm altında diz boşluğu kalmaz; 110 cm ayakta çalışma için üst sınır." },
+        "d": { "min": 450, "max": 800, "neden": "45 cm altı klavye ve ekran için sığ; 80 cm üstü uzanma mesafesini aşar." }
+      },
+      "hazir": [
+        { "ad": "Standart", "aciklama": "Orijinal ölçü", "olcu": { "w": 780, "h": 770, "d": 590 }, "profil": "acik-gri", "panel": "koyu-gri" },
+        { "ad": "Geniş çalışma", "aciklama": "İki ekran sığar", "olcu": { "w": 1200, "h": 750, "d": 600 }, "profil": "koyu-gri", "panel": "yesil" },
+        { "ad": "Ayakta", "aciklama": "Ayakta çalışma yüksekliği", "olcu": { "w": 1000, "h": 1050, "d": 600 }, "profil": "acik-gri", "panel": "mavi" }
+      ]
+    },
+    "cekmece": {
+      "slug": "nest-cekmece",
+      "ad": "Nest Çekmece Modülü",
+      "olcu": { "w": 500, "h": 200, "d": 615 },
+      "sinir": {
+        "w": { "min": 300, "max": 900, "neden": "30 cm Nest'in en dar modülü; 90 cm üstünde çekmece tabanı sehim yapar." },
+        "h": { "min": 150, "max": 450, "neden": "15 cm altında ray ve kilit sığmaz; 45 cm üstü tek çekmece için fazla ağır." },
+        "d": { "min": 400, "max": 750, "neden": "Teleskopik raylar 350–700 mm boylarında satılır." }
+      },
+      "hazir": [
+        { "ad": "Standart", "aciklama": "Orijinal ölçü", "olcu": { "w": 500, "h": 200, "d": 615 }, "profil": "acik-gri", "panel": "koyu-gri" },
+        { "ad": "Nest 45", "aciklama": "Nest ızgarasına uyar", "olcu": { "w": 450, "h": 350, "d": 565 }, "profil": "koyu-gri", "panel": "koyu-gri" },
+        { "ad": "Geniş ve sığ", "aciklama": "Alet çekmecesi", "olcu": { "w": 800, "h": 150, "d": 615 }, "profil": "acik-gri", "panel": "kirmizi" }
+      ]
+    },
+    "buzdolabi": {
+      "slug": "nest-buzdolabi-cekmecesi",
+      "ad": "Nest Buzdolabı Çekmecesi",
+      "olcu": { "w": 500, "h": 600, "d": 615 },
+      "sinir": {
+        "w": { "min": 450, "max": 800, "neden": "İç genişlik buzdolabından en az 4 cm fazla olmalı (Mobicool MCF40: 365 mm)." },
+        "h": { "min": 520, "max": 800, "neden": "Kapak açıklığı için buzdolabı yüksekliğine en az 7 cm eklenir (MCF40: 446 mm)." },
+        "d": { "min": 615, "max": 760, "neden": "Buzdolabı boyu (MCF40: 584 mm) ve ön panel." }
+      },
+      "hazir": [
+        { "ad": "MCF40", "aciklama": "Orijinal ölçü", "olcu": { "w": 500, "h": 600, "d": 615 }, "profil": "acik-gri", "panel": "koyu-gri" },
+        { "ad": "Alçak", "aciklama": "Bagaj camını kapatmaz", "olcu": { "w": 500, "h": 520, "d": 615 }, "profil": "koyu-gri", "panel": "koyu-gri" },
+        { "ad": "Geniş", "aciklama": "45–50 L buzdolapları", "olcu": { "w": 650, "h": 620, "d": 700 }, "profil": "acik-gri", "panel": "mavi" }
+      ]
+    },
+    "tesisat": {
+      "slug": "nest-su-gaz-cekmecesi",
+      "ad": "Nest Su ve Gaz Çekmecesi",
+      "olcu": { "w": 500, "h": 400, "d": 615 },
+      "sinir": {
+        "w": { "min": 450, "max": 900, "neden": "Üç 12 L bidon yan yana 38 cm tutar." },
+        "h": { "min": 320, "max": 600, "neden": "Bidon yüksekliği 26 cm; hortum bağlantısı için pay." },
+        "d": { "min": 600, "max": 760, "neden": "Bidon boyu (42 cm) ve önde gaz kartuşu sırası." }
+      },
+      "hazir": [
+        { "ad": "Standart", "aciklama": "3 bidon, 6 kartuş", "olcu": { "w": 500, "h": 400, "d": 615 }, "profil": "acik-gri", "panel": "koyu-gri" },
+        { "ad": "Geniş", "aciklama": "5 bidon", "olcu": { "w": 750, "h": 400, "d": 615 }, "profil": "koyu-gri", "panel": "koyu-gri" },
+        { "ad": "Kamp", "aciklama": "Alçak, bagaja", "olcu": { "w": 500, "h": 340, "d": 615 }, "profil": "acik-gri", "panel": "yesil" }
+      ]
+    },
+    "evye": {
+      "slug": "nest-evye-modulu",
+      "ad": "Nest Evye Modülü",
+      "olcu": { "w": 432, "h": 20, "d": 520 },
+      "sabitYukseklik": true,
+      "sinir": {
+        "w": { "min": 400, "max": 700, "neden": "Evye 325 mm; yanlarda vana ve hortum payı." },
+        "h": { "min": 20, "max": 20, "neden": "Evye modülü çekmecenin içine oturan bir plaka; yüksekliği çekmeceden gelir." },
+        "d": { "min": 480, "max": 700, "neden": "Evye ve katlanır musluk arka arkaya." }
+      },
+      "hazir": [
+        { "ad": "Standart", "aciklama": "Nest çekmecesine", "olcu": { "w": 432, "h": 20, "d": 520 }, "profil": "acik-gri", "panel": "koyu-gri" },
+        { "ad": "Geniş", "aciklama": "Yanında tezgah payı", "olcu": { "w": 650, "h": 20, "d": 520 }, "profil": "koyu-gri", "panel": "koyu-gri" },
+        { "ad": "Derin", "aciklama": "Arkada pompa alanı", "olcu": { "w": 432, "h": 20, "d": 640 }, "profil": "acik-gri", "panel": "mavi" }
+      ]
+    },
+    "kafes": {
+      "slug": "moduler-kopek-kafesi",
+      "ad": "Modüler Köpek Kafesi",
+      "olcu": { "w": 600, "h": 800, "d": 1205 },
+      "sinir": {
+        "w": { "min": 450, "max": 800, "neden": "Köpek içeride rahatça dönebilmeli: omuz genişliğinin iki katı." },
+        "h": { "min": 500, "max": 1000, "neden": "Ayakta dururken başın üstünde en az 5 cm (IATA)." },
+        "d": { "min": 700, "max": 1400, "neden": "Burundan kuyruk köküne boy + bacak boyunun yarısı (IATA)." }
+      },
+      "hazir": [
+        { "ad": "Küçük", "aciklama": "10 kg'a kadar", "olcu": { "w": 450, "h": 550, "d": 750 }, "profil": "acik-gri", "panel": "sari" },
+        { "ad": "Orta", "aciklama": "25 kg'a kadar", "olcu": { "w": 550, "h": 700, "d": 1000 }, "profil": "koyu-gri", "panel": "yesil" },
+        { "ad": "Boris", "aciklama": "45 kg Golden Retriever", "olcu": { "w": 600, "h": 800, "d": 1205 }, "profil": "acik-gri", "panel": "koyu-gri" }
+      ]
+    }
+  }
+}

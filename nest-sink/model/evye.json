@@ -1,0 +1,326 @@
+[
+{
+"id": 0,
+"name": "Pneumatic Ball Valve-2",
+"kind": "device",
+"group": "outer",
+"ext": [
+51,
+40,
+18
+],
+"c": [
+-116,
+232,
+213
+],
+"len": 50,
+"faces": 13698
+},
+{
+"id": 1,
+"name": "Shower Bidet-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+154,
+72,
+82
+],
+"c": [
+3,
+231,
+277
+],
+"len": 155,
+"faces": 18280
+},
+{
+"id": 2,
+"name": "Water rocket nozzle-2",
+"kind": "device",
+"group": "outer",
+"ext": [
+39,
+31,
+31
+],
+"c": [
+85,
+237,
+270
+],
+"len": 40,
+"faces": 40476
+},
+{
+"id": 3,
+"name": "tube-ss-8",
+"kind": "device",
+"group": "outer",
+"ext": [
+13,
+11,
+11
+],
+"c": [
+-32,
+208,
+179
+],
+"len": 15,
+"faces": 216
+},
+{
+"id": 4,
+"name": "shower head holder-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+29,
+35,
+43
+],
+"c": [
+-21,
+237,
+264
+],
+"len": 45,
+"faces": 616
+},
+{
+"id": 5,
+"name": "DEXO-Ø15-250-150-100N",
+"kind": "device",
+"group": "outer",
+"ext": [
+22,
+227,
+205
+],
+"c": [
+-205,
+114,
+-166
+],
+"len": 225,
+"faces": 41422
+},
+{
+"id": 6,
+"name": "Water rocket nozzle-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+31,
+39,
+31
+],
+"c": [
+166,
+243,
+192
+],
+"len": 40,
+"faces": 40476
+},
+{
+"id": 7,
+"name": "tube-ss-9",
+"kind": "device",
+"group": "outer",
+"ext": [
+13,
+11,
+11
+],
+"c": [
+40,
+208,
+179
+],
+"len": 15,
+"faces": 216
+},
+{
+"id": 8,
+"name": "SinkModuleSink_Frame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+520
+],
+"c": [
+206,
+237,
+-38
+],
+"len": 520,
+"faces": 912
+},
+{
+"id": 9,
+"name": "SinkModuleSink_Frame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+432,
+20,
+20
+],
+"c": [
+0,
+237,
+-308
+],
+"len": 430,
+"faces": 912
+},
+{
+"id": 10,
+"name": "SinkModuleSink_Frame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+20,
+20,
+520
+],
+"c": [
+-206,
+237,
+-38
+],
+"len": 520,
+"faces": 912
+},
+{
+"id": 11,
+"name": "SinkModuleSink_Frame-1",
+"kind": "profile",
+"group": "outer",
+"ext": [
+432,
+20,
+20
+],
+"c": [
+0,
+237,
+232
+],
+"len": 430,
+"faces": 912
+},
+{
+"id": 12,
+"name": "CometWasserhahnLondon",
+"kind": "device",
+"group": "outer",
+"ext": [
+85,
+64,
+187
+],
+"c": [
+-1,
+247,
+-174
+],
+"len": 185,
+"faces": 50724
+},
+{
+"id": 13,
+"name": "Pneumatic Ball Valve-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+51,
+40,
+18
+],
+"c": [
+135,
+232,
+213
+],
+"len": 50,
+"faces": 13698
+},
+{
+"id": 14,
+"name": "Raccord Y-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+31,
+15,
+43
+],
+"c": [
+88,
+228,
+125
+],
+"len": 45,
+"faces": 29852
+},
+{
+"id": 15,
+"name": "waterpump-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+91,
+61,
+163
+],
+"c": [
+5,
+205,
+141
+],
+"len": 165,
+"faces": 11258
+},
+{
+"id": 16,
+"name": "SinkModuleSink_Board-1",
+"kind": "panel",
+"group": "outer",
+"ext": [
+410,
+4,
+530
+],
+"c": [
+0,
+237,
+-38
+],
+"len": 530,
+"faces": 1892
+},
+{
+"id": 17,
+"name": "M Sink 305x245x70 mm-1",
+"kind": "device",
+"group": "outer",
+"ext": [
+325,
+83,
+265
+],
+"c": [
+0,
+203,
+-83
+],
+"len": 325,
+"faces": 7782
+}
+]

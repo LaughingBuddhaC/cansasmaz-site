@@ -3,10 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Can Sasmaz Studio — Shop</title>
-<meta name="description" content="Can Sasmaz Studio ürünleri: sigma profil DIY paketleri.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<title>Can Sasmaz Studio Shop</title>
+<meta name="description" content="Can Sasmaz Studio ürünleri: sigma profille kendin yap paketleri, Nest yol modülleri ve yeni fikirler.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+
+
+
 :root{
   --bg:#ffffff;
   --surface:#f5f5f7;
@@ -109,19 +113,30 @@
   color-scheme:dark;
 }
 
+
+
+
 *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:980px;margin:0 auto;padding:0 max(22px,env(safe-area-inset-left,0px))}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 header{border-bottom:1px solid var(--line);padding-block:14px} header .wrap{display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:600;font-size:17px;color:var(--ink);text-decoration:none;display:flex;gap:8px;align-items:center} .brand i{width:10px;height:10px;border-radius:3px;background:#E34520;display:inline-block}
+.brand{font-weight:600;font-size:17px;color:var(--ink);text-decoration:none;display:flex;gap:8px;align-items:center} .brand i{width:10px;height:10px;border-radius:3px;background:var(--brand);display:inline-block}
 nav a{color:var(--ink-muted);text-decoration:none;font-size:14px}
 h1{font-size:clamp(40px,7vw,64px);letter-spacing:-.02em;line-height:1.05;margin:72px 0 12px;text-wrap:balance}
-.lead{font-size:21px;color:var(--ink-muted);margin:0 0 48px;max-width:36ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-bottom:96px}
-.card{background:var(--surface);border-radius:28px;padding:28px;text-decoration:none;color:var(--ink);display:grid;gap:8px;transition:transform .2s ease}
+.lead{font-size:21px;color:var(--ink-muted);margin:0 0 24px;max-width:40ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--ink-muted);margin-bottom:56px}
+.fam{margin-bottom:72px} .fam-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-bottom:20px}
+.fam-head h2{font-size:28px;letter-spacing:-.01em;margin:0} .fam-head p{margin:0;color:var(--ink-muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{background:var(--surface);border-radius:28px;padding:24px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:8px;transition:transform .2s ease;min-width:0}
 .card:hover{transform:translateY(-2px)} .card img{width:100%;aspect-ratio:4/3;object-fit:contain;margin-bottom:8px}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-muted)}
-.card h2{font-size:24px;margin:0;letter-spacing:-.01em} .card p{margin:0;color:var(--ink-muted)} .price{font-weight:600;color:var(--ink)!important}
-.soon{opacity:.55;pointer-events:none}
+.ph{aspect-ratio:4/3;border-radius:18px;margin-bottom:8px;display:grid;place-items:center;text-align:center;padding:16px;font-size:13px;color:var(--ink-subtle);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:20px 20px;background-position:-1px -1px;opacity:.9}
+.ph span{background:var(--surface);padding:4px 10px;border-radius:8px}
+.card h3{font-size:21px;margin:0;letter-spacing:-.01em} .card p{margin:0;color:var(--ink-muted);flex:1}
+.price{font-weight:600;color:var(--ink)}
+.state{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;color:var(--ink-muted)} .state i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.state.cad i{background:var(--series-elcilik)} .state.idea i{background:var(--ink-subtle)}
+.mono{font-family:var(--font-mono)}
 footer{border-top:1px solid var(--line);padding-block:24px;color:var(--ink-muted);font-size:12px}
 </style>
 </head>
@@ -130,11 +145,25 @@ footer{border-top:1px solid var(--line);padding-block:24px;color:var(--ink-muted
 <main class="wrap">
 <h1>Kendin yap. Kendin kur.</h1>
 <p class="lead">Sigma alüminyum profillerle tasarladığım ürünlerin kılavuzları, kesim listeleri ve kesim dosyaları.</p>
-<div class="grid">
-<a class="card" href="sigma-desk/"><img src="sigma-desk/img/iso-1.webp" alt="Sigma Çalışma Masası"><span class="eyebrow">Modüler Sistemler · DIY</span><h2>Sigma Çalışma Masası</h2><p>Kaynak yok. Delme yok. Sadece cıvata.</p><p class="price">€9,99</p></a>
-<div class="card soon"><span class="eyebrow">Yakında</span><h2>Nest Çekmece Modülü</h2><p>Tam kapalı, ağır hizmet raylı çekmece.</p></div>
-<div class="card soon"><span class="eyebrow">Yakında</span><h2>Modüler Köpek Kafesi</h2><p>Sınırları kaldıran yuva.</p></div>
-</div>
+<div class="legend"><span class="price">€9,99 · satışta</span><span class="state"><i></i>Yakında: model ve kılavuz hazır</span><span class="state cad"><i></i>CAD aşamasında</span><span class="state idea"><i></i>Konsept</span></div>
+<section class="fam"><div class="fam-head"><h2>Ev ve çalışma</h2><p>Evde kullanılan, söküp taşınabilen mobilyalar.</p></div><div class="grid">
+<a class="card" href="sigma-desk/"><img src="sigma-desk/img/iso-1.webp" alt="Sigma Çalışma Masası" loading="lazy"><h3>Sigma Çalışma Masası</h3><p>Kaynak yok. Delme yok. Sadece cıvata.</p><span class="price">€9,99</span></a>
+<a class="card" href="side-table/"><div class="ph"><span class="mono">genişlik 400 mm · derinlik 400 mm</span></div><h3>Sigma Yan Sehpa</h3><p>Aletsiz montaj, beş dakikada şık bir köşe.</p><span class="state idea"><i></i>Konsept</span></a>
+<a class="card" href="entryway-rack/"><div class="ph"><span class="mono">derinlik 300 mm</span></div><h3>Sigma Antre ve Vestiyer</h3><p>Dar koridorlara akıllı çözüm.</p><span class="state idea"><i></i>Konsept</span></a>
+<a class="card" href="bed-platform/"><div class="ph"><span class="mono">genişlik 1.600 mm · derinlik 2.000 mm</span></div><h3>Sigma Yatak Platformu</h3><p>On dakikada kurulan rijit yatak.</p><span class="state idea"><i></i>Konsept</span></a>
+<a class="card" href="modular-sofa/"><div class="ph"><span class="mono">Ölçüler belirlenecek</span></div><h3>Sigma Modüler Koltuk</h3><p>İhtiyacına göre büyüyen koltuk.</p><span class="state idea"><i></i>Konsept</span></a>
+</div></section>
+<section class="fam"><div class="fam-head"><h2>Nest yol modülleri</h2><p>Karavan, atölye ve küçük evler için üst üste ve yan yana eklenen modüller.</p></div><div class="grid">
+<a class="card" href="nest-drawer/"><img src="nest-drawer/img/iso-1.webp" alt="Nest Çekmece Modülü" loading="lazy"><h3>Nest Çekmece Modülü</h3><p>Düzen, sadelikte saklıdır.</p><span class="state"><i></i>Yakında</span></a>
+<a class="card" href="nest-fridge-drawer/"><img src="nest-fridge-drawer/img/iso-1.webp" alt="Nest Buzdolabı Çekmecesi" loading="lazy"><h3>Nest Buzdolabı Çekmecesi</h3><p>Dar alanlarda kusursuz erişim.</p><span class="state"><i></i>Yakında</span></a>
+<a class="card" href="nest-water-gas-drawer/"><img src="nest-water-gas-drawer/img/iso-1.webp" alt="Nest Su ve Gaz Çekmecesi" loading="lazy"><h3>Nest Su ve Gaz Çekmecesi</h3><p>Yolun ağır yüklerini zahmetsizce kaydır.</p><span class="state"><i></i>Yakında</span></a>
+<a class="card" href="nest-sink/"><img src="nest-sink/img/iso-1.webp" alt="Nest Evye Modülü" loading="lazy"><h3>Nest Evye Modülü</h3><p>Suyun özgürlüğü: çekmeceden tam donanımlı mutfağa.</p><span class="state"><i></i>Yakında</span></a>
+<a class="card" href="nest-cooking/"><div class="ph"><span class="mono">500 × 600 × 200 mm</span></div><h3>Nest Pişirme Modülü</h3><p>İşin bitince sistemin içine saklanan bir mutfak.</p><span class="state cad"><i></i>CAD aşamasında</span></a>
+<a class="card" href="nest-power/"><div class="ph"><span class="mono">500 × 600 × 400 mm</span></div><h3>Nest Enerji Modülü</h3><p>Enerjini yönet. Dağınıklığı sıfırla.</p><span class="state cad"><i></i>CAD aşamasında</span></a>
+</div></section>
+<section class="fam"><div class="fam-head"><h2>Evcil</h2><p>Köpekler için, aynı sistemle.</p></div><div class="grid">
+<a class="card" href="dog-crate/"><img src="dog-crate/img/iso-1.webp" alt="Modüler Köpek Kafesi" loading="lazy"><h3>Modüler Köpek Kafesi</h3><p>Sınırları çizen değil, sınırları kaldıran yuva.</p><span class="price">€9,99</span></a>
+</div></section>
 </main>
 <footer><div class="wrap">© Can Sasmaz Studio · Kopenhag</div></footer>
 </body>
