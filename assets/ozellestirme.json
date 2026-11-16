@@ -18,6 +18,7 @@
     "masa": {
       "slug": "sigma-calisma-masasi",
       "ad": "Sigma Çalışma Masası",
+      "tasarim": true,
       "olcu": { "w": 780, "h": 770, "d": 590 },
       "sinir": {
         "w": { "min": 600, "max": 1600, "neden": "60 cm altı tek kişilik çalışma alanı bırakmaz; 160 cm üstünde tabla ortadan destek ister." },

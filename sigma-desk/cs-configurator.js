@@ -1,8 +1,12 @@
 /* Can Sasmaz Studio — Özelleştir bileşeni.
    CSConfigurator.mount(el, { glb, parts, spec, colors, title })
    glb/parts: NestCore parça dosyaları · spec: ozellestirme.json > urunler[key] · colors: ozellestirme.json > renkler
-   Gerektirir: three r128, GLTFLoader, OrbitControls, nest-core.js */
+   Gerektirir: three r128, GLTFLoader, OrbitControls, nest-core.js
+   Sigma motoru (isteğe bağlı): spec.tasarim true ise parts dosyasının yanındaki <anahtar>.tasarim.json ve sigma-engine.js
+   kendiliğinden yüklenir; kesim listesi ve paneller germe hesabı yerine tasarım kurallarından hesaplanır.
+   İşaret ya da dosya yoksa davranış değişmez. */
 (function (g) {
+  var BASE = ((document.currentScript && document.currentScript.src) || '').replace(/[^\/]*$/, '');
   function h(tag, attrs, kids) {
     var e = document.createElement(tag);
     for (var k in (attrs || {})) { if (k === 'text') e.textContent = attrs[k]; else if (k === 'html') e.innerHTML = attrs[k]; else e.setAttribute(k, attrs[k]); }
@@ -97,6 +101,7 @@
     /* sonuç */
     var cutT = h('table', { class: 'cfg-table' });
     var panT = h('table', { class: 'cfg-table' });
+    var ruleNote = h('p', { class: 'cfg-note', hidden: '' });
     var code = h('code', { class: 'cfg-code' });
     var copy = h('button', { type: 'button', class: 'cfg-chip', text: 'Kopyala' });
     copy.addEventListener('click', function () {
@@ -105,7 +110,7 @@
       try { navigator.clipboard.writeText(t).then(done, fb); } catch (e) { fb(); }
     });
     var result = h('div', { class: 'cfg-result' }, [
-      h('div', {}, [h('h3', { class: 'cfg-h', text: 'Profil kesim listesi' }), cutT]),
+      h('div', {}, [h('h3', { class: 'cfg-h', text: 'Profil kesim listesi' }), cutT, ruleNote]),
       h('div', {}, [h('h3', { class: 'cfg-h', text: 'Paneller' }), panT]),
       h('div', { class: 'cfg-codebox' }, [h('h3', { class: 'cfg-h', text: 'Yapılandırma kodu' }), h('div', { class: 'cfg-coderow' }, [code, copy]),
         h('p', { class: 'cfg-note', text: 'Ölçüyü değiştirdiğinde kesim listesi ve paneller bu ölçüye göre yeniden hesaplanır. Hazır üretim için bu kodu sipariş e-postana ekle.' })])
@@ -160,7 +165,20 @@
       var p = spec.hazir[i]; state.preset = i; state.profil = p.profil; state.panel = p.panel; state.w = p.olcu.w; state.h = p.olcu.h; state.d = p.olcu.d;
       sync(); if (N) fit(!animate);
     }
-    var fitTimer = null;
+    var fitTimer = null, sigma = null, last = null;
+    /* Sigma motoru: tasarım dosyası varsa yükle; yoksa ya da hata olursa sessizce germe hesabında kal */
+    function loadSigma() {
+      if (o.design === false || !(o.design || spec.tasarim) || !g.fetch) return;
+      var url = o.design || String(o.parts).replace(/\.json(\?.*)?$/, '.tasarim.json');
+      fetch(url).then(function (r) { if (!r.ok) throw new Error('yok'); return r.json(); }).then(function (w) {
+        if (!w || !w.tasarim || !w.harita) throw new Error('biçim');
+        if (g.SigmaEngine) return w;
+        return new Promise(function (ok, no) {
+          var sc = document.createElement('script'); sc.src = o.engine || BASE + 'sigma-engine.js';
+          sc.onload = function () { ok(w); }; sc.onerror = no; document.head.appendChild(sc);
+        });
+      }).then(function (w) { sigma = w; sync(true); }).catch(function () { sigma = null; });
+    }
     function sync(first) {
       /* form */
       Array.prototype.forEach.call(presets.querySelectorAll('input'), function (r, i) { r.checked = i === state.preset; });
@@ -172,16 +190,30 @@
       dimTag.textContent = spec.sabitYukseklik ? cm(state.w) + ' × ' + cm(state.d) + ' cm' : cm(state.w) + ' × ' + cm(state.d) + ' × ' + cm(state.h) + ' cm';
       var pk = state.profil === 'acik-gri' ? 'AG' : 'KG', nk = { 'koyu-gri': 'KG', kirmizi: 'KR', sari: 'SR', yesil: 'YS', mavi: 'MV' }[state.panel];
       code.textContent = spec.slug.toUpperCase().replace(/-/g, '').slice(0, 10) + '-' + state.w + 'x' + state.d + 'x' + state.h + '-' + pk + '-' + nk;
-      if (!N) return;
-      N.setColor('profil', state.profil); N.setColor('panel', state.panel);
-      N.setDims({ w: state.w / 1000, h: state.h / 1000, d: state.d / 1000 }); N.apply(state.x);
-      var cut = N.cutList(), pan = N.panelList();
-      cutT.innerHTML = '<thead><tr><th scope="col">Boy</th><th scope="col">Adet</th></tr></thead><tbody>' + cut.map(function (r) { return '<tr><td>' + r.boyMm + ' mm</td><td>' + r.adet + '</td></tr>'; }).join('') + '</tbody><tfoot><tr><td>Toplam</td><td>' + (cut.reduce(function (s, r) { return s + r.boyMm * r.adet; }, 0) / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 2 }) + ' m</td></tr></tfoot>';
+      if (N) {
+        N.setColor('profil', state.profil); N.setColor('panel', state.panel);
+        N.setDims({ w: state.w / 1000, h: state.h / 1000, d: state.d / 1000 }); N.apply(state.x);
+      }
+      /* listeler: sigma motoru varsa kurallardan, yoksa 3D modelin gerilmesinden */
+      var sr = null;
+      if (sigma && g.SigmaEngine) { try { sr = g.SigmaEngine.runSite(sigma, { w: state.w, h: state.h, d: state.d }); } catch (e) { sr = null; } }
+      if (!(sr && sr.solved)) sr = null;
+      last = sr;
+      root.setAttribute('data-hesap', sr ? 'sigma' : 'germe');
+      if (!sr && !N) return;
+      var cut = sr ? sr.kesim : N.cutList(), pan = sr ? sr.paneller : N.panelList();
+      var stok = sr ? ' · 6 m\u2019lik ' + sr.stokBoy + ' boy' : '';
+      cutT.innerHTML = '<thead><tr><th scope="col">Boy</th><th scope="col">Adet</th></tr></thead><tbody>' + cut.map(function (r) { return '<tr><td>' + r.boyMm + ' mm</td><td>' + r.adet + '</td></tr>'; }).join('') + '</tbody><tfoot><tr><td>Toplam' + stok + '</td><td>' + (cut.reduce(function (s, r) { return s + r.boyMm * r.adet; }, 0) / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 2 }) + ' m</td></tr></tfoot>';
       panT.innerHTML = '<thead><tr><th scope="col">Ölçü</th><th scope="col">Adet</th></tr></thead><tbody>' + pan.map(function (r) { return '<tr><td>' + r.olcu + ' mm</td><td>' + r.adet + '</td></tr>'; }).join('') + '</tbody>';
+      var notes = sr ? sr.notlar.map(function (x) { return x.metin || x.kural; }) : [];
+      ruleNote.hidden = !notes.length;
+      ruleNote.textContent = notes.length ? 'Not: ' + notes.join(' ') : '';
+      if (!N) return;
       needs = true;
       if (!first) { clearTimeout(fitTimer); fitTimer = setTimeout(function () { fit(false); }, 250); }
     }
     sync(true);
+    loadSigma();
     /* yükle */
     function start() {
       Promise.all([fetch(o.parts).then(function (r) { return r.json(); }), loadGlb(o.glb)]).then(function (res) {
@@ -191,7 +223,7 @@
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { io.disconnect(); start(); } }, { rootMargin: '200px' }); io.observe(stage);
     } else start();
-    return { state: state, applyPreset: applyPreset };
+    return { state: state, applyPreset: applyPreset, hesap: function () { return last; } };
   }
   g.CSConfigurator = { mount: mount };
 })(window);
