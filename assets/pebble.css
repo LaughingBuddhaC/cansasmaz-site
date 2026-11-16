@@ -1,0 +1,93 @@
+/* Can Sasmaz Studio · Çakıl Cam (Pebble Glass). Kaynak: design-system tokens.css v2 + components/bundle.css. Sayfadaki stillerden SONRA yüklenir. */
+:root{
+  --pebble-fill:rgba(255,255,255,0.42);
+  --pebble-fill-press:rgba(225,229,235,0.55);
+  --pebble-rim:linear-gradient(150deg, rgba(255,255,255,.98), rgba(255,255,255,.25) 38%, rgba(255,255,255,0) 60%, rgba(255,255,255,.55));
+  --pebble-raise:-4px -4px 12px rgba(255,255,255,.55), 6px 8px 20px rgba(110,120,135,.28), inset 0 1px 0 rgba(255,255,255,.85);
+  --pebble-press:inset 2px 3px 7px rgba(110,120,135,.32), inset -2px -2px 6px rgba(255,255,255,.7);
+  --pebble-action:-3px -3px 10px rgba(255,255,255,.35), 6px 8px 18px rgba(210,60,26,.35), inset 0 1px 0 rgba(255,255,255,.45);
+  --pebble-blur:blur(22px) saturate(170%);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --pebble-fill:rgba(42,39,36,0.42);
+  --pebble-fill-press:rgba(20,19,18,0.55);
+  --pebble-rim:linear-gradient(150deg, rgba(255,255,255,.32), rgba(255,255,255,.06) 38%, rgba(255,255,255,0) 60%, rgba(255,255,255,.14));
+  --pebble-raise:-3px -3px 10px rgba(255,255,255,.04), 8px 10px 24px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.14);
+  --pebble-press:inset 3px 3px 8px rgba(0,0,0,.6), inset -2px -2px 6px rgba(255,255,255,.05);
+  --pebble-action:-2px -2px 8px rgba(255,255,255,.05), 6px 8px 20px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.35);
+}}
+:root[data-theme="dark"]{
+  --pebble-fill:rgba(42,39,36,0.42);
+  --pebble-fill-press:rgba(20,19,18,0.55);
+  --pebble-rim:linear-gradient(150deg, rgba(255,255,255,.32), rgba(255,255,255,.06) 38%, rgba(255,255,255,0) 60%, rgba(255,255,255,.14));
+  --pebble-raise:-3px -3px 10px rgba(255,255,255,.04), 8px 10px 24px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.14);
+  --pebble-press:inset 3px 3px 8px rgba(0,0,0,.6), inset -2px -2px 6px rgba(255,255,255,.05);
+  --pebble-action:-2px -2px 8px rgba(255,255,255,.05), 6px 8px 20px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.35);
+}
+/* ================= Çakıl Cam (Pebble Glass) =================
+   Kabarık = basılabilir, basık = seçili. Yalnızca kontroller ve yüzen paneller; içerik düz kalır.
+   Kenar: iki katmanlı arka plan (dolgu padding-box + parlak kenar border-box). */
+.cs-pebble, .cs-btn-pebble, .cs-seg-pebble button[aria-selected="true"], .cs-option-pebble {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--pebble-fill), var(--pebble-fill)) padding-box, var(--pebble-rim) border-box;
+  box-shadow: var(--pebble-raise);
+  -webkit-backdrop-filter: var(--pebble-blur); backdrop-filter: var(--pebble-blur);
+}
+.cs-pebble { border-radius: var(--radius-xl); padding: var(--space-6); color: var(--ink); }
+.cs-btn-pebble { color: var(--ink); }
+.cs-btn-pebble:hover { transform: translateY(-1px); }
+.cs-btn-pebble:active { box-shadow: var(--pebble-press); transform: none; }
+.cs-btn-pebble.cs-btn-primary { color: var(--on-action); background: linear-gradient(180deg, #f0613b, var(--action)) padding-box, linear-gradient(150deg, rgba(255,255,255,.7), rgba(255,255,255,0) 45%) border-box; box-shadow: var(--pebble-action); }
+.cs-btn-pebble.cs-btn-primary:active { box-shadow: inset 2px 2px 6px rgba(120,30,10,.45); }
+
+.cs-seg-pebble { display: inline-flex; gap: 4px; padding: 4px; border-radius: var(--radius-pill); background: var(--pebble-fill-press); box-shadow: var(--pebble-press); -webkit-backdrop-filter: var(--pebble-blur); backdrop-filter: var(--pebble-blur); max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.cs-seg-pebble::-webkit-scrollbar { display: none; }
+.cs-seg-pebble button { appearance: none; border: 1px solid transparent; background: transparent; color: var(--ink); font: 500 14px/20px var(--font-sans); padding: 8px 16px; border-radius: var(--radius-pill); cursor: pointer; white-space: nowrap; transition: box-shadow .2s ease-out, background .2s ease-out; }
+.cs-seg-pebble button[aria-selected="true"] { font-weight: 600; }
+
+.cs-switch { appearance: none; width: 52px; height: 32px; padding: 0; border: 0; border-radius: var(--radius-pill); position: relative; cursor: pointer; flex: none; background: var(--pebble-fill-press); box-shadow: var(--pebble-press); }
+.cs-switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(160deg, #fff, #e4e7ec); box-shadow: 2px 3px 7px rgba(0,0,0,.25), inset 0 1px 0 #fff; transition: transform .22s ease-out; }
+.cs-switch[aria-checked="true"] { background: linear-gradient(180deg, #f0613b, var(--action)); box-shadow: inset 2px 2px 6px rgba(120,30,10,.45), inset -1px -1px 4px rgba(255,255,255,.25); }
+.cs-switch[aria-checked="true"]::after { transform: translateX(20px); }
+
+.cs-range { -webkit-appearance: none; appearance: none; width: 100%; height: 10px; margin: 0; border-radius: var(--radius-pill); background: var(--pebble-fill-press); box-shadow: var(--pebble-press); }
+.cs-range::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; border: 0; cursor: pointer; background: linear-gradient(160deg, #fff, #e4e7ec); box-shadow: 2px 3px 8px rgba(0,0,0,.28), inset 0 1px 0 #fff; }
+.cs-range::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; border: 0; cursor: pointer; background: linear-gradient(160deg, #fff, #e4e7ec); box-shadow: 2px 3px 8px rgba(0,0,0,.28), inset 0 1px 0 #fff; }
+
+.cs-option-pebble { border-radius: var(--radius-lg); }
+.cs-option-pebble:hover { box-shadow: var(--pebble-raise); }
+.cs-option-pebble:has(input:checked) { background: linear-gradient(var(--pebble-fill-press), var(--pebble-fill-press)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-press), inset 0 0 0 2px var(--accent-text); }
+.cs-option-pebble:has(input:checked) .cs-option-price { color: var(--accent-text); }
+
+.cs-btn-pebble:focus-visible, .cs-seg-pebble button:focus-visible, .cs-switch:focus-visible, .cs-range:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .cs-btn-pebble, .cs-switch::after, .cs-seg-pebble button { transition: none; } .cs-btn-pebble:hover { transform: none; } }
+
+/* ================= Site katmanı: mevcut bileşenleri Çakıl Cam'a çevirir ================= */
+/* birincil buton: turuncu çakıl */
+.cs-btn-primary { background: linear-gradient(180deg, #f0613b, var(--action)) padding-box, linear-gradient(150deg, rgba(255,255,255,.7), rgba(255,255,255,0) 45%) border-box; border: 1px solid transparent; box-shadow: var(--pebble-action); }
+.cs-btn-primary:hover { filter: none; transform: translateY(-1px); }
+.cs-btn-primary:active { box-shadow: inset 2px 2px 6px rgba(120,30,10,.45); transform: none; }
+.cs-btn-secondary, .cs-btn-glass { color: var(--ink); border: 1px solid transparent; background: linear-gradient(var(--pebble-fill), var(--pebble-fill)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-raise); -webkit-backdrop-filter: var(--pebble-blur); backdrop-filter: var(--pebble-blur); }
+.cs-btn-secondary:active, .cs-btn-glass:active { box-shadow: var(--pebble-press); }
+/* detay sekmeleri */
+.cs-seg { background: var(--pebble-fill-press); border: 0; box-shadow: var(--pebble-press); gap: 4px; }
+.cs-seg button { border: 1px solid transparent; font-weight: 500; }
+.cs-seg button[aria-selected="true"] { color: var(--ink); background: linear-gradient(var(--pebble-fill), var(--pebble-fill)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-raise); font-weight: 600; }
+/* satın alma seçenekleri */
+.cs-option { border: 1px solid transparent; background: linear-gradient(var(--pebble-fill), var(--pebble-fill)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-raise); border-radius: var(--radius-lg); }
+.cs-option:hover { box-shadow: var(--pebble-raise); }
+.cs-option:has(input:checked) { background: linear-gradient(var(--pebble-fill-press), var(--pebble-fill-press)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-press), inset 0 0 0 2px var(--accent-text); }
+.cs-option:has(input:checked) .cs-option-price { color: var(--accent-text); }
+/* Özelleştir */
+.cfg-chip, .cfg-dimtag { border: 1px solid transparent; background: linear-gradient(var(--pebble-fill), var(--pebble-fill)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-raise); -webkit-backdrop-filter: var(--pebble-blur); backdrop-filter: var(--pebble-blur); }
+.cfg-chip[aria-pressed="true"] { color: var(--ink); border-color: transparent; background: linear-gradient(var(--pebble-fill-press), var(--pebble-fill-press)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-press); font-weight: 600; }
+.cfg-preset { border: 1px solid transparent; background: linear-gradient(var(--pebble-fill), var(--pebble-fill)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-raise); }
+.cfg-preset:has(input:checked) { border-color: transparent; background: linear-gradient(var(--pebble-fill-press), var(--pebble-fill-press)) padding-box, var(--pebble-rim) border-box; box-shadow: var(--pebble-press), inset 0 0 0 2px var(--accent-text); }
+.cfg-swatch span { box-shadow: var(--pebble-raise); }
+.cfg-swatch input:checked + span { box-shadow: var(--pebble-press), 0 0 0 2px var(--bg), 0 0 0 4px var(--accent-text); }
+.cfg-num { border: 0; background: var(--pebble-fill-press); box-shadow: var(--pebble-press); }
+.cfg-range { height: 26px; }
+.cfg-range::-webkit-slider-runnable-track { height: 10px; border-radius: 980px; background: linear-gradient(to right, var(--action) var(--p), var(--pebble-fill-press) var(--p)); box-shadow: var(--pebble-press); }
+.cfg-range::-moz-range-track { height: 10px; border-radius: 980px; background: linear-gradient(to right, var(--action) var(--p), var(--pebble-fill-press) var(--p)); box-shadow: var(--pebble-press); }
+.cfg-range::-webkit-slider-thumb { width: 24px; height: 24px; margin-top: -7px; background: linear-gradient(160deg, #fff, #e4e7ec); box-shadow: 2px 3px 8px rgba(0,0,0,.28), inset 0 1px 0 #fff; }
+.cfg-range::-moz-range-thumb { width: 24px; height: 24px; background: linear-gradient(160deg, #fff, #e4e7ec); box-shadow: 2px 3px 8px rgba(0,0,0,.28), inset 0 1px 0 #fff; }
