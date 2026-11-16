@@ -99,8 +99,7 @@
     dimsBox.appendChild(reset);
     side.appendChild(dimsBox);
     /* sonuç */
-    var cutT = h('table', { class: 'cfg-table' });
-    var panT = h('table', { class: 'cfg-table' });
+    var totP = h('b', { class: 'cfg-sum-v' }), totA = h('b', { class: 'cfg-sum-v' });
     var ruleNote = h('p', { class: 'cfg-note', hidden: '' });
     var code = h('code', { class: 'cfg-code' });
     var copy = h('button', { type: 'button', class: 'cfg-chip', text: 'Kopyala' });
@@ -110,10 +109,11 @@
       try { navigator.clipboard.writeText(t).then(done, fb); } catch (e) { fb(); }
     });
     var result = h('div', { class: 'cfg-result' }, [
-      h('div', {}, [h('h3', { class: 'cfg-h', text: 'Profil kesim listesi' }), cutT, ruleNote]),
-      h('div', {}, [h('h3', { class: 'cfg-h', text: 'Paneller' }), panT]),
+      h('div', { class: 'cfg-sumbox' }, [h('div', { class: 'cfg-sum' }, [
+        h('div', {}, [h('span', { class: 'cfg-sum-l', text: 'Toplam profil' }), totP]),
+        h('div', {}, [h('span', { class: 'cfg-sum-l', text: 'Panel alanı' }), totA])]), ruleNote]),
       h('div', { class: 'cfg-codebox' }, [h('h3', { class: 'cfg-h', text: 'Yapılandırma kodu' }), h('div', { class: 'cfg-coderow' }, [code, copy]),
-        h('p', { class: 'cfg-note', text: 'Ölçüyü değiştirdiğinde kesim listesi ve paneller bu ölçüye göre yeniden hesaplanır. Hazır üretim için bu kodu sipariş e-postana ekle.' })])
+        h('p', { class: 'cfg-note', text: 'Ölçüyü değiştirdiğinde toplam profil boyu ve panel alanı yeniden hesaplanır. Hazır üretim ya da birlikte yapım için bu kodu mesajına ekle.' })])
     ]);
     root.appendChild(h('div', { class: 'cfg-main' }, [stage, side]));
     root.appendChild(result);
@@ -202,9 +202,10 @@
       root.setAttribute('data-hesap', sr ? 'sigma' : 'germe');
       if (!sr && !N) return;
       var cut = sr ? sr.kesim : N.cutList(), pan = sr ? sr.paneller : N.panelList();
-      var stok = sr ? ' · 6 m\u2019lik ' + sr.stokBoy + ' boy' : '';
-      cutT.innerHTML = '<thead><tr><th scope="col">Boy</th><th scope="col">Adet</th></tr></thead><tbody>' + cut.map(function (r) { return '<tr><td>' + r.boyMm + ' mm</td><td>' + r.adet + '</td></tr>'; }).join('') + '</tbody><tfoot><tr><td>Toplam' + stok + '</td><td>' + (cut.reduce(function (s, r) { return s + r.boyMm * r.adet; }, 0) / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 2 }) + ' m</td></tr></tfoot>';
-      panT.innerHTML = '<thead><tr><th scope="col">Ölçü</th><th scope="col">Adet</th></tr></thead><tbody>' + pan.map(function (r) { return '<tr><td>' + r.olcu + ' mm</td><td>' + r.adet + '</td></tr>'; }).join('') + '</tbody>';
+      var m = cut.reduce(function (t, r) { return t + r.boyMm * r.adet; }, 0) / 1000;
+      var ar = pan.reduce(function (t, r) { var n = String(r.olcu).match(/\d+(?:[.,]\d+)?/g) || [0, 0]; return t + parseFloat(n[0]) * parseFloat(n[1]) * r.adet; }, 0) / 1e6;
+      totP.textContent = m.toLocaleString('tr-TR', { maximumFractionDigits: 2 }) + ' m';
+      totA.textContent = ar.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' m²';
       var notes = sr ? sr.notlar.map(function (x) { return x.metin || x.kural; }) : [];
       ruleNote.hidden = !notes.length;
       ruleNote.textContent = notes.length ? 'Not: ' + notes.join(' ') : '';

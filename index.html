@@ -17,6 +17,12 @@
 
 
 
+
+
+
+
+
+
 :root{
   --bg:#ffffff;
   --surface:#f5f5f7;
@@ -118,6 +124,12 @@
   --link:var(--accent-text);
   color-scheme:dark;
 }
+
+
+
+
+
+
 
 
 
@@ -385,6 +397,13 @@ footer a{color:inherit}
   /* zemin */
   var ground = new THREE.Mesh(new THREE.PlaneGeometry(260, 260), new THREE.MeshStandardMaterial({ color: lin('#e4e6e9'), roughness: 1 }));
   ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; scene.add(ground);
+  /* arsa içi çim: yerinde üretilen doku */
+  var gc = document.createElement('canvas'); gc.width = gc.height = 256; var gx = gc.getContext('2d');
+  gx.fillStyle = '#7f9a62'; gx.fillRect(0, 0, 256, 256);
+  for (var gi = 0; gi < 9000; gi++) { var gr = Math.random(); gx.fillStyle = gr < .45 ? 'rgba(96,124,72,.55)' : gr < .8 ? 'rgba(146,170,104,.5)' : 'rgba(176,192,124,.35)'; gx.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 1.5, 2 + Math.random() * 3); }
+  var gtex = new THREE.CanvasTexture(gc); gtex.wrapS = gtex.wrapT = THREE.RepeatWrapping; gtex.repeat.set(14, 10); gtex.encoding = THREE.sRGBEncoding; gtex.anisotropy = 4;
+  var lawn = new THREE.Mesh(new THREE.PlaneGeometry(38, 27), new THREE.MeshStandardMaterial({ map: gtex, roughness: 1 }));
+  lawn.rotation.x = -Math.PI / 2; lawn.position.set(0, .004, 2); lawn.receiveShadow = true; scene.add(lawn);
   var site = new Bin();
   // arsa sınırı ve yollar
   [[-19, 15.5, 19, 15.56], [-19, -11.56, 19, -11.5], [-19.06, -11.5, -19, 15.5], [19, -11.5, 19.06, 15.5]].forEach(function (r) { site.box('conn', r[0], 0, r[1], r[2], .012, r[3]); });

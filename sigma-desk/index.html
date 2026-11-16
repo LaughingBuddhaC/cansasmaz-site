@@ -511,12 +511,12 @@ html { scroll-behavior: smooth; }
           <div class="cs-glass hint" id="viewer-hint" hidden>Sürükle: döndür · İki parmak: yakınlaştır</div>
         </div>
         <div class="cs-tile span-6 video-tile">
-          <div class="cap"><span class="eyebrow">Parça parça</span><h3 class="cs-tile-title">Her parça yerini biliyor.</h3><p class="cs-tile-text">4 köşe, 6 ara bağlantı, 12 T-somun, 12 cıvata ve iki panel.</p></div>
+          <div class="cap"><span class="eyebrow">Parça parça</span><h3 class="cs-tile-title">Her parça yerini biliyor.</h3><p class="cs-tile-text">Profiller, köşe bağlantıları, cıvatalar ve iki panel.</p></div>
           <video src="img/donen.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Masanın dönerek parçalarına ayrıldığı ve yeniden birleştiği animasyon"></video>
         </div>
-        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Toplam profil</span><span class="big mono">8,03<small>m</small></span><p class="cs-tile-text">20×20 sigma, 4 farklı boyda 12 parça. İki adet 6 m'lik boydan çıkıyor.</p></div>
+        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Toplam profil</span><span class="big mono">8,03<small>m</small></span><p class="cs-tile-text">20×20 sigma profil, standart 6 m boylardan kesilir.</p></div>
         <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Bağlantı</span><span class="big mono">12<small>×M5</small></span><p class="cs-tile-text">Havşa başlı cıvata ve T-somun. Tek alet: 3 mm alyan.</p></div>
-        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Tabla</span><span class="big mono">2<small>panel</small></span><p class="cs-tile-text">4 mm siyah alüminyum kompozit: iki ince alüminyum yüzey, arasında dolgu. Köpek kafesiyle aynı panel.</p></div>
+        <div class="cs-tile span-2 tile-stat"><span class="cs-stat-label">Tabla</span><span class="big mono">2<small>panel</small></span><p class="cs-tile-text">Siyah alüminyum kompozit. Köpek kafesiyle aynı panel.</p></div>
         <div class="cs-tile span-3 tile-img"><h3 class="cs-tile-title">Üstten bakınca, iki panel ve bir omurga.</h3><p class="cs-tile-text">Ortadaki profil tablayı taşıyor ve iki paneli ayırıyor.</p><img src="img/ust.webp" alt="Masanın üstten görünümü: iki tabla paneli ve ortadaki profil"></div>
         <div class="cs-tile span-3 tile-img"><h3 class="cs-tile-title">Önden bakınca, sade bir çizgi.</h3><p class="cs-tile-text">Ayakları alttaki yatay kirişler birbirine bağlıyor.</p><img src="img/on.webp" alt="Masanın önden görünümü"></div>
       </div>
@@ -536,9 +536,9 @@ html { scroll-behavior: smooth; }
       <div class="pack-head"><span class="eyebrow">Dijital paket</span><h2 class="title" id="paket-h">Paketin içinde ne var?</h2><p class="muted">Profilleri kestirip parçaları sipariş ettiğin andan masanın ayağa kalktığı ana kadar ihtiyacın olan dosyalar.</p></div>
       <ul class="cs-pack">
         <li><span class="cs-pack-num">01</span><div><div class="cs-pack-title">Montaj kılavuzu</div><div class="cs-pack-desc">Adım adım, patlatılmış görünümlerle.</div></div><span class="cs-pack-fmt">PDF</span></li>
-        <li><span class="cs-pack-num">02</span><div><div class="cs-pack-title">Malzeme listesi</div><div class="cs-pack-desc">Bağlantı elemanları, T-somun ve cıvata adetleri.</div></div><span class="cs-pack-fmt">XLSX</span></li>
-        <li><span class="cs-pack-num">03</span><div><div class="cs-pack-title">Profil kesim listesi</div><div class="cs-pack-desc">12 parça, 4 boy. Atölyeye doğrudan gönderilebilir.</div></div><span class="cs-pack-fmt">PDF</span></li>
-        <li><span class="cs-pack-num">04</span><div><div class="cs-pack-title">Tabla paneli kesim dosyası</div><div class="cs-pack-desc">570 × 375 mm. Lazer veya CNC için.</div></div><span class="cs-pack-fmt">DXF</span></li>
+        <li><span class="cs-pack-num">02</span><div><div class="cs-pack-title">Malzeme listesi</div><div class="cs-pack-desc">Sipariş etmen gereken bütün parçalar.</div></div><span class="cs-pack-fmt">XLSX</span></li>
+        <li><span class="cs-pack-num">03</span><div><div class="cs-pack-title">Profil kesim listesi</div><div class="cs-pack-desc">Atölyeye doğrudan gönderilebilir.</div></div><span class="cs-pack-fmt">PDF</span></li>
+        <li><span class="cs-pack-num">04</span><div><div class="cs-pack-title">Tabla paneli kesim dosyası</div><div class="cs-pack-desc">Lazer veya CNC için.</div></div><span class="cs-pack-fmt">DXF</span></li>
       </ul>
     </div>
   </section>
@@ -560,19 +560,19 @@ html { scroll-behavior: smooth; }
         <div class="panel" role="tabpanel" id="p-ozel" aria-labelledby="tab-ozel">
           <div class="ozel-head">
             <h3 class="cs-tile-title">Senin ölçün, senin rengin.</h3>
-            <p class="muted">Hazır seçeneklerden birini seç ya da ölçüleri kendin ayarla. Kesim listesi ve paneller seçtiğin ölçüye göre yeniden hesaplanır.</p>
+            <p class="muted">Hazır seçeneklerden birini seç ya da ölçüleri kendin ayarla. Toplam profil boyu ve panel alanı seçtiğin ölçüye göre yeniden hesaplanır.</p>
           </div>
           <div id="cfg-root" data-key="masa"></div>
         </div>
         <div class="panel" role="tabpanel" id="p-teknik" aria-labelledby="tab-teknik" hidden>
           <dl class="specs">
             <dt>Ölçüler</dt><dd><span class="mono">780 × 590 × 770 mm</span><br><span class="muted small">Genişlik × derinlik × yükseklik</span></dd>
-            <dt>Çerçeve</dt><dd>20×20 sigma alüminyum profil<br><span class="muted small">12 parça, toplam <span class="mono">8,03 m</span></span></dd>
-            <dt>Tabla</dt><dd>2 × siyah alüminyum kompozit panel<br><span class="muted small"><span class="mono">570 × 375 mm</span>, 4 mm · iki ince alüminyum yüzey arasında dolgu çekirdek</span></dd>
-            <dt>Bağlantı</dt><dd>4 × 3 yönlü köşe, 6 × 2 yönlü ara bağlantı<br><span class="muted small">12 × M5 T-somun, 12 × M5 × 10 havşa başlı (DIN 7991)</span></dd>
+            <dt>Çerçeve</dt><dd>20×20 sigma alüminyum profil<br><span class="muted small">Toplam <span class="mono">8,03 m</span></span></dd>
+            <dt>Tabla</dt><dd>2 × siyah alüminyum kompozit panel</dd>
+            <dt>Bağlantı</dt><dd>10 adet</dd>
             <dt>Alet</dt><dd>3 mm alyan anahtarı</dd>
             <dt>Montaj süresi</dt><dd>Yaklaşık 30 dakika</dd>
-            <dt>Zorluk</dt><dd>2 / 10 · tek alet, kesim atölyede yapılabilir</dd>
+            <dt>Zorluk</dt><dd>2 / 10</dd>
           </dl>
           <div class="views">
             <figure><img src="img/on.webp" alt="Masanın önden görünümü"><figcaption>Ön</figcaption></figure>
@@ -582,33 +582,14 @@ html { scroll-behavior: smooth; }
 
         <div class="panel" role="tabpanel" id="p-bilesen" aria-labelledby="tab-bilesen" hidden>
           <figure class="explode-fig"><img src="img/patlatma.webp" alt="Masanın patlatılmış görünümü: tabla panelleri yukarıda, bağlantı elemanları çerçevenin çevresinde" loading="lazy"><figcaption>Patlatılmış görünüm</figcaption></figure>
-          <div class="two">
-            <div class="table-wrap"><table>
-              <thead><tr><th>Profil (20×20 sigma)</th><th class="num">Boy</th><th class="num">Adet</th><th class="num">Toplam</th></tr></thead>
-              <tbody>
-                <tr><td>Ayak</td><td class="num">750 mm</td><td class="num">4</td><td class="num">3.000 mm</td></tr>
-                <tr><td>Uzun kiriş</td><td class="num">740 mm</td><td class="num">3</td><td class="num">2.220 mm</td></tr>
-                <tr><td>Alt kiriş</td><td class="num">580 mm</td><td class="num">2</td><td class="num">1.160 mm</td></tr>
-                <tr><td>Kısa kiriş</td><td class="num">550 mm</td><td class="num">3</td><td class="num">1.650 mm</td></tr>
-              </tbody>
-              <tfoot><tr><td>Toplam</td><td></td><td class="num">12</td><td class="num">8.030 mm</td></tr></tfoot>
-            </table></div>
-            <div class="table-wrap"><table>
-              <thead><tr><th>Bağlantı ve panel</th><th class="num">Adet</th></tr></thead>
-              <tbody>
-                <tr><td>Alüminyum kompozit tabla paneli, 4 mm</td><td class="num">2</td></tr>
-                <tr><td>3 yönlü köşe bağlantısı</td><td class="num">4</td></tr>
-                <tr><td>2 yönlü ara bağlantı</td><td class="num">6</td></tr>
-                <tr><td>T-kanal somunu M5</td><td class="num">12</td></tr>
-                <tr><td>Havşa başlı cıvata M5 × 10</td><td class="num">12</td></tr>
-              </tbody>
-            </table></div>
-          </div>
-          <div class="cutplan" style="background:var(--bg)">
-            <div><h3 class="cs-tile-title">6 metrelik iki boydan çıkıyor.</h3><p class="muted small" style="margin-top:6px">12 parçanın standart 6 m profillere yerleşimi, ölçekli. Her kesimde 3 mm testere payı.</p></div>
-            <svg id="cutsvg" viewBox="0 0 1000 150" role="img" aria-label="Kesim planı: birinci 6 metrelik boyda dört adet 750, üç adet 740 ve bir adet 580 milimetre; ikinci boyda bir adet 580 ve üç adet 550 milimetre"></svg>
-            <div class="cut-legend" id="cut-legend"></div>
-          </div>
+          <ul class="contents" aria-label="Kutunun içinden çıkanlar">
+            <li><i>A</i>Sigma profil 20×20</li>
+            <li><i>B</i>Alüminyum kompozit panel</li>
+            <li><i>C</i>3 yönlü köşe bağlantısı</li>
+            <li><i>D</i>2 yönlü ara bağlantı</li>
+            <li><i>E</i>T-kanal somunu M5</li>
+            <li><i>F</i>Havşa başlı cıvata M5</li>
+          </ul>
         </div>
 
         <div class="panel" role="tabpanel" id="p-tasarim" aria-labelledby="tab-tasarim" hidden>
@@ -645,7 +626,7 @@ html { scroll-behavior: smooth; }
         <div><span class="eyebrow">Satın al</span><h2 id="buy-h" style="margin-top:8px">Masanı nasıl istersin?</h2></div>
         <div class="cs-options" role="radiogroup" aria-label="Seçenek">
           <label class="cs-option"><input type="radio" name="opt" id="opt-diy" value="diy" checked><span class="cs-option-title">Dijital paket</span><span class="cs-option-desc">Kılavuz, malzeme listesi, kesim dosyaları</span><span class="cs-option-price mono">€9,99</span></label>
-          <label class="cs-option"><input type="radio" name="opt" id="opt-hazir" value="hazir"><span class="cs-option-title">Hazır ürün</span><span class="cs-option-desc">Senin için üretilir ve kurulur</span><span class="cs-option-price">Fiyat al</span></label>
+          <label class="cs-option"><input type="radio" name="opt" id="opt-hazir" value="hazir"><span class="cs-option-title">Hazır ürün</span><span class="cs-option-desc">Senin için üretilir ve kurulur</span><span class="cs-option-price">€200</span></label>
           <label class="cs-option"><input type="radio" name="opt" id="opt-birlikte" value="birlikte"><span class="cs-option-title">Beraber yapalım</span><span class="cs-option-desc">Ölçülerini paylaş, sana göre uyarlayalım</span><span class="cs-option-price">Teklif al</span></label>
         </div>
         <div class="facts">
@@ -693,12 +674,12 @@ html { scroll-behavior: smooth; }
 
   /* Buy options */
   var MAIL = 'm.cansasmaz@gmail.com';
-  var opts = { diy: { label: 'Dijital paketi satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/84aa6c99-73a3-46e3-a3ed-0a9b84cef44f/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738', contact: false },
-    hazir: { label: 'Hazır ürün için fiyat al', href: 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Sigma çalışma masası - hazır ürün'), contact: true },
+  var opts = { diy: { label: 'Dijital paketi satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/84aa6c99-73a3-46e3-a3ed-0a9b84cef44f/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738', contact: false, note: 'Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir.' },
+    hazir: { label: 'Hazır masayı satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/9787124c-7e12-45a2-a86e-72dafb0a6f4f/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738', contact: false, note: 'Güvenli ödeme cansasmaz.com mağazasında. Ölçü ve renk tercihini sipariş notuna yaz; üretimden önce seninle teyit ederim.' },
     birlikte: { label: 'Ölçülerini gönder', href: 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Sigma çalışma masası - beraber yapalım'), contact: true } };
   var btn = document.getElementById('buy-btn'), note = document.getElementById('buy-note'), contact = document.getElementById('contact');
   Array.prototype.forEach.call(document.querySelectorAll('input[name="opt"]'), function (r) {
-    r.addEventListener('change', function () { var o = opts[r.value]; btn.textContent = o.label; btn.href = o.href; if (o.contact) btn.removeAttribute('target'); else btn.setAttribute('target', '_blank'); note.hidden = o.contact; contact.hidden = !o.contact; });
+    r.addEventListener('change', function () { var o = opts[r.value]; btn.textContent = o.label; btn.href = o.href; if (o.contact) btn.removeAttribute('target'); else btn.setAttribute('target', '_blank'); if (o.note) note.textContent = o.note; note.hidden = o.contact; contact.hidden = !o.contact; });
   });
   var copyBtn = document.getElementById('copy-mail');
   copyBtn.addEventListener('click', function () {
@@ -709,6 +690,7 @@ html { scroll-behavior: smooth; }
 
   /* Cut plan, to scale: 6000 mm = 1000 units */
   function drawCut() {
+    if (!document.getElementById('cutsvg')) return;
     var svg = document.getElementById('cutsvg'), NS = 'http://www.w3.org/2000/svg';
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     var K = 1000 / 6000, kerf = 3;
@@ -815,5 +797,6 @@ html { scroll-behavior: smooth; }
 })();
 </script>
 
+<script src="../assets/contact.js"></script>
 </body>
 </html>
