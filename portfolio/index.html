@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tasarım Arşivi · Can Sasmaz Studio</title>
+<meta name="description" content="2016 – 2025 arası hayata geçirdiğim projeler: araç üstü yaşam modülleri, offroad ve canopy camper'lar, e-mobilite, HV batarya paketleri ve şarj istasyonları.">
+<meta property="og:title" content="Tasarım Arşivi · Can Sasmaz Studio">
+<meta property="og:image" content="https://shop.cansasmaz.com/portfolio/img/offroad-camper.webp">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+
+
+
+
+
+
+
+
+
+
+
+
+:root{
+  --bg:#ffffff;
+  --surface:#f5f5f7;
+  --surface-raised:#ffffff;
+  --line:#d2d2d7;
+  --ink:#1d1d1f;
+  --ink-muted:#6e6e73;
+  --ink-subtle:#86868b;
+  --brand:#e34520;
+  --action:#d23c1a;
+  --on-action:#ffffff;
+  --accent-text:#c23a17;
+  --accent-soft:#fde8e1;
+  --gold:#f1c891;
+  --glass-fill:rgba(255,255,255,0.62);
+  --glass-stroke:rgba(255,255,255,0.80);
+  --glass-shade:rgba(0,0,0,0.10);
+  --success:#1f7a45;
+  --warning:#8a5d00;
+  --error:#b3261e;
+  --series-moduler:#5b6770;
+  --series-dogman:#2e7d4f;
+  --series-house:#8a6a2f;
+  --series-elcilik:#2b63a0;
+  --link:var(--accent-text);
+  --font-sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, "Segoe UI", sans-serif;
+  --font-display:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, "Segoe UI", sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-20:80px;
+  --space-30:120px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+  --radius-xl:28px;
+  --radius-pill:980px;
+  --shadow-card:0 0 0 rgba(0,0,0,0);
+  --shadow-float:0 2px 8px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.10);
+  --shadow-glass:0 8px 32px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#000000;
+  --surface:#1c1a18;
+  --surface-raised:#2a2724;
+  --line:#38342f;
+  --ink:#f5f5f7;
+  --ink-muted:#a1a1a6;
+  --ink-subtle:#86868b;
+  --brand:#e34520;
+  --action:#d23c1a;
+  --on-action:#ffffff;
+  --accent-text:#ff6b47;
+  --accent-soft:#3a1a10;
+  --gold:#f1c891;
+  --glass-fill:rgba(38,35,31,0.55);
+  --glass-stroke:rgba(255,255,255,0.14);
+  --glass-shade:rgba(0,0,0,0.45);
+  --success:#4fbf7a;
+  --warning:#e0b04a;
+  --error:#ff7a70;
+  --series-moduler:#9aa7b0;
+  --series-dogman:#5cc08a;
+  --series-house:#f1c891;
+  --series-elcilik:#7fb0e6;
+  --link:var(--accent-text);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#000000;
+  --surface:#1c1a18;
+  --surface-raised:#2a2724;
+  --line:#38342f;
+  --ink:#f5f5f7;
+  --ink-muted:#a1a1a6;
+  --ink-subtle:#86868b;
+  --brand:#e34520;
+  --action:#d23c1a;
+  --on-action:#ffffff;
+  --accent-text:#ff6b47;
+  --accent-soft:#3a1a10;
+  --gold:#f1c891;
+  --glass-fill:rgba(38,35,31,0.55);
+  --glass-stroke:rgba(255,255,255,0.14);
+  --glass-shade:rgba(0,0,0,0.45);
+  --success:#4fbf7a;
+  --warning:#e0b04a;
+  --error:#ff7a70;
+  --series-moduler:#9aa7b0;
+  --series-dogman:#5cc08a;
+  --series-house:#f1c891;
+  --series-elcilik:#7fb0e6;
+  --link:var(--accent-text);
+  color-scheme:dark;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font:500 11px/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+/* Üst çubuk */
+.ust{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:saturate(1.6) blur(20px);backdrop-filter:saturate(1.6) blur(20px);border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.ust .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:52px}
+.brand{display:flex;gap:8px;align-items:center;font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}
+.brand i{width:10px;height:10px;border-radius:3px;background:var(--brand)}
+.seg{display:flex;gap:4px;padding:3px;border-radius:var(--radius-pill);background:var(--pebble-fill-press,var(--surface));box-shadow:var(--pebble-press,none)}
+.seg a{font:500 13px/1 var(--font-sans);color:var(--ink-muted);text-decoration:none;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid transparent;transition:color .2s}
+.seg a[aria-current="true"]{color:var(--ink);font-weight:600;background:linear-gradient(var(--pebble-fill,#fff),var(--pebble-fill,#fff)) padding-box,var(--pebble-rim,transparent) border-box;box-shadow:var(--pebble-raise,0 1px 3px rgba(0,0,0,.1))}
+/* Giriş */
+.giris{padding:88px 0 40px;overflow:hidden}
+.giris h1{font:700 clamp(48px,8vw,104px)/.95 var(--font-display);letter-spacing:-.045em;margin:14px 0 18px}
+.giris h1 span{color:var(--ink-subtle)}
+.giris p{font-size:clamp(18px,2vw,22px);line-height:1.4;color:var(--ink-muted);max-width:32ch;margin:0}
+.akis{margin-top:56px;display:flex;gap:16px;width:max-content;animation:akis 70s linear infinite}
+.akis img{height:clamp(150px,20vw,240px);aspect-ratio:4/3;object-fit:contain;background:#fff;mix-blend-mode:multiply;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line)}
+.giris:hover .akis{animation-play-state:paused}
+@keyframes akis{to{transform:translateX(-50%)}}
+/* Bloklar */
+.blok{padding:72px 0 24px;scroll-margin-top:52px}
+.blok-bas{max-width:720px;margin-bottom:48px}
+.blok-bas h2{font:700 clamp(34px,5vw,56px)/1 var(--font-display);letter-spacing:-.035em;margin:12px 0 16px}
+.blok-bas p{font-size:19px;line-height:1.5;color:var(--ink-muted);margin:0}
+.proje{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:center;padding:40px 0;border-top:1px solid var(--line)}
+.proje-txt .no{font:500 12px/1 var(--font-mono);color:var(--ink-subtle)}
+.proje-txt h3{font:700 clamp(26px,3vw,34px)/1.05 var(--font-display);letter-spacing:-.025em;margin:10px 0 14px}
+.proje-txt p{font-size:17px;line-height:1.55;color:var(--ink-muted);margin:0 0 16px}
+.adet{font:500 11px/1 var(--font-mono);letter-spacing:.08em;color:var(--ink-subtle);text-transform:uppercase}
+.ph{display:block;width:100%;padding:0;border:0;cursor:zoom-in;background:#fff;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);aspect-ratio:4/3;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1)}
+.ph img{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:multiply;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.ph:hover,.ph:focus-visible{transform:translateY(-3px);box-shadow:inset 0 0 0 1px var(--line),0 18px 40px rgba(0,0,0,.14)}
+.ph:hover img{transform:scale(1.05)}
+.ph:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.ph.buyuk{aspect-ratio:16/11}
+.serit{grid-column:1/-1;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 14px;margin:0 -20px;scrollbar-width:none}
+.serit::-webkit-scrollbar{display:none}
+.serit .ph{flex:0 0 clamp(200px,24%,280px);scroll-snap-align:start}
+.secki{padding-top:72px}
+.kartlar{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kart{margin:0}
+.kart figcaption{margin-top:12px;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.devam{padding:96px 0 104px;text-align:center}
+.devam h2{font:700 clamp(30px,4vw,44px)/1.05 var(--font-display);letter-spacing:-.03em;margin:12px 0 14px}
+.devam p{color:var(--ink-muted);font-size:18px;margin:0 auto 26px;max-width:40ch}
+.btn{display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:var(--radius-pill);font:600 15px/1 var(--font-sans);text-decoration:none;color:#fff;background:linear-gradient(180deg,#f0613b,var(--action));box-shadow:0 6px 18px rgba(227,69,32,.3),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn:active{transform:scale(.98)}
+footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;color:var(--ink-muted);font-size:12px;border-top:1px solid var(--line)}
+footer a{color:inherit}
+/* Ortaya çıkış */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.gor{opacity:1;transform:none}
+/* Büyük görsel */
+dialog.lb{width:min(1200px,94vw);max-height:92vh;padding:0;border:0;border-radius:20px;background:#fff;box-shadow:0 40px 100px rgba(0,0,0,.45);overflow:hidden}
+dialog.lb::backdrop{background:rgba(10,10,12,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+dialog.lb[open]{animation:ac .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes ac{from{opacity:0;transform:scale(.96)}}
+.lb img{display:block;width:100%;max-height:82vh;object-fit:contain;background:#fff}
+.lb .alt{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font-size:14px;color:#1d1d1f;border-top:1px solid #e5e5ea}
+.lb .alt span{font:500 12px/1 var(--font-mono);color:#86868b}
+.lb button.k{position:absolute;top:50%;width:44px;height:44px;margin-top:-40px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.75);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 2px 10px rgba(0,0,0,.18);font-size:22px;color:#1d1d1f}
+.lb .geri{left:12px}.lb .ileri{right:12px}
+.lb .kapat{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;background:rgba(0,0,0,.06);font-size:20px;color:#1d1d1f}
+@media (max-width:860px){
+  .proje{grid-template-columns:1fr;gap:20px}
+  .proje-ana{order:-1}
+  .kartlar{grid-template-columns:repeat(2,1fr);gap:14px}
+  .seg a{padding:8px 10px}
+  .ust .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .akis{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+  .ph,.ph img{transition:none}
+  .ph:hover,.ph:focus-visible{transform:none}.ph:hover img{transform:none}
+  dialog.lb[open]{animation:none}
+}
+</style>
+<link rel="stylesheet" href="../assets/pebble.css">
+</head>
+<body>
+<header class="ust"><div class="wrap"><a class="brand" href="../"><i></i><span>Can Sasmaz Studio</span></a>
+<nav class="seg" aria-label="Bölümler"><a href="#yasam" aria-current="true">Araç üstü yaşam</a><a href="#emobility">E-Mobility</a></nav></div></header>
+<section class="giris" aria-labelledby="baslik"><div class="wrap">
+  <span class="eyebrow">Portfolyo · 2016 – 2025</span>
+  <h1 id="baslik">Tasarım<br><span>Arşivi.</span></h1>
+  <p>2016&#x27;dan 2025&#x27;e: atölyede başlayan araç üstü yaşam modülleri ve Imecar&#x27;da elektrikli araçlar için yaptığım batarya ve şarj tasarımları.</p>
+</div>
+<div class="akis" aria-hidden="true"><img src="img/offroad-camper.webp" alt="" loading="eager"><img src="img/charge-station.webp" alt="" loading="eager"><img src="img/canopy-camper.webp" alt="" loading="eager"><img src="img/bike-battery.webp" alt="" loading="eager"><img src="img/vw-camperbox.webp" alt="" loading="eager"><img src="img/mobile-charge-station.webp" alt="" loading="eager"><img src="img/ranger-camper-box.webp" alt="" loading="eager"><img src="img/gen1-portable-battery-pack.webp" alt="" loading="eager"><img src="img/t4-campervan.webp" alt="" loading="eager"><img src="img/105.webp" alt="" loading="eager"><img src="img/pickup-camper.webp" alt="" loading="eager"><img src="img/golf-cart-autonomous.webp" alt="" loading="eager"><img src="img/offroad-camper.webp" alt="" loading="eager"><img src="img/charge-station.webp" alt="" loading="eager"><img src="img/canopy-camper.webp" alt="" loading="eager"><img src="img/bike-battery.webp" alt="" loading="eager"><img src="img/vw-camperbox.webp" alt="" loading="eager"><img src="img/mobile-charge-station.webp" alt="" loading="eager"><img src="img/ranger-camper-box.webp" alt="" loading="eager"><img src="img/gen1-portable-battery-pack.webp" alt="" loading="eager"><img src="img/t4-campervan.webp" alt="" loading="eager"><img src="img/105.webp" alt="" loading="eager"><img src="img/pickup-camper.webp" alt="" loading="eager"><img src="img/golf-cart-autonomous.webp" alt="" loading="eager"></div>
+</section>
+<main>
+<section class="blok" id="yasam"><div class="wrap"><header class="blok-bas rv"><span class="eyebrow">Bölüm 1 · Atölye</span><h2>Araç üstü yaşam</h2><p>Küçük bir alana mutfak, depo ve enerji sığdırmak. Modüler düşünmeyi burada öğrendim.</p></header><article class="proje rv"><div class="proje-txt"><span class="no">01</span><h3>Camper Box</h3><p>İlk prototipler. Araca girip çıkan kutular: lavabo, ocak, çekmece, enerji. Bugünkü modüler sistemlerin ilk hali.</p><span class="adet">6 görsel</span></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/camper-box.webp" data-t="Camper Box"><img src="img/camper-box.webp" alt="Camper Box" loading="lazy"></button></div><div class="serit"><button class="ph" type="button" data-full="img/vw-camperbox.webp" data-t="Camper Box"><img src="img/vw-camperbox.webp" alt="Camper Box" loading="lazy"></button><button class="ph" type="button" data-full="img/t4-campervan.webp" data-t="Camper Box"><img src="img/t4-campervan.webp" alt="Camper Box" loading="lazy"></button><button class="ph" type="button" data-full="img/suv-camper-box.webp" data-t="Camper Box"><img src="img/suv-camper-box.webp" alt="Camper Box" loading="lazy"></button><button class="ph" type="button" data-full="img/suv-camperbox.webp" data-t="Camper Box"><img src="img/suv-camperbox.webp" alt="Camper Box" loading="lazy"></button><button class="ph" type="button" data-full="img/5-camperbox.webp" data-t="Camper Box"><img src="img/5-camperbox.webp" alt="Camper Box" loading="lazy"></button></div></article><article class="proje rv"><div class="proje-txt"><span class="no">02</span><h3>Offroad Camper</h3><p>Standart bir aracı keşif aracına çeviren dönüşümler: çatı çadırı, tente, güneş paneli ve arkadan açılan mutfak. Atölyede yaptığım, en sevdiğim işler.</p><span class="adet">6 görsel</span></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/offroad-camper.webp" data-t="Offroad Camper"><img src="img/offroad-camper.webp" alt="Offroad Camper" loading="lazy"></button></div><div class="serit"><button class="ph" type="button" data-full="img/ranger-camper-box.webp" data-t="Offroad Camper"><img src="img/ranger-camper-box.webp" alt="Offroad Camper" loading="lazy"></button><button class="ph" type="button" data-full="img/pickup-camperbox.webp" data-t="Offroad Camper"><img src="img/pickup-camperbox.webp" alt="Offroad Camper" loading="lazy"></button><button class="ph" type="button" data-full="img/truck-camper.webp" data-t="Offroad Camper"><img src="img/truck-camper.webp" alt="Offroad Camper" loading="lazy"></button><button class="ph" type="button" data-full="img/campervan.webp" data-t="Offroad Camper"><img src="img/campervan.webp" alt="Offroad Camper" loading="lazy"></button><button class="ph" type="button" data-full="img/vintage-campervan.webp" data-t="Offroad Camper"><img src="img/vintage-campervan.webp" alt="Offroad Camper" loading="lazy"></button></div></article><article class="proje rv"><div class="proje-txt"><span class="no">03</span><h3>Canopy Camper</h3><p>Her pickup için ayrı tasarlanan kabinler. Seri üretim kalıbı yok; aracın ölçüsü ve kullanımı belirliyor. Tasarımın arazide de çalışması gerektiğini burada öğrendim.</p><span class="adet">2 görsel</span></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/canopy-camper.webp" data-t="Canopy Camper"><img src="img/canopy-camper.webp" alt="Canopy Camper" loading="lazy"></button></div><div class="serit"><button class="ph" type="button" data-full="img/pickup-camper.webp" data-t="Canopy Camper"><img src="img/pickup-camper.webp" alt="Canopy Camper" loading="lazy"></button></div></article><article class="proje rv"><div class="proje-txt"><span class="no">04</span><h3>Camper Gadgets</h3><p>Kampa eşlik eden küçük parçalar: pizza fırını, dikey ızgara ve soba.</p><span class="adet">3 görsel</span></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/pizzaoven.webp" data-t="Camper Gadgets"><img src="img/pizzaoven.webp" alt="Camper Gadgets" loading="lazy"></button></div><div class="serit"><button class="ph" type="button" data-full="img/vertical-grill.webp" data-t="Camper Gadgets"><img src="img/vertical-grill.webp" alt="Camper Gadgets" loading="lazy"></button><button class="ph" type="button" data-full="img/rus-sobas.webp" data-t="Camper Gadgets"><img src="img/rus-sobas.webp" alt="Camper Gadgets" loading="lazy"></button></div></article></div></section>
+<section class="blok" id="emobility"><div class="wrap"><header class="blok-bas rv"><span class="eyebrow">Bölüm 2 · Imecar</span><h2>E-Mobility</h2><p>Atölyede öğrendiğim modülerliği Imecar&#x27;da elektrikli araçlara taşıdım. Batarya mimarisi, şarj üniteleri ve enerji sistemleri için endüstriyel tasarımlar.</p></header><article class="proje rv"><div class="proje-txt"><span class="no">05</span><h3>E-Mobility Tasarımları</h3><p>Elektrikli aracın içindeki bileşenler. Mekaniği ve elektroniği aynı gövdede buluşturan, montajı kolay, ısıyı yöneten tasarımlar.</p></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/bike-battery.webp" data-t="E-Mobility Tasarımları"><img src="img/bike-battery.webp" alt="E-Mobility Tasarımları" loading="lazy"></button></div></article><article class="proje rv"><div class="proje-txt"><span class="no">06</span><h3>HV Batarya Paketleri</h3><p>Yüksek voltajlı batarya paketleri. Güvenli, kompakt ve sağlam; seri üretime uygun.</p><span class="adet">3 görsel</span></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/105.webp" data-t="HV Batarya Paketleri"><img src="img/105.webp" alt="HV Batarya Paketleri" loading="lazy"></button></div><div class="serit"><button class="ph" type="button" data-full="img/34-5.webp" data-t="HV Batarya Paketleri"><img src="img/34-5.webp" alt="HV Batarya Paketleri" loading="lazy"></button><button class="ph" type="button" data-full="img/80-foto.webp" data-t="HV Batarya Paketleri"><img src="img/80-foto.webp" alt="HV Batarya Paketleri" loading="lazy"></button></div></article><article class="proje rv"><div class="proje-txt"><span class="no">07</span><h3>Şarj İstasyonu</h3><p>Dış ortamda çalışan şarj ünitesi. Hava koşullarına dayanıklı gövde, kullanımı kolay arayüz.</p></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/charge-station.webp" data-t="Şarj İstasyonu"><img src="img/charge-station.webp" alt="Şarj İstasyonu" loading="lazy"></button></div></article><article class="proje rv"><div class="proje-txt"><span class="no">08</span><h3>Çeşitli Projeler</h3><p>Sabit enerji depolamadan güneş enerjisi sistemlerine, farklı ihtiyaçlar için enerji ürünleri.</p><span class="adet">4 görsel</span></div><div class="proje-ana"><button class="ph buyuk" type="button" data-full="img/selfie-fiat-fast-charge.webp" data-t="Çeşitli Projeler"><img src="img/selfie-fiat-fast-charge.webp" alt="Çeşitli Projeler" loading="lazy"></button></div><div class="serit"><button class="ph" type="button" data-full="img/home-pv-operation.webp" data-t="Çeşitli Projeler"><img src="img/home-pv-operation.webp" alt="Çeşitli Projeler" loading="lazy"></button><button class="ph" type="button" data-full="img/chilin-2-6kwh.webp" data-t="Çeşitli Projeler"><img src="img/chilin-2-6kwh.webp" alt="Çeşitli Projeler" loading="lazy"></button><button class="ph" type="button" data-full="img/a-frame-pv.webp" data-t="Çeşitli Projeler"><img src="img/a-frame-pv.webp" alt="Çeşitli Projeler" loading="lazy"></button></div></article><div class="secki"><header class="blok-bas rv"><span class="eyebrow">Seçki</span><h2>Diğer işler</h2><p>Otonom golf araçları, batarya termal yönetimi, mobil şarj ve taşınabilir güç: aynı birikimin farklı alanlara uzanan işleri.</p></header><div class="kartlar"><figure class="kart rv"><button class="ph" type="button" data-full="img/mobile-charge-station.webp" data-t="Evbee Mobil Şarj İstasyonu"><img src="img/mobile-charge-station.webp" alt="Evbee Mobil Şarj İstasyonu" loading="lazy"></button><figcaption>Evbee Mobil Şarj İstasyonu</figcaption></figure><figure class="kart rv"><button class="ph" type="button" data-full="img/gen1-portable-battery-pack.webp" data-t="Portatif Güç Ünitesi"><img src="img/gen1-portable-battery-pack.webp" alt="Portatif Güç Ünitesi" loading="lazy"></button><figcaption>Portatif Güç Ünitesi</figcaption></figure><figure class="kart rv"><button class="ph" type="button" data-full="img/golf-cart-autonomous.webp" data-t="Otonom Golf Araçları"><img src="img/golf-cart-autonomous.webp" alt="Otonom Golf Araçları" loading="lazy"></button><figcaption>Otonom Golf Araçları</figcaption></figure><figure class="kart rv"><button class="ph" type="button" data-full="img/80.webp" data-t="HV Battery Pack Thermal Management"><img src="img/80.webp" alt="HV Battery Pack Thermal Management" loading="lazy"></button><figcaption>HV Battery Pack Thermal Management</figcaption></figure></div></div></div></section>
+
+<section class="devam"><div class="wrap"><span class="eyebrow">Bugün</span><h2>Bugün sigma profillerle üretiyorum.</h2><p>Aynı yaklaşım, yeni malzeme: herkesin kendi kurabileceği mobilya ve modüller.</p><a class="btn" href="../#urunler">Ürünlere bak</a></div></section>
+</main>
+<footer><div class="wrap"><span>© Can Sasmaz Studio · Kopenhag</span><span><a href="../">Ana sayfa</a> · <a href="../house-of-sasmaz/">House of Sasmaz</a></span></div></footer>
+<dialog class="lb" aria-label="Görsel"><button class="kapat" type="button" aria-label="Kapat">×</button><button class="k geri" type="button" aria-label="Önceki">‹</button><button class="k ileri" type="button" aria-label="Sonraki">›</button><img alt=""><div class="alt"><strong></strong><span></span></div></dialog>
+<script>
+(function () {
+  var sakin = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ortaya çıkış
+  var rv = document.querySelectorAll('.rv');
+  if (!sakin && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('gor'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+    rv.forEach(function (el) { io.observe(el); });
+  } else rv.forEach(function (el) { el.classList.add('gor'); });
+  // bölüm sekmeleri
+  var links = document.querySelectorAll('.seg a'), bloks = ['yasam', 'emobility'].map(function (id) { return document.getElementById(id); });
+  function aktif() { var y = scrollY + innerHeight * 0.35, k = 0; bloks.forEach(function (b, i) { if (b.offsetTop <= y) k = i; }); links.forEach(function (a, i) { a.setAttribute('aria-current', String(i === k)); }); }
+  addEventListener('scroll', aktif, { passive: true }); aktif();
+  // büyük görsel
+  var lb = document.querySelector('.lb'), im = lb.querySelector('img'), ad = lb.querySelector('.alt strong'), sy = lb.querySelector('.alt span');
+  var all = Array.prototype.slice.call(document.querySelectorAll('main .ph')), cur = 0;
+  function goster(i) { cur = (i + all.length) % all.length; var b = all[cur]; im.src = b.dataset.full; im.alt = b.dataset.t; ad.textContent = b.dataset.t; sy.textContent = (cur + 1) + ' / ' + all.length; }
+  all.forEach(function (b, i) { b.addEventListener('click', function () { goster(i); lb.showModal ? lb.showModal() : window.open(b.dataset.full); }); });
+  lb.querySelector('.geri').addEventListener('click', function () { goster(cur - 1); });
+  lb.querySelector('.ileri').addEventListener('click', function () { goster(cur + 1); });
+  lb.querySelector('.kapat').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') goster(cur - 1); if (e.key === 'ArrowRight') goster(cur + 1); });
+})();
+</script>
+</body>
+</html>
