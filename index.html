@@ -261,9 +261,9 @@ footer a{color:inherit}
 .kapi:is(:hover,:focus-visible,.live) .kapi-mark{transform:translateY(calc(50cqh - 100% - 10px)) scale(.8)}
 .kapi:is(:hover,:focus-visible,.live) img{animation-play-state:running}
 .kapi-mark .arma{height:70cqh;width:auto;filter:drop-shadow(0 6px 12px rgba(0,0,0,.45))}
-.kapi.house:is(:hover,:focus-visible,.live) .kapi-mark{opacity:0;transform:translateY(-50%) scale(.9)}
-.kapi.house .kapi-mark{transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .35s}
-.kapi.house .kapi-media::after{display:none}
+.kapi.intro:is(:hover,:focus-visible,.live) .kapi-mark{opacity:0;transform:translateY(-50%) scale(.9)}
+.kapi.intro .kapi-mark{transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.kapi.intro .kapi-media::after{display:none}
 .kapi-mark .dm{height:34cqh;width:auto;margin-bottom:2px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.4))}
 .kapi.dog .kapi-mark b{font-size:clamp(14px,1.5vw,19px)}
 .kapi:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
@@ -318,15 +318,15 @@ footer a{color:inherit}
       <span class="kapi-media" aria-hidden="true"><video muted loop playsinline preload="none" poster="assets/giris/nest.webp"><source src="assets/giris/nest.mp4" type="video/mp4"></video></span>
       <span class="kapi-mark"><b>NEST</b><small>Yol modülleri</small></span>
     </a>
-    <a class="kapi dog proj" href="https://dogman.cansasmaz.com" style="--tone:var(--series-dogman)">
-      <span class="kapi-media" aria-hidden="true"><img src="https://dogman.cansasmaz.com/img/duo.jpg" alt="" loading="lazy"><img src="https://dogman.cansasmaz.com/img/river.jpg" alt="" loading="lazy"></span>
+    <a class="kapi dog intro" href="https://dogman.cansasmaz.com" style="--tone:var(--series-dogman)">
+      <span class="kapi-media" aria-hidden="true"><video muted playsinline preload="none" poster="assets/giris/dogman-intro.webp"><source src="assets/giris/dogman-intro.mp4" type="video/mp4"></video></span>
       <span class="kapi-mark"><img class="dm" src="https://dogman.cansasmaz.com/img/brand/mark-emboss-round.png" alt="" onerror="this.remove()"><b>DOGMAN</b><small lang="en">Walking Club</small></span>
     </a>
     <a class="kapi proj" href="portfolio/" style="--tone:var(--series-elcilik)">
       <span class="kapi-media" aria-hidden="true"><img src="portfolio/img/offroad-camper.webp" alt="" loading="lazy"><img src="assets/giris/nemo.webp" alt="" loading="lazy"></span>
       <span class="kapi-mark"><small>Portfolyo</small><b>Projeler</b></span>
     </a>
-    <a class="kapi house" href="house-of-sasmaz/" style="--tone:var(--series-house)">
+    <a class="kapi house intro" href="house-of-sasmaz/" style="--tone:var(--series-house)">
       <span class="kapi-media" aria-hidden="true"><video muted playsinline preload="none" poster="assets/giris/house-intro.webp"><source src="assets/giris/house-intro.mp4" type="video/mp4"></video></span>
       <span class="kapi-mark"><img class="arma" src="assets/giris/house-arma.webp" alt="House of Sasmaz"></span>
     </a>
