@@ -635,7 +635,7 @@ html { scroll-behavior: smooth; }
           <div><b class="mono">2</b><span>Zorluk /10</span></div>
         </div>
         <div class="buy-cta">
-          <a class="cs-btn cs-btn-primary" id="buy-btn" href="https://www.wixapis.com/ecom/v1/checkout-templates/84aa6c99-73a3-46e3-a3ed-0a9b84cef44f/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738" target="_blank" rel="noopener">Dijital paketi satın al</a>
+          <a class="cs-btn cs-btn-primary" id="buy-btn" href="https://www.wixapis.com/ecom/v1/checkout-templates/96653d41-425a-4aeb-999a-71856880c2c4/create-and-redirect-to-checkout?siteId=228a46f7-e0e9-4aa3-aaff-d95ef65945dd" target="_blank" rel="noopener">Dijital paketi satın al</a>
           <p class="buy-note" id="buy-note">Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir.</p>
           <div class="contact" id="contact" hidden><span>Yaz:</span><span class="mono" id="mail">m.cansasmaz@gmail.com</span><button class="copy" id="copy-mail" type="button">Kopyala</button></div>
         </div>
@@ -674,8 +674,8 @@ html { scroll-behavior: smooth; }
 
   /* Buy options */
   var MAIL = 'm.cansasmaz@gmail.com';
-  var opts = { diy: { label: 'Dijital paketi satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/84aa6c99-73a3-46e3-a3ed-0a9b84cef44f/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738', contact: false, note: 'Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir.' },
-    hazir: { label: 'Hazır masayı satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/9787124c-7e12-45a2-a86e-72dafb0a6f4f/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738', contact: false, note: 'Güvenli ödeme cansasmaz.com mağazasında. Ölçü ve renk tercihini sipariş notuna yaz; üretimden önce seninle teyit ederim.' },
+  var opts = { diy: { label: 'Dijital paketi satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/96653d41-425a-4aeb-999a-71856880c2c4/create-and-redirect-to-checkout?siteId=228a46f7-e0e9-4aa3-aaff-d95ef65945dd', contact: false, note: 'Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir.' },
+    hazir: { label: 'Hazır masayı satın al', href: 'https://www.wixapis.com/ecom/v1/checkout-templates/9fb7cf03-86e8-4f48-8983-23f74d84836b/create-and-redirect-to-checkout?siteId=228a46f7-e0e9-4aa3-aaff-d95ef65945dd', contact: false, note: 'Güvenli ödeme cansasmaz.com mağazasında. Ölçü ve renk tercihini sipariş notuna yaz; üretimden önce seninle teyit ederim.' },
     birlikte: { label: 'Ölçülerini gönder', href: 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Sigma çalışma masası - beraber yapalım'), contact: true } };
   var btn = document.getElementById('buy-btn'), note = document.getElementById('buy-note'), contact = document.getElementById('contact');
   Array.prototype.forEach.call(document.querySelectorAll('input[name="opt"]'), function (r) {
