@@ -614,7 +614,7 @@ html { scroll-behavior: smooth; }
           <div><b class="mono">5</b><span>Zorluk /10</span></div>
         </div>
         <div class="buy-cta">
-          <a class="cs-btn cs-btn-primary" id="buy-btn" href="https://www.wixapis.com/ecom/v1/checkout-templates/b84b979c-40f1-478a-87dd-a2da1fbdbfa8/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738" target="_blank" rel="noopener">Dijital paketi satın al</a><p class="buy-note" id="buy-note">Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir.</p>
+          <a class="cs-btn cs-btn-primary" id="buy-btn" href="https://www.wixapis.com/ecom/v1/checkout-templates/d6b2bc9b-b902-47b9-94b5-efed474d3cf2/create-and-redirect-to-checkout?siteId=228a46f7-e0e9-4aa3-aaff-d95ef65945dd" target="_blank" rel="noopener">Dijital paketi satın al</a><p class="buy-note" id="buy-note">Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir.</p>
           <div class="contact" id="contact" hidden><span>Yaz:</span><span class="mono" id="mail">m.cansasmaz@gmail.com</span><button class="copy" id="copy-mail" type="button">Kopyala</button></div>
         </div>
       </div>
@@ -644,7 +644,7 @@ html { scroll-behavior: smooth; }
   });
 
   /* Satın alma seçenekleri */
-  var opts = {"diy": {"label": "Dijital paketi satın al", "href": "https://www.wixapis.com/ecom/v1/checkout-templates/b84b979c-40f1-478a-87dd-a2da1fbdbfa8/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738", "contact": false, "note": "Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir."}, "hazir": {"label": "Hazır ürünü satın al", "href": "https://www.wixapis.com/ecom/v1/checkout-templates/2e4b1000-e957-45ae-ae92-7738b5d2e545/create-and-redirect-to-checkout?siteId=69e8129e-50c3-4eb0-8352-a98e6673c738", "contact": false, "note": "Güvenli ödeme cansasmaz.com mağazasında. Ölçü ve renk tercihini sipariş notuna yaz; üretimden önce seninle teyit ederim."}, "birlikte": {"label": "Ölçülerini gönder", "href": "mailto:m.cansasmaz@gmail.com?subject=Modüler Köpek Kafesi - beraber yapalım", "contact": true}};
+  var opts = {"diy": {"label": "Dijital paketi satın al", "href": "https://www.wixapis.com/ecom/v1/checkout-templates/d6b2bc9b-b902-47b9-94b5-efed474d3cf2/create-and-redirect-to-checkout?siteId=228a46f7-e0e9-4aa3-aaff-d95ef65945dd", "contact": false, "note": "Güvenli ödeme cansasmaz.com mağazasında. Ödemeden sonra dosyalar e-postana gelir."}, "hazir": {"label": "Hazır ürünü satın al", "href": "https://www.wixapis.com/ecom/v1/checkout-templates/edae185d-20cb-42c6-ac06-648e112c88ab/create-and-redirect-to-checkout?siteId=228a46f7-e0e9-4aa3-aaff-d95ef65945dd", "contact": false, "note": "Güvenli ödeme cansasmaz.com mağazasında. Ölçü ve renk tercihini sipariş notuna yaz; üretimden önce seninle teyit ederim."}, "birlikte": {"label": "Ölçülerini gönder", "href": "mailto:m.cansasmaz@gmail.com?subject=Modüler Köpek Kafesi - beraber yapalım", "contact": true}};
   var btn = document.getElementById('buy-btn'), note = document.getElementById('buy-note'), contact = document.getElementById('contact');
   Array.prototype.forEach.call(document.querySelectorAll('input[name="opt"]'), function (r) {
     r.addEventListener('change', function () { var o = opts[r.value]; btn.textContent = o.label; btn.href = o.href; if (o.contact) btn.removeAttribute('target'); else btn.setAttribute('target', '_blank'); if (o.note) note.textContent = o.note; note.hidden = o.contact && r.value !== 'diy'; contact.hidden = !o.contact; });
