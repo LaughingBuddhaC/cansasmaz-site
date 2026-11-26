@@ -1,15 +1,46 @@
 {
   "renkler": {
     "profil": [
-      { "kod": "acik-gri", "ad": "Açık gri", "hex": "#b4b9bf", "not": "Mevcut renk. Doğal eloksal." },
-      { "kod": "koyu-gri", "ad": "Koyu gri", "hex": "#4a4d52", "not": "Mat koyu eloksal." }
+      {
+        "kod": "acik-gri",
+        "ad": "Açık gri",
+        "hex": "#b4b9bf",
+        "not": "Mevcut renk. Doğal eloksal."
+      },
+      {
+        "kod": "koyu-gri",
+        "ad": "Koyu gri",
+        "hex": "#4a4d52",
+        "not": "Mat koyu eloksal."
+      }
     ],
     "panel": [
-      { "kod": "koyu-gri", "ad": "Koyu gri", "hex": "#3a3c40", "not": "Mevcut renk." },
-      { "kod": "kirmizi", "ad": "Kırmızı", "hex": "#9e3a31" },
-      { "kod": "sari", "ad": "Sarı", "hex": "#d0a03a" },
-      { "kod": "yesil", "ad": "Yeşil", "hex": "#5e7560" },
-      { "kod": "mavi", "ad": "Mavi", "hex": "#3f5e7e" }
+      {
+        "kod": "koyu-gri",
+        "ad": "Koyu gri",
+        "hex": "#3a3c40",
+        "not": "Mevcut renk."
+      },
+      {
+        "kod": "kirmizi",
+        "ad": "Kırmızı",
+        "hex": "#9e3a31"
+      },
+      {
+        "kod": "sari",
+        "ad": "Sarı",
+        "hex": "#d0a03a"
+      },
+      {
+        "kod": "yesil",
+        "ad": "Yeşil",
+        "hex": "#5e7560"
+      },
+      {
+        "kod": "mavi",
+        "ad": "Mavi",
+        "hex": "#3f5e7e"
+      }
     ],
     "sabit": "Bağlantı parçaları, cıvatalar, raylar ve kilitler standart renginde kalır.",
     "yuzey": "Bütün renkler mat."
@@ -19,92 +50,740 @@
       "slug": "sigma-calisma-masasi",
       "ad": "Sigma Çalışma Masası",
       "tasarim": true,
-      "olcu": { "w": 780, "h": 770, "d": 590 },
+      "olcu": {
+        "w": 780,
+        "h": 770,
+        "d": 590
+      },
       "sinir": {
-        "w": { "min": 600, "max": 1600, "neden": "60 cm altı tek kişilik çalışma alanı bırakmaz; 160 cm üstünde tabla ortadan destek ister." },
-        "h": { "min": 650, "max": 1100, "neden": "65 cm altında diz boşluğu kalmaz; 110 cm ayakta çalışma için üst sınır." },
-        "d": { "min": 450, "max": 800, "neden": "45 cm altı klavye ve ekran için sığ; 80 cm üstü uzanma mesafesini aşar." }
+        "w": {
+          "min": 600,
+          "max": 1600,
+          "neden": "60 cm altı tek kişilik çalışma alanı bırakmaz; 160 cm üstünde tabla ortadan destek ister."
+        },
+        "h": {
+          "min": 650,
+          "max": 1100,
+          "neden": "65 cm altında diz boşluğu kalmaz; 110 cm ayakta çalışma için üst sınır."
+        },
+        "d": {
+          "min": 450,
+          "max": 800,
+          "neden": "45 cm altı klavye ve ekran için sığ; 80 cm üstü uzanma mesafesini aşar."
+        }
       },
       "hazir": [
-        { "ad": "Standart", "aciklama": "Orijinal ölçü", "olcu": { "w": 780, "h": 770, "d": 590 }, "profil": "acik-gri", "panel": "koyu-gri" },
-        { "ad": "Geniş çalışma", "aciklama": "İki ekran sığar", "olcu": { "w": 1200, "h": 750, "d": 600 }, "profil": "koyu-gri", "panel": "yesil" },
-        { "ad": "Ayakta", "aciklama": "Ayakta çalışma yüksekliği", "olcu": { "w": 1000, "h": 1050, "d": 600 }, "profil": "acik-gri", "panel": "mavi" }
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 780,
+            "h": 770,
+            "d": 590
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş çalışma",
+          "aciklama": "İki ekran sığar",
+          "olcu": {
+            "w": 1200,
+            "h": 750,
+            "d": 600
+          },
+          "profil": "koyu-gri",
+          "panel": "yesil"
+        },
+        {
+          "ad": "Ayakta",
+          "aciklama": "Ayakta çalışma yüksekliği",
+          "olcu": {
+            "w": 1000,
+            "h": 1050,
+            "d": 600
+          },
+          "profil": "acik-gri",
+          "panel": "mavi"
+        }
       ]
     },
     "cekmece": {
       "slug": "nest-cekmece",
       "ad": "Nest Çekmece Modülü",
-      "olcu": { "w": 500, "h": 200, "d": 615 },
+      "olcu": {
+        "w": 500,
+        "h": 200,
+        "d": 615
+      },
       "sinir": {
-        "w": { "min": 300, "max": 900, "neden": "30 cm Nest'in en dar modülü; 90 cm üstünde çekmece tabanı sehim yapar." },
-        "h": { "min": 150, "max": 450, "neden": "15 cm altında ray ve kilit sığmaz; 45 cm üstü tek çekmece için fazla ağır." },
-        "d": { "min": 400, "max": 750, "neden": "Teleskopik raylar 350–700 mm boylarında satılır." }
+        "w": {
+          "min": 300,
+          "max": 900,
+          "neden": "30 cm Nest'in en dar modülü; 90 cm üstünde çekmece tabanı sehim yapar."
+        },
+        "h": {
+          "min": 150,
+          "max": 450,
+          "neden": "15 cm altında ray ve kilit sığmaz; 45 cm üstü tek çekmece için fazla ağır."
+        },
+        "d": {
+          "min": 400,
+          "max": 750,
+          "neden": "Teleskopik raylar 350–700 mm boylarında satılır."
+        }
       },
       "hazir": [
-        { "ad": "Standart", "aciklama": "Orijinal ölçü", "olcu": { "w": 500, "h": 200, "d": 615 }, "profil": "acik-gri", "panel": "koyu-gri" },
-        { "ad": "Nest 45", "aciklama": "Nest ızgarasına uyar", "olcu": { "w": 450, "h": 350, "d": 565 }, "profil": "koyu-gri", "panel": "koyu-gri" },
-        { "ad": "Geniş ve sığ", "aciklama": "Alet çekmecesi", "olcu": { "w": 800, "h": 150, "d": 615 }, "profil": "acik-gri", "panel": "kirmizi" }
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 500,
+            "h": 200,
+            "d": 615
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Nest 45",
+          "aciklama": "Nest ızgarasına uyar",
+          "olcu": {
+            "w": 450,
+            "h": 350,
+            "d": 565
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş ve sığ",
+          "aciklama": "Alet çekmecesi",
+          "olcu": {
+            "w": 800,
+            "h": 150,
+            "d": 615
+          },
+          "profil": "acik-gri",
+          "panel": "kirmizi"
+        }
       ]
     },
     "buzdolabi": {
       "slug": "nest-buzdolabi-cekmecesi",
       "ad": "Nest Buzdolabı Çekmecesi",
-      "olcu": { "w": 500, "h": 600, "d": 615 },
+      "olcu": {
+        "w": 500,
+        "h": 600,
+        "d": 615
+      },
       "sinir": {
-        "w": { "min": 450, "max": 800, "neden": "İç genişlik buzdolabından en az 4 cm fazla olmalı (Mobicool MCF40: 365 mm)." },
-        "h": { "min": 520, "max": 800, "neden": "Kapak açıklığı için buzdolabı yüksekliğine en az 7 cm eklenir (MCF40: 446 mm)." },
-        "d": { "min": 615, "max": 760, "neden": "Buzdolabı boyu (MCF40: 584 mm) ve ön panel." }
+        "w": {
+          "min": 450,
+          "max": 800,
+          "neden": "İç genişlik buzdolabından en az 4 cm fazla olmalı (Mobicool MCF40: 365 mm)."
+        },
+        "h": {
+          "min": 520,
+          "max": 800,
+          "neden": "Kapak açıklığı için buzdolabı yüksekliğine en az 7 cm eklenir (MCF40: 446 mm)."
+        },
+        "d": {
+          "min": 615,
+          "max": 760,
+          "neden": "Buzdolabı boyu (MCF40: 584 mm) ve ön panel."
+        }
       },
       "hazir": [
-        { "ad": "MCF40", "aciklama": "Orijinal ölçü", "olcu": { "w": 500, "h": 600, "d": 615 }, "profil": "acik-gri", "panel": "koyu-gri" },
-        { "ad": "Alçak", "aciklama": "Bagaj camını kapatmaz", "olcu": { "w": 500, "h": 520, "d": 615 }, "profil": "koyu-gri", "panel": "koyu-gri" },
-        { "ad": "Geniş", "aciklama": "45–50 L buzdolapları", "olcu": { "w": 650, "h": 620, "d": 700 }, "profil": "acik-gri", "panel": "mavi" }
+        {
+          "ad": "MCF40",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 500,
+            "h": 600,
+            "d": 615
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Alçak",
+          "aciklama": "Bagaj camını kapatmaz",
+          "olcu": {
+            "w": 500,
+            "h": 520,
+            "d": 615
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş",
+          "aciklama": "45–50 L buzdolapları",
+          "olcu": {
+            "w": 650,
+            "h": 620,
+            "d": 700
+          },
+          "profil": "acik-gri",
+          "panel": "mavi"
+        }
       ]
     },
     "tesisat": {
       "slug": "nest-su-gaz-cekmecesi",
       "ad": "Nest Su ve Gaz Çekmecesi",
-      "olcu": { "w": 500, "h": 400, "d": 615 },
+      "olcu": {
+        "w": 500,
+        "h": 400,
+        "d": 615
+      },
       "sinir": {
-        "w": { "min": 450, "max": 900, "neden": "Üç 12 L bidon yan yana 38 cm tutar." },
-        "h": { "min": 320, "max": 600, "neden": "Bidon yüksekliği 26 cm; hortum bağlantısı için pay." },
-        "d": { "min": 600, "max": 760, "neden": "Bidon boyu (42 cm) ve önde gaz kartuşu sırası." }
+        "w": {
+          "min": 450,
+          "max": 900,
+          "neden": "Üç 12 L bidon yan yana 38 cm tutar."
+        },
+        "h": {
+          "min": 320,
+          "max": 600,
+          "neden": "Bidon yüksekliği 26 cm; hortum bağlantısı için pay."
+        },
+        "d": {
+          "min": 600,
+          "max": 760,
+          "neden": "Bidon boyu (42 cm) ve önde gaz kartuşu sırası."
+        }
       },
       "hazir": [
-        { "ad": "Standart", "aciklama": "3 bidon, 6 kartuş", "olcu": { "w": 500, "h": 400, "d": 615 }, "profil": "acik-gri", "panel": "koyu-gri" },
-        { "ad": "Geniş", "aciklama": "5 bidon", "olcu": { "w": 750, "h": 400, "d": 615 }, "profil": "koyu-gri", "panel": "koyu-gri" },
-        { "ad": "Kamp", "aciklama": "Alçak, bagaja", "olcu": { "w": 500, "h": 340, "d": 615 }, "profil": "acik-gri", "panel": "yesil" }
+        {
+          "ad": "Standart",
+          "aciklama": "3 bidon, 6 kartuş",
+          "olcu": {
+            "w": 500,
+            "h": 400,
+            "d": 615
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş",
+          "aciklama": "5 bidon",
+          "olcu": {
+            "w": 750,
+            "h": 400,
+            "d": 615
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Kamp",
+          "aciklama": "Alçak, bagaja",
+          "olcu": {
+            "w": 500,
+            "h": 340,
+            "d": 615
+          },
+          "profil": "acik-gri",
+          "panel": "yesil"
+        }
       ]
     },
     "evye": {
       "slug": "nest-evye-modulu",
       "ad": "Nest Evye Modülü",
-      "olcu": { "w": 432, "h": 20, "d": 520 },
+      "olcu": {
+        "w": 432,
+        "h": 20,
+        "d": 520
+      },
       "sabitYukseklik": true,
       "sinir": {
-        "w": { "min": 400, "max": 700, "neden": "Evye 325 mm; yanlarda vana ve hortum payı." },
-        "h": { "min": 20, "max": 20, "neden": "Evye modülü çekmecenin içine oturan bir plaka; yüksekliği çekmeceden gelir." },
-        "d": { "min": 480, "max": 700, "neden": "Evye ve katlanır musluk arka arkaya." }
+        "w": {
+          "min": 400,
+          "max": 700,
+          "neden": "Evye 325 mm; yanlarda vana ve hortum payı."
+        },
+        "h": {
+          "min": 20,
+          "max": 20,
+          "neden": "Evye modülü çekmecenin içine oturan bir plaka; yüksekliği çekmeceden gelir."
+        },
+        "d": {
+          "min": 480,
+          "max": 700,
+          "neden": "Evye ve katlanır musluk arka arkaya."
+        }
       },
       "hazir": [
-        { "ad": "Standart", "aciklama": "Nest çekmecesine", "olcu": { "w": 432, "h": 20, "d": 520 }, "profil": "acik-gri", "panel": "koyu-gri" },
-        { "ad": "Geniş", "aciklama": "Yanında tezgah payı", "olcu": { "w": 650, "h": 20, "d": 520 }, "profil": "koyu-gri", "panel": "koyu-gri" },
-        { "ad": "Derin", "aciklama": "Arkada pompa alanı", "olcu": { "w": 432, "h": 20, "d": 640 }, "profil": "acik-gri", "panel": "mavi" }
+        {
+          "ad": "Standart",
+          "aciklama": "Nest çekmecesine",
+          "olcu": {
+            "w": 432,
+            "h": 20,
+            "d": 520
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş",
+          "aciklama": "Yanında tezgah payı",
+          "olcu": {
+            "w": 650,
+            "h": 20,
+            "d": 520
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Derin",
+          "aciklama": "Arkada pompa alanı",
+          "olcu": {
+            "w": 432,
+            "h": 20,
+            "d": 640
+          },
+          "profil": "acik-gri",
+          "panel": "mavi"
+        }
       ]
     },
     "kafes": {
       "slug": "moduler-kopek-kafesi",
       "ad": "Modüler Köpek Kafesi",
-      "olcu": { "w": 600, "h": 800, "d": 1205 },
+      "olcu": {
+        "w": 600,
+        "h": 800,
+        "d": 1205
+      },
       "sinir": {
-        "w": { "min": 450, "max": 800, "neden": "Köpek içeride rahatça dönebilmeli: omuz genişliğinin iki katı." },
-        "h": { "min": 500, "max": 1000, "neden": "Ayakta dururken başın üstünde en az 5 cm (IATA)." },
-        "d": { "min": 700, "max": 1400, "neden": "Burundan kuyruk köküne boy + bacak boyunun yarısı (IATA)." }
+        "w": {
+          "min": 450,
+          "max": 800,
+          "neden": "Köpek içeride rahatça dönebilmeli: omuz genişliğinin iki katı."
+        },
+        "h": {
+          "min": 500,
+          "max": 1000,
+          "neden": "Ayakta dururken başın üstünde en az 5 cm (IATA)."
+        },
+        "d": {
+          "min": 700,
+          "max": 1400,
+          "neden": "Burundan kuyruk köküne boy + bacak boyunun yarısı (IATA)."
+        }
       },
       "hazir": [
-        { "ad": "Küçük", "aciklama": "10 kg'a kadar", "olcu": { "w": 450, "h": 550, "d": 750 }, "profil": "acik-gri", "panel": "sari" },
-        { "ad": "Orta", "aciklama": "25 kg'a kadar", "olcu": { "w": 550, "h": 700, "d": 1000 }, "profil": "koyu-gri", "panel": "yesil" },
-        { "ad": "Boris", "aciklama": "45 kg Golden Retriever", "olcu": { "w": 600, "h": 800, "d": 1205 }, "profil": "acik-gri", "panel": "koyu-gri" }
+        {
+          "ad": "Küçük",
+          "aciklama": "10 kg'a kadar",
+          "olcu": {
+            "w": 450,
+            "h": 550,
+            "d": 750
+          },
+          "profil": "acik-gri",
+          "panel": "sari"
+        },
+        {
+          "ad": "Orta",
+          "aciklama": "25 kg'a kadar",
+          "olcu": {
+            "w": 550,
+            "h": 700,
+            "d": 1000
+          },
+          "profil": "koyu-gri",
+          "panel": "yesil"
+        },
+        {
+          "ad": "Boris",
+          "aciklama": "45 kg Golden Retriever",
+          "olcu": {
+            "w": 600,
+            "h": 800,
+            "d": 1205
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        }
+      ]
+    },
+    "sehpa": {
+      "slug": "sigma-yan-sehpa",
+      "ad": "Sigma Yan Sehpa",
+      "tasarim": true,
+      "olcu": {
+        "w": 400,
+        "h": 520,
+        "d": 400
+      },
+      "sinir": {
+        "w": {
+          "min": 300,
+          "max": 600,
+          "neden": "30 cm altı bir fincan ve bir kitaba yetmez; 60 cm üstü sehpa değil masa olur."
+        },
+        "h": {
+          "min": 400,
+          "max": 650,
+          "neden": "Koltuk kolçağı yüksekliğine göre: 40–65 cm."
+        },
+        "d": {
+          "min": 300,
+          "max": 600,
+          "neden": "Kare ya da dikdörtgen; 60 cm üstü raf sehim yapar."
+        }
+      },
+      "hazir": [
+        {
+          "ad": "Küçük",
+          "aciklama": "Dar köşeler için",
+          "olcu": {
+            "w": 350,
+            "h": 450,
+            "d": 350
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 400,
+            "h": 520,
+            "d": 400
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş",
+          "aciklama": "Lamba ve kitaplar",
+          "olcu": {
+            "w": 550,
+            "h": 550,
+            "d": 450
+          },
+          "profil": "koyu-gri",
+          "panel": "yesil"
+        }
+      ]
+    },
+    "vestiyer": {
+      "slug": "sigma-antre-vestiyer",
+      "ad": "Sigma Antre ve Vestiyer",
+      "tasarim": true,
+      "olcu": {
+        "w": 900,
+        "h": 1800,
+        "d": 300
+      },
+      "sinir": {
+        "w": {
+          "min": 600,
+          "max": 1200,
+          "neden": "120 cm üstünde raflar ortadan destek ister."
+        },
+        "h": {
+          "min": 1500,
+          "max": 2000,
+          "neden": "Askıdaki uzun montlar için en az 150 cm."
+        },
+        "d": {
+          "min": 250,
+          "max": 400,
+          "neden": "Ayakkabı boyu ve askı genişliği: 25–40 cm."
+        }
+      },
+      "hazir": [
+        {
+          "ad": "Dar",
+          "aciklama": "Kapı arkası",
+          "olcu": {
+            "w": 600,
+            "h": 1800,
+            "d": 300
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 900,
+            "h": 1800,
+            "d": 300
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Aile",
+          "aciklama": "Dört kişilik giriş",
+          "olcu": {
+            "w": 1200,
+            "h": 1900,
+            "d": 350
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        }
+      ]
+    },
+    "yatak": {
+      "slug": "sigma-yatak-platformu",
+      "ad": "Sigma Yatak Platformu",
+      "tasarim": true,
+      "olcu": {
+        "w": 1600,
+        "h": 350,
+        "d": 2000
+      },
+      "sinir": {
+        "w": {
+          "min": 900,
+          "max": 1800,
+          "neden": "Tek kişilikten king size’a: 90–180 cm."
+        },
+        "h": {
+          "min": 250,
+          "max": 450,
+          "neden": "Şilte yüzeyi 25–45 cm; oturup kalkma yüksekliği."
+        },
+        "d": {
+          "min": 1900,
+          "max": 2100,
+          "neden": "Standart şilte boyları: 190, 200, 210 cm."
+        }
+      },
+      "hazir": [
+        {
+          "ad": "Tek kişilik",
+          "aciklama": "90 × 200",
+          "olcu": {
+            "w": 900,
+            "h": 350,
+            "d": 2000
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Çift kişilik",
+          "aciklama": "140 × 200",
+          "olcu": {
+            "w": 1400,
+            "h": 350,
+            "d": 2000
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Queen",
+          "aciklama": "160 × 200, orijinal",
+          "olcu": {
+            "w": 1600,
+            "h": 350,
+            "d": 2000
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        }
+      ]
+    },
+    "kanepe": {
+      "slug": "sigma-moduler-koltuk",
+      "ad": "Sigma Modüler Koltuk",
+      "tasarim": true,
+      "olcu": {
+        "w": 800,
+        "h": 760,
+        "d": 850
+      },
+      "sinir": {
+        "w": {
+          "min": 600,
+          "max": 1000,
+          "neden": "Bir kişilik oturma genişliği 60–100 cm."
+        },
+        "h": {
+          "min": 650,
+          "max": 850,
+          "neden": "Sırt yüksekliği: bel desteğinden omuz hizasına."
+        },
+        "d": {
+          "min": 750,
+          "max": 950,
+          "neden": "Oturma derinliği ve sırt minderi."
+        }
+      },
+      "hazir": [
+        {
+          "ad": "Dar",
+          "aciklama": "Küçük salon",
+          "olcu": {
+            "w": 650,
+            "h": 720,
+            "d": 800
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 800,
+            "h": 760,
+            "d": 850
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Geniş",
+          "aciklama": "Uzanmalık",
+          "olcu": {
+            "w": 950,
+            "h": 780,
+            "d": 950
+          },
+          "profil": "koyu-gri",
+          "panel": "koyu-gri"
+        }
+      ]
+    },
+    "pisirme": {
+      "slug": "nest-pisirme-modulu",
+      "ad": "Nest Pişirme Modülü",
+      "tasarim": true,
+      "olcu": {
+        "w": 500,
+        "h": 200,
+        "d": 600
+      },
+      "sinir": {
+        "w": {
+          "min": 400,
+          "max": 700,
+          "neden": "Tekli ocaktan ikili ocağa."
+        },
+        "h": {
+          "min": 180,
+          "max": 300,
+          "neden": "Ocak yüksekliği ve ray: en az 18 cm."
+        },
+        "d": {
+          "min": 500,
+          "max": 700,
+          "neden": "Teleskopik raylar 350–700 mm boylarında."
+        }
+      },
+      "hazir": [
+        {
+          "ad": "Tekli ocak",
+          "aciklama": "Kartuşlu kamp ocağı",
+          "olcu": {
+            "w": 400,
+            "h": 200,
+            "d": 500
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 500,
+            "h": 200,
+            "d": 600
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "İkili ocak",
+          "aciklama": "Geniş gövde",
+          "olcu": {
+            "w": 650,
+            "h": 220,
+            "d": 600
+          },
+          "profil": "koyu-gri",
+          "panel": "kirmizi"
+        }
+      ]
+    },
+    "enerji": {
+      "slug": "nest-enerji-modulu",
+      "ad": "Nest Enerji Modülü",
+      "tasarim": true,
+      "olcu": {
+        "w": 500,
+        "h": 400,
+        "d": 600
+      },
+      "sinir": {
+        "w": {
+          "min": 400,
+          "max": 800,
+          "neden": "Güç istasyonunun genişliği + her yanda kablo payı."
+        },
+        "h": {
+          "min": 300,
+          "max": 600,
+          "neden": "Cihaz bölmesi ve kontrol paneli için en az 30 cm."
+        },
+        "d": {
+          "min": 450,
+          "max": 700,
+          "neden": "Arka panoda kablo bükülme payı."
+        }
+      },
+      "hazir": [
+        {
+          "ad": "Kompakt",
+          "aciklama": "1 kWh sınıfı istasyon",
+          "olcu": {
+            "w": 400,
+            "h": 350,
+            "d": 500
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Standart",
+          "aciklama": "Orijinal ölçü",
+          "olcu": {
+            "w": 500,
+            "h": 400,
+            "d": 600
+          },
+          "profil": "acik-gri",
+          "panel": "koyu-gri"
+        },
+        {
+          "ad": "Büyük",
+          "aciklama": "2+ kWh, iki cihaz",
+          "olcu": {
+            "w": 750,
+            "h": 450,
+            "d": 650
+          },
+          "profil": "koyu-gri",
+          "panel": "mavi"
+        }
       ]
     }
   }
