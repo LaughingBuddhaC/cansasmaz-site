@@ -523,31 +523,7 @@ html,body{margin:0;overflow-x:clip;scrollbar-width:none}html::-webkit-scrollbar{
   var fb = new Bin();   // mobilya
   var F = Y0;
   // çalışma: masa doğu duvarına dönük, katlanır duvar masası
-  // yatak odası
-  item('cift-kisilik-yatak-bazasi', 6.85, F, 0, -Math.PI / 2, fb);
-  item('komodin', 7.6, F, 1.25, -Math.PI / 2, fb); item('komodin', 7.6, F, -1.25, -Math.PI / 2, fb);
-  fb.box('fabric', 5.85, F + .35, -.8, 7.75, F + .55, .8); // şilte
-  // giriş: ayakkabılık ve Boris'in kafesi
-  item('ayakkabilik', -7.8, F, 1.1, Math.PI / 2, fb);
-  item('kafes', -6.6, F, -1.0, 0, fb);
   // atölye: Nest çekmece dolabı (2×3) ve tezgâh
-  // mutfak: Nest modül sırası arka duvarda
-  var kx = -7.6;
-  item('buzdolabi', kx + .25, F, -5.6, 0, fb); kx += .52;
-  item('cekmece', kx + .25, F, -5.6, 0, fb); item('cekmece', kx + .25, F + .2, -5.6, 0, fb); item('evye', kx + .25, F + .4, -5.6, 0, fb); kx += .52;
-  item('tesisat', kx + .25, F, -5.6, 0, fb); kx += .52;
-  item('cekmece', kx + .25, F, -5.6, 0, fb); item('cekmece', kx + .25, F + .2, -5.6, 0, fb);
-  item('masa', -4.4, F, -3.7, 0, fb, 1.5);
-  // salon: sigma koltuk, yan sehpa, halı
-  (function () {
-    var x0 = -.6, x1 = 2.6, z0 = -5.4, z1 = -4.5, y = F;
-    [[x0, z0], [x1 - PS, z0], [x0, z1 - PS], [x1 - PS, z1 - PS]].forEach(function (p) { fb.box('alu', p[0], y, p[1], p[0] + PS, y + .4, p[1] + PS); });
-    fb.box('alu', x0, y + .38, z0, x1, y + .4, z0 + PS); fb.box('alu', x0, y + .38, z1 - PS, x1, y + .4, z1);
-    fb.box('fabric', x0 + .02, y + .4, z0 + .02, x1 - .02, y + .55, z1 - .02);
-    fb.box('fabric', x0 + .02, y + .55, z0 - .02, x1 - .02, y + .95, z0 + .2);
-    fb.box('alu', 2.9, y, -5.2, 2.92, y + .45, -4.8); fb.box('wood', 2.85, y + .45, -5.25, 3.25, y + .47, -4.75);
-    fb.box('fabric', -.3, y + .002, -4.3, 2.3, y + .01, -2.6);
-  })();
   fb.into(house);
 
   /* avlu: ağaç ve sigma ekim kasaları */
@@ -769,8 +745,10 @@ html,body{margin:0;overflow-x:clip;scrollbar-width:none}html::-webkit-scrollbar{
   /* atölye: kamera odanın içinde, göz hizasında */
   var ATOLYE_IN = { z: ZK.atolye, t: new THREE.Vector3(-6.6, 1.05, 4.9), az: 2.441, el: .277, d: 3.47, fov: 50, inside: 1 };
   var CALISMA_IN = { z: ZK.calisma, t: new THREE.Vector3(6.6, 1.05, 4.9), az: -2.441, el: .277, d: 3.47, fov: 50, inside: 1 };
+  var GIRIS_IN = { z: ZK.giris, t: new THREE.Vector3(-5.6, .7, .9), az: -2.592, el: .44, d: 3.17, fov: 50, inside: 1 };
+  var SALON_IN = { z: ZK.salon, t: new THREE.Vector3(1.0, .9, -5.0), az: -.785, el: .30, d: 3.85, fov: 50, inside: 1 };
   var INTENTS = [{"k": "yapmak", "t": "bir şey yapmak", "c": "#F2994A", "room": "atolye", "cards": [{"tag": "Mağaza", "title": "Kendin yap paketleri", "text": "3D model, montaj kılavuzu ve parça listesiyle kendi mobilyanı kur.", "href": "https://shop.cansasmaz.com/#ev"}, {"tag": "Ürün", "title": "Sigma Çalışma Masası", "text": "İlk dijital paketim; özelleştir sekmesinden ölçünü seç.", "href": "https://shop.cansasmaz.com/sigma-desk/"}, {"tag": "Arşiv", "title": "Portfolyo", "text": "Karavandan bataryaya bugüne kadar yaptıklarım.", "href": "https://shop.cansasmaz.com/portfolio/"}]}, {"k": "ev", "t": "evimi kurmak", "c": "#27AE60", "room": "salon", "cards": [{"tag": "Ev", "title": "Modüler Kanepe", "text": "Modül modül büyüyen kanepe.", "href": "https://shop.cansasmaz.com/modular-sofa/"}, {"tag": "Ev", "title": "Yatak Platformu", "text": "Sökülüp taşınabilen sigma yatak bazası.", "href": "https://shop.cansasmaz.com/bed-platform/"}, {"tag": "Ev", "title": "Tüm ev ürünleri", "text": "Komodin, ayakkabılık, sehpa ve fazlası.", "href": "https://shop.cansasmaz.com/#ev"}]}, {"k": "yol", "t": "yola çıkmak", "c": "#2BB5C0", "room": "yol", "cards": [{"tag": "Nest", "title": "Yol modülleri", "text": "Araca takılır, eve döner: çekmece, evye, buzdolabı.", "href": "https://shop.cansasmaz.com/#nest"}, {"tag": "Nest", "title": "Nest Evye Modülü", "text": "Su ve gaz çekmecesiyle sahra mutfağı.", "href": "https://shop.cansasmaz.com/nest-sink/"}, {"tag": "Video", "title": "House of Sasmaz", "text": "Yolda çektiğimiz seriler.", "href": "https://shop.cansasmaz.com/house-of-sasmaz/"}]}, {"k": "program", "t": "bir program denemek", "c": "#EB5A7A", "room": "calisma", "cards": [{"tag": "Araç", "title": "Sigma Designer", "text": "Ürün sayfalarındaki Özelleştir sekmesi bu motorla çalışıyor.", "href": "https://shop.cansasmaz.com/sigma-desk/"}, {"tag": "Araç", "title": "Kapak Stüdyosu", "text": "YouTube kapaklarımı ürettiğim araç.", "href": null}, {"tag": "Araç", "title": "Katır", "text": "İçerik üretirken kendim için yazdığım yardımcı.", "href": null}]}, {"k": "dk", "t": "Danimarka’ya yerleşmek", "c": "#5B8DEF", "room": "giris", "cards": [{"tag": "Kulüp", "title": "DogMan Walking Club", "text": "Kopenhag’da köpek gezdirme kulübü.", "href": "https://dogman.cansasmaz.com"}, {"tag": "Seri", "title": "Danimarka Küçük Elçiliği", "text": "House of Sasmaz’ın Danimarka serisi.", "href": "https://shop.cansasmaz.com/house-of-sasmaz/"}, {"tag": "Kanal", "title": "YouTube", "text": "Danimarka’da mühendis olmak üzerine videolar.", "href": "https://www.youtube.com/@cansasmazz"}]}, {"k": "okumak", "t": "biraz okumak", "c": "#A98BEB", "room": "yatak", "cards": [{"tag": "E-kitap", "title": "YARIM", "text": "Şiir ve düzyazı. Mehmet Can Şaşmaz.", "href": null}, {"tag": "Yazı", "title": "Seçici olmak ne demek?", "text": "Üretim ucuzladığında değer neyi seçtiğine kayıyor.", "href": null}, {"tag": "Liste", "title": "Tasarım ve üretim okuma listesi", "text": "Modülerlik ve onarılabilir tasarım üzerine kitaplar.", "href": null}]}];
-  var KEYS = [WIDE, { z: null, t: new THREE.Vector3(0, .5, 3.4), az: .95, el: .52, d: 60 }, ATOLYE_IN, CALISMA_IN, ROOMSHOT.giris, ROOMSHOT.salon, ROOMSHOT.yol, ROOMSHOT.karavan, ROOMSHOT.dunya,
+  var KEYS = [WIDE, { z: null, t: new THREE.Vector3(0, .5, 3.4), az: .95, el: .52, d: 60 }, ATOLYE_IN, CALISMA_IN, GIRIS_IN, SALON_IN, ROOMSHOT.yol, ROOMSHOT.karavan, ROOMSHOT.dunya,
               { z: null, t: new THREE.Vector3(1, .5, 2.5), az: .9, el: .72, d: 84 }, ROOMSHOT.atolye];
   var chEls = [].slice.call(document.querySelectorAll('.ch')), dots = [].slice.call(document.querySelectorAll('.prog i')), hint = document.querySelector('.hint');
   var curT = KEYS[0].t.clone(), curS = { az: KEYS[0].az, el: KEYS[0].el, d: KEYS[0].d }, first = true, lastIdx = -1, curF = 26, curW = 0;
@@ -799,7 +777,7 @@ html,body{margin:0;overflow-x:clip;scrollbar-width:none}html::-webkit-scrollbar{
   (function () {
     if (!THREE.GLTFLoader) return;
     var LD = new THREE.GLTFLoader();
-    [['atolye', [[-6.6, 4.4], [-5.2, 3.4]]], ['calisma', [[6.9, 5.5], [5.5, 3.6]]]].forEach(function (R) {
+    [['atolye', [[-6.0, 4.0]]], ['calisma', [[6.4, 4.6]]], ['giris', [[-6.0, 0.3]]], ['salon', [[0.6, -4.2]]], ['mutfak', []], ['yatak', []]].forEach(function (R) {
       LD.load('assets/hane/' + R[0] + '.glb', function (gl) {
         var g = gl.scene; g.position.y = Y0;
         g.traverse(function (o) {
@@ -814,6 +792,7 @@ html,body{margin:0;overflow-x:clip;scrollbar-width:none}html::-webkit-scrollbar{
   function atolyeMotion(dt) {
     if (REDUCED) return;
     atT += dt; var t = atT;
+    if (AT.anim_tail) AT.anim_tail.o.rotation.y = AT.anim_tail.r.y + Math.sin(t * 7) * .35;
     if (AT.anim_chair) AT.anim_chair.o.rotation.y = AT.anim_chair.r.y + Math.sin(t * .45) * .18;
     if (AT.anim_scope) AT.anim_scope.o.position.y = AT.anim_scope.p.y + Math.sin(t * 6) * .004;
     if (!AT.anim_cnc_gantry) return;
